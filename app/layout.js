@@ -67,8 +67,13 @@ const jsonLd = {
       openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: [
-          "Monday", "Tuesday", "Wednesday", "Thursday",
-          "Friday", "Saturday", "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
         ],
         opens: "00:00",
         closes: "23:59",
@@ -93,7 +98,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -101,7 +106,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${outfit.variable} ${spaceGrotesk.variable} antialiased`}
+        className={`${outfit.style} ${spaceGrotesk.variable} antialiased`}
       >
         {children}
       </body>

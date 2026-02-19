@@ -20,11 +20,12 @@
 
 # production
 /build
-
+/.claude
+claude.md
 # misc
 .DS_Store
 *.pem
-
+/data
 # debug
 npm-debug.log*
 yarn-debug.log*
