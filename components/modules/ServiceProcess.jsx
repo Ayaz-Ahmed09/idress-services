@@ -25,7 +25,7 @@ const steps = [
   },
 ];
 
-export function ServiceProcess() {
+export function ServiceProcess({ heading = "How We Work" }) {
   return (
     <section className="py-16 bg-surface-dark text-white relative overflow-hidden">
       {/* Background decoration */}
@@ -33,7 +33,7 @@ export function ServiceProcess() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">How We Work</h2>
+          <h2 className="text-3xl font-bold mb-4">{heading}</h2>
           <p className="text-gray-400">
             Simple 4-step process to get your comfort back.
           </p>

@@ -71,13 +71,14 @@
   }
 }
 
-/* Global Reset */
+/* Global Reset — Force Dark Theme */
 html {
   overflow-x: hidden;
+  color-scheme: dark;
 }
 
 body {
-  @apply bg-white dark:bg-gray-950 text-gray-900 dark:text-white font-body antialiased overflow-x-hidden;
+  @apply bg-gray-950 text-white font-body antialiased overflow-x-hidden;
   width: 100%;
 }
 
@@ -87,13 +88,35 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-display font-bold text-gray-900 dark:text-white;
+  @apply font-display font-bold text-white;
 }
 
 p {
-  @apply text-gray-600 dark:text-gray-400;
+  @apply text-gray-400;
 }
 
 a {
   @apply text-inherit;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-slide-up-slow {
+  animation: slideUp 30s linear infinite;
+}
+
+.animate-slide-up-medium {
+  animation: slideUp 25s linear infinite;
+}
+
+.animate-slide-up-fast {
+  animation: slideUp 20s linear infinite;
 }

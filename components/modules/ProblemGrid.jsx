@@ -27,13 +27,13 @@ export function ProblemGrid({
   const displayItems = problems.length > 0 ? problems : defaultOne;
 
   return (
-    <section className="py-20 bg-white dark:bg-surface-dark">
+    <section className="py-20 bg-surface-dark">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             {title}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
+          <p className="text-lg text-gray-400">
             Select your issue and get an instant quote.
           </p>
         </div>
@@ -44,15 +44,15 @@ export function ProblemGrid({
             return (
               <GlassCard
                 key={i}
-                className="p-6 hover:border-primary/50 transition-all cursor-pointer group bg-gray-50 border-gray-100 shadow-sm hover:shadow-xl dark:bg-secondary/50 dark:border-white/5"
+                className="p-6 hover:border-primary/50 transition-all cursor-pointer group bg-secondary/50 border-white/5 shadow-sm hover:shadow-xl"
               >
-                <div className="h-12 w-12 rounded-xl bg-blue-50 dark:bg-primary/20 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="h-12 w-12 rounded-xl bg-primary/20 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Icon className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
+                <h3 className="text-xl font-bold mb-2 text-white">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed">
                   {item.desc}
                 </p>
               </GlassCard>

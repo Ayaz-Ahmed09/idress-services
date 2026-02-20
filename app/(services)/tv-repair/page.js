@@ -1,114 +1,138 @@
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
-import BrandsSection from "@/components/modules/BrandsSection";
 import { HeroSplit } from "@/components/modules/HeroSplit";
-import { ProblemGrid } from "@/components/modules/ProblemGrid";
-import ServiceFAQSection from "@/components/modules/ServiceFAQSection";
 import { ServiceProcess } from "@/components/modules/ServiceProcess";
 import { StickyMobileNav } from "@/components/modules/StickyMobileNav";
 import SubServicesSection from "@/components/modules/SubServicesSection";
 import { TrustBar } from "@/components/modules/TrustBar";
-import ServicesForm from "@/components/ui/ServicesForm";
+import ServiceFAQSection from "@/components/modules/ServiceFAQSection";
+import Testimonials from "@/components/modules/Services_test";
+import ContactForm from "@/components/modules/Contact";
 import { services } from "@/data/services";
+import Link from "next/link";
+import {
+  generateServiceMetadata,
+  generateServiceJsonLd,
+} from "@/lib/generateServiceMetadata";
 
-export const metadata = {
-  title: "TV Repair Dubai | LED, LCD & Smart TV Screen Fix",
-  description:
-    "Pro TV repair in Dubai for all brands (Sony, Samsung, LG). We fix broken screens, sound issues, power problems, and motherboard faults.",
-  alternates: {
-    canonical: "/tv-repair",
-  },
-};
+/* ─── Metadata (Next.js Metadata API) ─── */
+export const metadata = generateServiceMetadata("tv-repair");
 
+/* ─── JSON-LD Structured Data ─── */
+const jsonLd = generateServiceJsonLd("tv-repair");
+
+/* ─── Page-specific data ─── */
 const serviceData = services["tv-repair"];
+
+const tvTestimonials = [
+  {
+    name: "Khalid M.",
+    role: "Home Theater Enthusiast",
+    content:
+      "My Samsung 65-inch OLED had a black screen issue. The technician diagnosed a faulty T-Con board and replaced it on-site. Picture quality is flawless again!",
+    rating: 5,
+  },
+  {
+    name: "Deepa S.",
+    role: "Apartment Resident",
+    content:
+      "Our Sony TV wasn't turning on at all. They fixed the power supply board within 2 hours and the cost was very reasonable.",
+    rating: 5,
+  },
+  {
+    name: "Mohammed H.",
+    role: "Villa Owner",
+    content:
+      "Needed a wall mount installed for our new 75-inch LG TV. Clean wiring, perfect alignment, and they even helped with the sound bar setup.",
+    rating: 5,
+  },
+  {
+    name: "Lisa T.",
+    role: "Office Manager",
+    content:
+      "Our conference room Smart TV kept losing WiFi. They updated the firmware and replaced the WiFi module. Works perfectly now.",
+    rating: 4,
+  },
+  {
+    name: "Raj P.",
+    role: "Gaming Enthusiast",
+    content:
+      "HDMI port was damaged on my gaming TV. They soldered a new port and saved me from buying a new TV. Highly recommend!",
+    rating: 5,
+  },
+];
 
 export default function TvRepairPage() {
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <Navbar />
-      <main className="min-h-screen bg-surface">
+      <main className="min-h-screen bg-dark">
+        {/* ─── h1 lives here ─── */}
         <HeroSplit
-          title="TV Screen / Power Issues?"
-          subtitle="Black screen? No Sound? We fix LED, OLED, & Smart TVs in your home or pick-up & delivery."
+          title="Professional TV Repair & Installation in Dubai"
+          subtitle="LED, LCD, OLED or Smart TV — we fix black screens, no power, sound issues, and broken displays at your doorstep. All brands serviced."
           serviceName="TV Repair"
           features={[
-            "Screen Replacement",
-            "Motherboard Repair",
-            "Original Parts",
+            "Screen Replacement Experts",
+            "Motherboard & PCB Repair",
+            "Wall Mount Installation",
           ]}
         />
 
-        <TrustBar />
+        <TrustBar title="tv-repair" />
 
-        <ProblemGrid
-          title="Common TV Problems"
-          problems={[
-            {
-              title: "Broken Screen",
-              desc: "Cracked or shattered LED/OLED panel replacement.",
-              icon: null,
-            },
-            {
-              title: "No Picture / Sound",
-              desc: "TV turns on but no image or audio? Logic board issue.",
-              icon: null,
-            },
-            {
-              title: "Power Issues",
-              desc: "TV won't turn on or keeps restarting? Power supply fix.",
-              icon: null,
-            },
-            {
-              title: "Lines on Screen",
-              desc: "Vertical or horizontal lines? Panel or T-Con board fault.",
-              icon: null,
-            },
-            {
-              title: "WiFi Not Connecting",
-              desc: "Smart TV features not working? Module repair.",
-              icon: null,
-            },
-            {
-              title: "HDMI Port Broken",
-              desc: "Cannot connect gaming console or STB? Port replacement.",
-              icon: null,
-            },
-          ]}
-        />
-
+        {/* ─── h2: service catalog ─── */}
         <SubServicesSection
           subServices={serviceData.subServices || []}
           serviceSlug="tv-repair"
           serviceTitle="TV Repair"
+          sectionHeading="Comprehensive TV Repair Services We Offer"
           gradient="from-purple-500 to-pink-400"
         />
 
-        <ServiceProcess />
+        {/* ─── h2: process / trust ─── */}
+        <ServiceProcess heading="Our TV Repair Process — Diagnosis to Delivery" />
 
-        <BrandsSection
-          brands={serviceData.brands || []}
-          gradient="from-purple-500 to-pink-400"
-        />
-
+        {/* ─── h2: FAQ signals ─── */}
         <ServiceFAQSection
-          faqs={serviceData.faqs || []}
-          serviceTitle="TV Repair"
+          title="tv-repair"
+          heading="TV Repair FAQs — Your Questions Answered by Experts"
         />
 
-        <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-950">
+        {/* ─── h4: booking CTA ─── */}
+        <section className="py-16 md:py-24 bg-gray-950">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Book Your TV Service
-              </h2>
-              <p className="text-gray-600 dark:text-gray-400">
+              <h4 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Schedule Your TV Repair Appointment
+              </h4>
+              <p className="text-gray-400">
                 Fill in the form below and we&apos;ll get back to you within 30
                 minutes
               </p>
+              <button className="mt-4 px-3 py-2 bg-gray-500/50 backdrop-blur-sm outline-1 border-2 border-sky-500">
+                <Link href="/book">Book Now</Link>
+              </button>
             </div>
-            <ServicesForm />
           </div>
         </section>
+
+        {/* ─── h2: social proof ─── */}
+        <Testimonials
+          testimonials={tvTestimonials}
+          title="What Dubai Residents Say About Our TV Repair Service"
+          subtitle="Real reviews from customers who trusted us with their TV repairs."
+          className="mt-4"
+        />
+
+        {/* ─── h2: contact / conversion ─── */}
+        <ContactForm heading="Request a Free TV Repair Quote" />
 
         <StickyMobileNav />
       </main>

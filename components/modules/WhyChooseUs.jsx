@@ -180,13 +180,13 @@ export default function WhyChooseUs() {
                 className="group relative p-6 md:p-8 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-transparent transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 overflow-hidden"
               >
                 {/* Hover gradient background */}
-                <div
+                {/* <div
                   className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
-                />
+                /> */}
 
                 {/* Icon */}
                 <div
-                  className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${feature.color} text-white mb-5 group-hover:scale-110 transition-transform duration-300`}
+                  className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-linear-to-br ${feature.color} text-white mb-5 group-hover:scale-110 transition-transform duration-300`}
                 >
                   <Icon />
                 </div>

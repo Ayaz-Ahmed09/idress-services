@@ -49,7 +49,7 @@ export function HeroSplit({
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-in fade-in slide-in-from-bottom-8 duration-700 delay-400">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start ">
             <Button
               size="lg"
               variant="accent"
@@ -104,25 +104,25 @@ export function HeroSplit({
           >
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                <h3 className="text-2xl font-bold text-white">
                   Get a Quick Quote
                 </h3>
-                <p className="text-sm text-gray-500">Response time: ~15 mins</p>
+                <p className="text-sm text-gray-800">Response time: ~15 mins</p>
               </div>
 
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 gap-4">
+              <form className="space-y-4  backdrop-blur-2xl">
+                <div className="grid grid-cols-1 gap-4  backdrop-blur-3xl">
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border-transparent focus:border-primary focus:bg-white focus:ring-0 transition-all"
+                    className="w-full px-4 py-3 rounded-lg border-b-2 border-orange-500 bg-transparent text-white  focus:border-primary focus:bg-gray-700 focus:ring-0 transition-all"
                   />
                   <input
                     type="tel"
                     placeholder="Mobile Number"
-                    className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border-transparent focus:border-primary focus:bg-white focus:ring-0 transition-all"
+                    className="w-full px-4 py-3 rounded-lg  text-white border-b-2 border-orange-500  focus:border-primary focus:bg-gray-700 focus:ring-0 transition-all"
                   />
-                  <select className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border-transparent focus:border-primary focus:bg-white focus:ring-0 transition-all text-gray-500">
+                  <select className="w-full px-4 py-3 rounded-lg  text-gray-300 border-b-2 border-orange-500 focus:border-primary focus:bg-gray-700 focus:ring-2 transition-all">
                     <option>Select Issue</option>
                     <option>Not Cooling / Heating</option>
                     <option>Water Leakage</option>
@@ -133,8 +133,8 @@ export function HeroSplit({
                 </div>
                 <Button
                   size="lg"
-                  variant="primary"
-                  className="w-full font-bold text-lg"
+                  variant="black"
+                  className="w-full font-bold text-lg border-b-4 border-orange-500 border-t-2 "
                 >
                   Request Callback
                 </Button>

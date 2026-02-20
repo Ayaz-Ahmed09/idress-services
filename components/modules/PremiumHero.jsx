@@ -195,7 +195,7 @@ export default function PremiumHero() {
 
             {/* Info Cards */}
             <motion.div
-              className="absolute top-10 right-0 p-4 rounded-xl bg-white dark:bg-gray-800 shadow-xl"
+              className="absolute top-10 right-0 p-4 rounded-xl bg-white dark:bg-gray-800 shadow-xl md:block hidden"
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
             >
@@ -208,7 +208,7 @@ export default function PremiumHero() {
             </motion.div>
 
             <motion.div
-              className="absolute bottom-20 left-0 p-4 rounded-xl bg-white dark:bg-gray-800 shadow-xl"
+              className="absolute bottom-20 left-0 p-4 rounded-xl bg-white dark:bg-gray-800 shadow-xl md:block hidden"
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
             >
@@ -224,7 +224,7 @@ export default function PremiumHero() {
 
         {/* Stats Row */}
         <motion.div
-          className="mt-16 md:mt-24 grid grid-cols-3 gap-6 md:gap-12"
+          className="mt-16 md:mt-24 grid grid-cols-3 gap-1 lg:gap-6 md:gap-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
@@ -236,12 +236,12 @@ export default function PremiumHero() {
           ].map((stat, i) => (
             <div
               key={i}
-              className="text-center p-6 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50"
+              className="text-center p-3 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50"
             >
-              <p className="text-3xl md:text-4xl font-bold bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+              <p className="sm:text-md lg:text-xl md:text-2xl font-bold bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                 {stat.value}
               </p>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
+              <p className="text-gray-600 dark:text-gray-400 text-sm  sm:w-full text-center">
                 {stat.label}
               </p>
             </div>

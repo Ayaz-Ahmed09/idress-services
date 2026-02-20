@@ -161,7 +161,7 @@ function CounterCard({
 
   return (
     <div className="text-center p-6 md:p-8">
-      <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white mb-5 shadow-lg shadow-blue-500/30">
+      <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-linear-to-br from-blue-500 to-cyan-500 text-white mb-5 shadow-lg shadow-blue-500/30">
         <Icon />
       </div>
       <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-2">
@@ -171,7 +171,7 @@ function CounterCard({
       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
         {label}
       </h3>
-      <p className="text-gray-500 dark:text-gray-400 text-sm">{description}</p>
+      <p className="text-gray-200 dark:text-gray-200 text-sm">{description}</p>
     </div>
   );
 }

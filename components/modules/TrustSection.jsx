@@ -76,9 +76,9 @@ export default function TrustSection() {
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h3 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Trusted by Thousands, Built on Excellence
-          </h2>
+          </h3>
 
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             We combine expertise, reliability, and customer care to deliver the
@@ -99,15 +99,15 @@ export default function TrustSection() {
             >
               <div className="relative h-full p-8 rounded-2xl bg-white dark:bg-gray-800/50 border border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-gray-950/50">
                 {/* Gradient accent */}
-                <div
+                {/* <div
                   className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${feature.gradient} pointer-events-none blur-xl`}
                   style={{ filter: "blur(20px)" }}
-                />
+                /> */}
 
                 <div className="relative">
                   {/* Icon */}
                   <div
-                    className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${feature.gradient} mb-4`}
+                    className={`inline-flex p-3 rounded-xl bg-linear-to-br ${feature.gradient} mb-4`}
                   >
                     <feature.icon size={24} className="text-white" />
                   </div>
@@ -122,7 +122,7 @@ export default function TrustSection() {
 
                   {/* Hover accent line */}
                   <div
-                    className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${feature.gradient} rounded-full w-0 group-hover:w-full transition-all duration-500`}
+                    className={`absolute bottom-0 left-0 h-1 bg-linear-to-r ${feature.gradient} rounded-full w-0 group-hover:w-full transition-all duration-500`}
                   />
                 </div>
               </div>

@@ -50,6 +50,7 @@ export default function ServicesSection() {
                 slug={service.slug}
                 title={service.title}
                 icon={service.icon}
+                image={service.image}
                 color={service.color}
                 gradient={service.gradient}
                 description={service.metaDescription.substring(0, 120) + "..."}
