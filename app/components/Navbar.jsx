@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "#services" },
+  // { label: "Services", href: "#services" },
   { label: "Contact-us", href: "/contact-us" },
   { label: "About-us", href: "/about-us" },
-  { label: "BOOK NOW", href: "/book" },
+  // { label: "BOOK NOW", href: "/book" },
 ];
 
 export default function Navbar() {
@@ -116,13 +116,13 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <a
-              href="#booking"
+            <Link
+              href="/book"
               onClick={() => setIsOpen(false)}
               className="mt-4 block rounded-xl bg-linear-to-r from-(--accent-cyan) to-[#00B8D4] px-6 py-3 text-center text-base font-semibold text-(--bg-primary) transition-all duration-300 hover:shadow-lg hover:shadow-(--accent-cyan)/25"
             >
               Book Now
-            </a>
+            </Link>
           </div>
         </div>
       </div>

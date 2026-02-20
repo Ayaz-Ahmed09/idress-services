@@ -1,10 +1,14 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const footerLinks = {
   services: [
-    { label: "AC Repair", href: "#services" },
-    { label: "AC Installation", href: "#services" },
-    { label: "Deep Cleaning", href: "#services" },
-    { label: "Maintenance", href: "#services" },
-    { label: "Emergency Service", href: "#services" },
+    { label: "AC Repair", href: "/ac-repair" },
+    { label: "Refrigerator Repair", href: "/fridge-repair" },
+    { label: "TV Repair", href: "/tv-repair" },
+    { label: "Washing Machine Repair", href: "/electronics-repair" },
+    { label: "Electrician", href: "/electrician-service" },
+    { label: "CCTV Installation", href: "/cctv-installation" },
   ],
   areas: [
     "Downtown Dubai",
@@ -22,41 +26,25 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="relative border-t border-[var(--border-glass)]"
+      className="relative border-t border-(--border-glass)"
     >
       {/* Top gradient */}
-      <div
-        className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[var(--accent-cyan)]/40 to-transparent"
-        aria-hidden="true"
-      />
+      {/* Background Glows */}
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-slate-900 rounded-full blur-[100px] animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-indigo-600/20 rounded-full blur-[120px] animate-pulse" />
+
 
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <a href="#" className="flex items-center gap-2 mb-4">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--accent-cyan)] to-[var(--accent-orange)] p-[1px]">
-                <div className="flex h-full w-full items-center justify-center rounded-lg bg-[var(--bg-primary)]">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="var(--accent-cyan)"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
-                  </svg>
-                </div>
+            <Link href="#" className="flex items-center gap-2 mb-4">
+              <div className="flex   items-center justify-center rounded-lg bg-linear-to-br from-(--accent-cyan) to-(--accent-orange) p-[1px]">
+                <Image src="/logo.png" alt="Logo" width={200} height={200} />
               </div>
-              <span className="font-display text-lg font-bold">
-                <span className="text-[var(--text-primary)]">Precision</span>
-                <span className="text-[var(--accent-cyan)]">AC</span>
-              </span>
-            </a>
-            <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-6 max-w-xs">
+
+            </Link>
+            <p className="text-sm text-(--text-muted) leading-relaxed mb-6 max-w-xs">
               Industrial-grade AC repair, diagnostics, and maintenance services
               for residential and commercial properties across Dubai.
             </p>
@@ -64,7 +52,7 @@ export default function Footer() {
             <div className="space-y-3">
               <a
                 href="tel:+971501234567"
-                className="flex items-center gap-2 text-sm text-[var(--text-secondary)] hover:text-[var(--accent-cyan)] transition-colors"
+                className="flex items-center gap-2 text-sm text-(--text-secondary) hover:text-(--accent-cyan) transition-colors"
               >
                 <svg
                   width="14"
@@ -82,7 +70,7 @@ export default function Footer() {
               </a>
               <a
                 href="mailto:repairs@precisionac.ae"
-                className="flex items-center gap-2 text-sm text-[var(--text-secondary)] hover:text-[var(--accent-cyan)] transition-colors"
+                className="flex items-center gap-2 text-sm text-(--text-secondary) hover:text-(--accent-cyan) transition-colors"
               >
                 <svg
                   width="14"
@@ -104,7 +92,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-sm font-semibold text-[var(--text-primary)] uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-semibold text-(--text-primary) uppercase tracking-wider mb-4">
               Services
             </h4>
             <ul className="space-y-2.5">
@@ -112,7 +100,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors duration-200"
+                    className="text-sm text-(--text-muted) hover:text-(--text-primary) transition-colors duration-200"
                   >
                     {link.label}
                   </a>
@@ -123,13 +111,13 @@ export default function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h4 className="text-sm font-semibold text-[var(--text-primary)] uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-semibold text-(--text-primary) uppercase tracking-wider mb-4">
               Service Areas
             </h4>
             <ul className="space-y-2.5">
               {footerLinks.areas.map((area) => (
                 <li key={area}>
-                  <span className="text-sm text-[var(--text-muted)]">
+                  <span className="text-sm text-(--text-muted)">
                     {area}
                   </span>
                 </li>

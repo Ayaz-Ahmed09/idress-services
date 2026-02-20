@@ -71,7 +71,7 @@ export default function CctvPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <Navbar />
+      {/* <Navbar /> */}
       <main className="min-h-screen bg-dark">
         {/* ─── h1 lives here ─── */}
         <HeroSplit
@@ -136,7 +136,7 @@ export default function CctvPage() {
 
         <StickyMobileNav />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

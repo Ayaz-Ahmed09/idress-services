@@ -60,7 +60,7 @@ export default function Home() {
   return (
     <>
       <ScrollAnimations />
-      <Navbar />
+      {/* <Navbar /> */}
       <main>
         <PremiumHero />
         <ServicesSection />
