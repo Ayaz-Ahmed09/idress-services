@@ -78,10 +78,20 @@ export default function AcRepairPage() {
           title="Expert AC Repair & Service in Dubai"
           subtitle="We fix AC breakdowns, gas leaks, and cooling issues in 60 minutes flat. Certified HVAC technicians with same-day response across Dubai."
           serviceName="AC Repair"
+          heroImage="/Ac-hero.png"
           features={[
             "24/7 Emergency AC Fix",
             "Gas Refill Specialists",
             "30-Day Service Warranty",
+          ]}
+          issueOptions={[
+            "Not Cooling / Heating",
+            "Gas Leakage / Refill",
+            "Water Leakage",
+            "Noise Issue",
+            "AC Installation",
+            "AC Cleaning / Service",
+            "Other",
           ]}
         />
 

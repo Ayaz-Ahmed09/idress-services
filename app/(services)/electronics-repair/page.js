@@ -78,10 +78,19 @@ export default function ElectronicsRepairPage() {
           title="Home Appliance & Electronics Repair in Dubai"
           subtitle="Washing machine, microwave, water purifier, or geyser broken? Our expert technicians repair all home electronics at your doorstep with genuine parts."
           serviceName="Electronics Repair"
+          heroImage="/electronics.jpeg"
           features={[
             "All Major Brands Covered",
             "Genuine Spare Parts",
             "Same-Day Service Available",
+          ]}
+          issueOptions={[
+            "Washing Machine Repair",
+            "Microwave Repair",
+            "Water Purifier / RO",
+            "Geyser / Water Heater",
+            "Dishwasher Repair",
+            "Other",
           ]}
         />
 

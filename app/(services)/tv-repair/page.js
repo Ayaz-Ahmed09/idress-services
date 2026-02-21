@@ -78,10 +78,20 @@ export default function TvRepairPage() {
           title="Professional TV Repair & Installation in Dubai"
           subtitle="LED, LCD, OLED or Smart TV — we fix black screens, no power, sound issues, and broken displays at your doorstep. All brands serviced."
           serviceName="TV Repair"
+          heroImage="/TV-services.jpeg"
           features={[
             "Screen Replacement Experts",
             "Motherboard & PCB Repair",
             "Wall Mount Installation",
+          ]}
+          issueOptions={[
+            "Black Screen / No Display",
+            "No Power / Won't Turn On",
+            "Sound Issue",
+            "Screen Damage",
+            "Wall Mount Installation",
+            "HDMI / Port Issue",
+            "Other",
           ]}
         />
 

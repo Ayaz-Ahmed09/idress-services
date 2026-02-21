@@ -78,10 +78,20 @@ export default function CctvPage() {
           title="Professional CCTV Installation & Security in Dubai"
           subtitle="Protect your home and business with HD/IP cameras, DVR/NVR setup, and 24/7 remote monitoring. Hikvision & Dahua certified installers."
           serviceName="CCTV Services"
+          heroImage="/cctv.jpeg"
           features={[
             "SIRA Certified Installers",
             "Mobile App Remote Viewing",
             "Free Site Survey & Quote",
+          ]}
+          issueOptions={[
+            "New CCTV Installation",
+            "Camera Not Working",
+            "DVR / NVR Issue",
+            "Mobile App Setup",
+            "Camera Upgrade",
+            "AMC / Maintenance",
+            "Other",
           ]}
         />
 

@@ -78,10 +78,20 @@ export default function FridgeRepairPage() {
           title="Expert Refrigerator Repair & Service in Dubai"
           subtitle="Fridge not cooling? Water leaking? Our certified technicians fix all refrigerator brands at your doorstep with same-day service and genuine parts."
           serviceName="Fridge Repair"
+          heroImage="/Referigentor-services.jpeg"
           features={[
             "Same-Day Doorstep Service",
             "Compressor & Gas Specialists",
             "90-Day Repair Warranty",
+          ]}
+          issueOptions={[
+            "Not Cooling",
+            "Water Leakage",
+            "Compressor Issue",
+            "Gas Refill",
+            "Ice Build-up",
+            "Noise Issue",
+            "Other",
           ]}
         />
 

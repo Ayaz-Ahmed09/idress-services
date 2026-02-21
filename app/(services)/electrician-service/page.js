@@ -78,10 +78,20 @@ export default function ElectricianPage() {
           title="Licensed Electrician Services in Dubai — 24/7"
           subtitle="Short circuit? Power tripping? Need new wiring? Our certified electricians fix all electrical issues safely and fast across Dubai."
           serviceName="Electrician Services"
+          heroImage="/electricen-hero.png"
           features={[
             "24/7 Emergency Response",
             "Licensed & Certified Pros",
             "Safety-First Approach",
+          ]}
+          issueOptions={[
+            "Short Circuit / Tripping",
+            "Wiring & Rewiring",
+            "Switch & Socket Repair",
+            "Light Installation",
+            "DB Box / Breaker Issue",
+            "New Electrical Fitting",
+            "Other",
           ]}
         />
 
