@@ -37,19 +37,19 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 text-center items-center justify-center">
             <Link href="#" className="flex items-center gap-2 mb-4">
               <div className="flex   items-center justify-center rounded-lg bg-linear-to-br from-(--accent-cyan) to-(--accent-orange) p-[1px]">
-                <Image src="/logo.png" alt="Logo" width={200} height={200} />
+                <Image src="/3d-logo.png" alt="Logo" width={400} height={300} />
               </div>
-
+              {/* <div className="bg-linear-to-r from-tranparent via-cyan-500 to-transparent  h-2" /> */}
             </Link>
-            <p className="text-sm text-(--text-muted) leading-relaxed mb-6 max-w-xs">
-              Industrial-grade AC repair, diagnostics, and maintenance services
-              for residential and commercial properties across Dubai.
+            <p className="text-sm text-center content-center text-(--text-muted)  mb-6 ">
+              Industrial-grade Repair, diagnostics, and maintenance services
+              for residential and commercial properties across Dubai
             </p>
             {/* Contact */}
-            <div className="space-y-3">
+            <div className="space-y-3 flex flex-col items-center justify-center-safe text-center">
               <a
                 href="tel:+971501234567"
                 className="flex items-center gap-2 text-sm text-(--text-secondary) hover:text-(--accent-cyan) transition-colors"
@@ -91,7 +91,7 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div>
+          <div className="text-center">
             <h4 className="text-sm font-semibold text-(--text-primary) uppercase tracking-wider mb-4">
               Services
             </h4>
@@ -111,13 +111,13 @@ export default function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h4 className="text-sm font-semibold text-(--text-primary) uppercase tracking-wider mb-4">
+            <h4 className="text-sm text-center flex flex-col font-semibold text-(--text-primary) uppercase tracking-wider mb-4">
               Service Areas
             </h4>
             <ul className="space-y-2.5">
               {footerLinks.areas.map((area) => (
-                <li key={area}>
-                  <span className="text-sm text-(--text-muted)">
+                <li key={area} className="flex flex-col text-center">
+                  <span className="text-sm text-(--text-muted) items-center justify-center">
                     {area}
                   </span>
                 </li>
@@ -127,20 +127,20 @@ export default function Footer() {
 
           {/* Newsletter/CTA */}
           <div>
-            <h4 className="text-sm font-semibold text-[var(--text-primary)] uppercase tracking-wider mb-4">
+            <h4 className="text-sm text-center font-semibold text-(--text-primary) uppercase tracking-wider mb-4">
               Stay Updated
             </h4>
-            <p className="text-sm text-[var(--text-muted)] mb-4">
+            <p className="text-sm text-(--text-muted) mb-4">
               Get maintenance tips and exclusive offers.
             </p>
             <div className="flex gap-2">
               <input
                 type="email"
                 placeholder="your@email.com"
-                className="flex-1 rounded-xl border border-[var(--border-glass)] bg-[var(--bg-secondary)] px-4 py-2.5 text-sm text-[var(--text-primary)] placeholder-[var(--text-muted)] outline-none transition-colors focus:border-[var(--accent-cyan)]"
+                className="flex-1 rounded-xl border border-(--border-glass) bg-(--bg-secondary) px-4 py-2.5 text-sm text-(--text-primary) placeholder-(--text-muted) outline-none transition-colors focus:border-(--accent-cyan)"
                 aria-label="Email address"
               />
-              <button className="flex-shrink-0 rounded-xl bg-[var(--accent-cyan)] px-4 py-2.5 text-sm font-semibold text-[var(--bg-primary)] transition-all duration-300 hover:shadow-lg hover:shadow-[var(--accent-cyan)]/25">
+              <button className="shrink-0 rounded-xl bg-(--accent-cyan) px-4 py-2.5 text-sm font-semibold text-(--bg-primary) transition-all duration-300 hover:shadow-lg hover:shadow-(--accent-cyan)/25">
                 Join
               </button>
             </div>
@@ -151,7 +151,7 @@ export default function Footer() {
                 <a
                   key={social}
                   href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-[var(--border-glass)] text-[var(--text-muted)] transition-all duration-200 hover:border-[var(--accent-cyan)]/30 hover:text-[var(--accent-cyan)] hover:bg-[var(--accent-cyan-dim)]"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-(--border-glass) text-(--text-muted) transition-all duration-200 hover:border-(--accent-cyan)/30 hover:text-(--accent-cyan) hover:bg-[var(--accent-cyan-dim)]"
                   aria-label={social}
                 >
                   <span className="text-xs font-bold">{social[0]}</span>
@@ -162,26 +162,26 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[var(--border-glass)] pt-8 sm:flex-row">
-          <p className="text-xs text-[var(--text-muted)]">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-(--border-glass) pt-8 sm:flex-row">
+          <p className="text-xs text-(--text-muted)">
             © 2026 PrecisionAC. All rights reserved. Licensed & Insured in UAE.
           </p>
-          <div className="flex items-center gap-4 text-xs text-[var(--text-muted)]">
+          <div className="flex items-center gap-4 text-xs text-(--text-muted)">
             <a
               href="#"
-              className="hover:text-[var(--text-secondary)] transition-colors"
+              className="hover:text-(--text-secondary) transition-colors"
             >
               Privacy
             </a>
             <a
               href="#"
-              className="hover:text-[var(--text-secondary)] transition-colors"
+              className="hover:text-(--text-secondary) transition-colors"
             >
               Terms
             </a>
             <a
-              href="#"
-              className="hover:text-[var(--text-secondary)] transition-colors"
+              href="/sitemap"
+              className="hover:text-(--text-secondary) transition-colors"
             >
               Sitemap
             </a>

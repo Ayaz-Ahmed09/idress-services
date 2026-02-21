@@ -84,7 +84,7 @@ export function HeroSplit({
 
       {/* ── Gradient overlay: readable text + image still visible ── */}
       {heroImage && (
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/75 via-black/60 to-black/40" />
+        <div className="absolute inset-0 -z-10 blur-[ 4px]" />
       )}
 
       {/* Background decoration (fallback when no image) */}
@@ -107,7 +107,7 @@ export function HeroSplit({
             {title}
           </h1>
 
-          <p className="text-lg text-gray-200 max-w-xl mx-auto lg:mx-0 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 drop-shadow-md">
+          <p className="text-lg font-display text-gray-100 max-w-xl mx-auto lg:mx-0 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 drop-shadow-md">
             {subtitle}
           </p>
 
@@ -168,7 +168,7 @@ export function HeroSplit({
                 <h3 className="text-2xl font-bold text-white">
                   Get a Quick Quote
                 </h3>
-                <p className="text-sm text-gray-400">Response time: 5 mins</p>
+                <p className="text-sm text-orange-500">Response time: 5 mins</p>
               </div>
 
               <form

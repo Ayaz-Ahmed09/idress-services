@@ -72,13 +72,13 @@ export default function FridgeRepairPage() {
       />
 
       {/* <Navbar /> */}
-      <main className="min-h-screen bg-dark">
+      <main className="min-h-screen backdrop-blur-lg">
         {/* ─── h1 lives here ─── */}
         <HeroSplit
           title="Expert Refrigerator Repair & Service in Dubai"
           subtitle="Fridge not cooling? Water leaking? Our certified technicians fix all refrigerator brands at your doorstep with same-day service and genuine parts."
           serviceName="Fridge Repair"
-          heroImage="/Referigentor-services.jpeg"
+          heroImage="/fridge/fridge-1-1.png"
           features={[
             "Same-Day Doorstep Service",
             "Compressor & Gas Specialists",

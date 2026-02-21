@@ -1,19 +1,28 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { services } from '../../data/services'
+import { usePathname } from "next/navigation";
+
 const navLinks = [
   { label: "Home", href: "/" },
-  // { label: "Services", href: "#services" },
   { label: "Contact-us", href: "/contact-us" },
   { label: "About-us", href: "/about-us" },
-  // { label: "BOOK NOW", href: "/book" },
 ];
 
+// Find the active service based on current pathname
+const serviceList = Object.values(services);
+
 export default function Navbar() {
+  const pathname = usePathname();
+  const activeService = serviceList.find((s) => pathname.includes(s.slug));
+
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -32,16 +41,29 @@ export default function Navbar() {
     };
   }, [isOpen]);
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "glass-strong bg-blur-xl bg-(--bg-primary) shadow-lg shadow-black/20" : "backdrop-blur-xl"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "glass-strong bg-blur-xl bg-black/80 shadow-lg shadow-black/20" : "backdrop-blur-xl"
         }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        {/* Logo */}
-        <Link href="/">
-          <Image src="/logo.png" alt="Logo-idress-home-maintenance-services" width={100} height={100} />
-        </Link>
+        <div className="flex items-center gap-4 h-14">
+          <Link href="/">
+            <Image src="/3d-logo.png" alt="Logo-idress-home-maintenance-services" width={180} height={150} />
+          </Link>
+        </div>
+
         {/* Desktop Links */}
         <div className="hidden items-center gap-8 lg:flex">
           {navLinks.map((link) => (
@@ -53,6 +75,41 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+
+          {/* Show ONLY the current page's service with dropdown */}
+          {activeService && (
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setDropdownOpen((prev) => !prev)}
+                className="relative flex items-center gap-1.5 text-sm font-medium text-(--accent-cyan) transition-colors duration-200 hover:text-(--text-primary)"
+              >
+                <span>{activeService.title}</span>
+                <svg
+                  className={`h-3.5 w-3.5 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {/* Sub-services dropdown */}
+              {dropdownOpen && (
+                <div className="absolute left-1/2 top-full mt-3 w-72 -translate-x-1/2 rounded-xl border border-(--border-glass) bg-black/90 p-2 shadow-2xl backdrop-blur-xl z-50">
+                  {activeService.subServices.map((sub) => (
+                    <Link
+                      key={sub.id}
+                      href="/book"
+                      onClick={() => setDropdownOpen(false)}
+                      className="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-(--text-secondary) transition-colors duration-150 hover:bg-(--accent-cyan)/10 hover:text-(--text-primary)"
+                    >
+                      <span className="text-base">{sub.icon}</span>
+                      <span>{sub.title}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Desktop CTA */}
@@ -116,6 +173,42 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            {/* Show ONLY the current page's service with dropdown */}
+            {activeService && (
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setDropdownOpen((prev) => !prev)}
+                  className="relative flex items-center gap-1.5 text-sm font-medium text-(--accent-cyan) transition-colors duration-200 hover:text-(--text-primary)"
+                >
+                  <span>{activeService.title}</span>
+                  <svg
+                    className={`h-3.5 w-3.5 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {/* Sub-services dropdown */}
+                {dropdownOpen && (
+                  <div className="absolute left-1/2 top-full mt-3 w-72 -translate-x-1/2 rounded-xl border border-(--border-glass) bg-black/90 p-2 shadow-2xl backdrop-blur-xl z-50">
+                    {activeService.subServices.map((sub) => (
+                      <Link
+                        key={sub.id}
+                        href="/book"
+                        onClick={() => setDropdownOpen(false)}
+                        className="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-(--text-secondary) transition-colors duration-150 hover:bg-(--accent-cyan)/10 hover:text-(--text-primary)"
+                      >
+                        <span className="text-base">{sub.icon}</span>
+                        <span>{sub.title}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+
+
             <Link
               href="/book"
               onClick={() => setIsOpen(false)}

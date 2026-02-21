@@ -72,13 +72,13 @@ export default function AcRepairPage() {
       />
 
       {/* <Navbar /> */}
-      <main className="min-h-screen bg-dark">
+      <main className="min-h-screen py-8 bg-dark">
         {/* ─── h1 lives here ─── */}
         <HeroSplit
           title="Expert AC Repair & Service in Dubai"
           subtitle="We fix AC breakdowns, gas leaks, and cooling issues in 60 minutes flat. Certified HVAC technicians with same-day response across Dubai."
           serviceName="AC Repair"
-          heroImage="/Ac-hero.png"
+          heroImage="/ac-repair/Ac-hero.webp"
           features={[
             "24/7 Emergency AC Fix",
             "Gas Refill Specialists",

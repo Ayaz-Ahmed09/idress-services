@@ -4,7 +4,7 @@ export const services = {
   "ac-repair": {
     slug: "ac-repair",
     title: "AC Repair & Service",
-    metaTitle: "AC Repair Service Near You | 24/7 Emergency AC Repair | [City]",
+    metaTitle: "AC Repair Service Near You | 24/7 Emergency AC Repair | Dubai",
     metaDescription: "Expert AC repair, installation & maintenance. All brands - Split AC, Window AC, Central AC. Same-day service. Call now for instant booking!",
     seoTitle: "AC Repair Dubai | #1 Emergency AC Fix, Gas Refill & Deep Cleaning — Same-Day",
     seoDescription: "Dubai's fastest AC repair — split, central & window units fixed in 60 min. 24/7 emergency service, certified technicians, gas refill from AED 150, 30-day warranty. Call 055-786-4636 for instant booking.",
@@ -48,42 +48,44 @@ export const services = {
     color: "blue",
     gradient: "from-blue-500 to-cyan-400",
     emergencyAvailable: true,
-    image: "/Ac-Service.jpeg",
+    image: "/ac-repair/Ac-Service.jpeg",
     subServices: [
       {
         id: "ac-not-cooling",
         title: "AC Not Cooling",
         description: "AC running but not cooling properly? We diagnose and fix compressor issues, gas leaks, dirty filters and thermostat problems.",
         icon: "🌡️",
-        image: "/ac.jpeg",
+        image: "/ac-repair/ac.jpeg",
         keywords: ["ac not cooling", "ac cooling problem", "ac not cold"],
         estimatedTime: "1-2 hours"
       },
       {
         id: "ac-gas-refill",
         title: "AC Gas Refill / Recharge",
-        image: "/ac.jpeg",
+        image: "/ac-repair/ac-gas-refill.jpeg",
         description: "Professional refrigerant gas refilling service. R22, R32, R410A for all AC types with leak detection included.",
         icon: "⛽",
-        price: "Starting ₹1,499",
+        // price: "Starting ₹1,499",
         keywords: ["ac gas refill", "ac gas charge", "refrigerant refill"],
         estimatedTime: "1 hour"
       },
       {
         id: "ac-installation",
         title: "AC Installation & Uninstallation",
+        image: "/ac-repair/ac-1.jpeg",
         description: "Professional split AC, window AC installation. Includes copper piping, bracket, and electrical wiring setup.",
         icon: "🔧",
-        price: "Starting ₹999",
+        // price: "Starting ₹999",
         keywords: ["ac installation", "split ac installation", "ac fitting"],
         estimatedTime: "2-3 hours"
       },
       {
         id: "ac-servicing",
         title: "AC Regular Servicing",
+        image: "/ac-repair/Ac-Service.jpeg",
         description: "Complete AC servicing - filter cleaning, coil cleaning, drain pipe cleaning, and performance check.",
         icon: "🧹",
-        price: "Starting ₹499",
+        // price: "Starting ₹499",
         keywords: ["ac service", "ac cleaning", "ac maintenance"],
         estimatedTime: "1-2 hours"
       },
@@ -92,7 +94,8 @@ export const services = {
         title: "AC Compressor Repair",
         description: "Expert compressor diagnosis, repair, and replacement service for all AC brands and models.",
         icon: "⚙️",
-        price: "Starting ₹2,499",
+        image: "/ac-repair/compressor.jpeg",
+        // price: "Starting ₹2,499",
         keywords: ["ac compressor repair", "compressor replacement"],
         estimatedTime: "2-4 hours"
       },
@@ -101,7 +104,8 @@ export const services = {
         title: "AC PCB / Control Board Repair",
         description: "Circuit board repair, replacement, and troubleshooting for indoor and outdoor AC units.",
         icon: "🔌",
-        price: "Starting ₹1,999",
+        image: "/ac-repair/ac-pcb.png",
+        // price: "Starting ₹1,999",
         keywords: ["ac pcb repair", "ac control board", "ac motherboard"],
         estimatedTime: "2-3 hours"
       },
@@ -110,7 +114,8 @@ export const services = {
         title: "AC Making Noise",
         description: "Diagnose and fix unusual AC noises - rattling, buzzing, clicking, or humming sounds.",
         icon: "🔊",
-        price: "Starting ₹399",
+        image: "/ac-repair/noise.jpeg",
+        // price: "Starting ₹399",
         keywords: ["ac noise", "ac making sound", "ac vibration"],
         estimatedTime: "1-2 hours"
       },
@@ -119,7 +124,8 @@ export const services = {
         title: "AC Water Leaking",
         description: "Fix water dripping from indoor or outdoor AC unit. Drain pipe cleaning and tray repair included.",
         icon: "💧",
-        price: "Starting ₹349",
+        image: "/ac-repair/water-leaking.png",
+        // price: "Starting ₹349",
         keywords: ["ac water leak", "ac dripping water", "ac drain problem"],
         estimatedTime: "1 hour"
       }
@@ -183,7 +189,7 @@ export const services = {
     heroSubheading: "Professional Fridge Repair for All Brands & Models",
     heroDescription: "Don't let a broken fridge spoil your food. Our certified technicians fix all refrigerator problems with same-day service and genuine spare parts.",
     icon: "🧊",
-    image: "/Referigentor-services.jpeg",
+    image: "/fridge/Referigentor-services.jpeg",
     color: "teal",
     gradient: "from-teal-500 to-emerald-400",
     emergencyAvailable: true,
