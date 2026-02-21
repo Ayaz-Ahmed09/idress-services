@@ -69,7 +69,7 @@ export function HeroSplit({
     <section className="relative pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden text-white">
       {/* ── Background Image via next/image (auto WebP/AVIF, srcset, zero CLS) ── */}
       {heroImage && (
-        <div className="absolute inset-0 -z-20">
+        <div className="absolute inset-0 ">
           <Image
             src={heroImage}
             alt={`${serviceName || "Service"} background`}
@@ -84,7 +84,7 @@ export function HeroSplit({
 
       {/* ── Gradient overlay: readable text + image still visible ── */}
       {heroImage && (
-        <div className="absolute inset-0 -z-10 backdrop-blur-lg" />
+        <div className="absolute inset-0 z-10 " />
       )}
 
       {/* Background decoration (fallback when no image) */}
@@ -92,7 +92,7 @@ export function HeroSplit({
         <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-primary/10 blur-[100px] rounded-full" />
       )}
 
-      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative z-[1]">
+      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative -z-[10px]">
         {/* Left Content */}
         <div className="space-y-8 text-center lg:text-left">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-sm font-medium text-accent animate-in fade-in slide-in-from-bottom-4 duration-500">
