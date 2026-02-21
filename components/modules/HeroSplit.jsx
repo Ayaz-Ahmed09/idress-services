@@ -69,7 +69,7 @@ export function HeroSplit({
     <section className="relative pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden text-white">
       {/* ── Background Image via next/image (auto WebP/AVIF, srcset, zero CLS) ── */}
       {heroImage && (
-        <div className="absolute inset-0 ">
+        <div className="absolute inset-0 backdrop-brightness-50 ">
           <Image
             src={heroImage}
             alt={`${serviceName || "Service"} background`}
@@ -77,7 +77,7 @@ export function HeroSplit({
             sizes="100vw"
             className="object-cover object-center"
             quality={85}
-            loading="lazy"
+            loading="eager"
           />
         </div>
       )}

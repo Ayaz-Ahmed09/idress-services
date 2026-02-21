@@ -1,5 +1,5 @@
-import ThankYou from "@/components/ui/ThankYou";
 
+import Confetti from "@/components/ui/Thankyou"
 export const metadata = {
   title: "Booking Confirmed | Thank You",
   description:
@@ -15,7 +15,7 @@ export default function ThankYouPage() {
     <main className="min-h-screen flex items-center justify-center">
       <section className="text-center p-8">
         <h1 className="text-4xl font-bold mb-4 text-green-600">Thank You!</h1>
-        <ThankYou />
+        <Confetti numberOfPieces={100} recycle={true} />
       </section>
     </main>
   );
