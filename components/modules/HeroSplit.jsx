@@ -84,7 +84,7 @@ export function HeroSplit({
 
       {/* ── Gradient overlay: readable text + image still visible ── */}
       {heroImage && (
-        <div className="absolute inset-0 -z-10 blur-[ 4px]" />
+        <div className="absolute inset-0 -z-10 blur-[ 50px]" />
       )}
 
       {/* Background decoration (fallback when no image) */}
