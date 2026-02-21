@@ -124,7 +124,7 @@ export function HeroSplit({
             <Link href="/book">
               <Button
                 size="lg"
-                variant="default"
+                variant="accent"
               >
                 Book Expert Now
               </Button>
