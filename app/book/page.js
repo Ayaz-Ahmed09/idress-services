@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function BookPage() {
   return (
-    <main className="min-h-screen bg-gray-50 dark:bg-gray-950">
+    <main className="min-h-screen bg-transparent dark:bg-gray-950">
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">

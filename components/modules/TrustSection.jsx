@@ -97,7 +97,7 @@ export default function TrustSection() {
               transition={{ delay: index * 0.1 }}
               className="group"
             >
-              <div className="relative h-full p-8 rounded-2xl bg-white dark:bg-gray-800/50 border border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-gray-950/50">
+              <div className="relative h-full p-8 rounded-2xl bg-slate-700/50 dark:bg-gray-800/50 border border-gray-200/50 dark:border-cyan-500/80 backdrop-blur-lg hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-gray-950/50">
                 {/* Gradient accent */}
                 {/* <div
                   className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${feature.gradient} pointer-events-none blur-xl`}
@@ -132,7 +132,7 @@ export default function TrustSection() {
 
         {/* CTA Banner */}
         <motion.div
-          className="mt-16 md:mt-24 p-8 md:p-12 rounded-2xl bg-gradient-to-r from-blue-600/10 to-cyan-500/10 border border-blue-500/30 backdrop-blur-sm"
+          className="mt-16 md:mt-24 p-8 md:p-12 rounded-2xl bg-linear-to-r from-blue-600/10 to-cyan-500/10 border border-blue-500/30 backdrop-blur-sm"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -151,13 +151,13 @@ export default function TrustSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-end">
               <a
                 href="/book"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-cyan-500 hover:shadow-lg hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105 active:scale-95"
+                className="inline-flex items-center justify-center px-8 py-3 rounded-xl font-semibold text-white bg-linear-to-r from-blue-600 to-cyan-500 hover:shadow-lg hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105 active:scale-95"
               >
                 Book Service
               </a>
               <a
                 href="tel:0557864636"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-xl font-semibold text-gray-900 dark:text-white bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-3 rounded-xl font-semibold text-gray-900 dark:text-white bg-cyan-500 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300"
               >
                 Call Now
               </a>

@@ -1,6 +1,6 @@
 "use client";
 
-import emailjs from "@emailjs/browser";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
@@ -257,7 +257,6 @@ export default function ServicesForm() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const [useFallback, setUseFallback] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -269,6 +268,8 @@ export default function ServicesForm() {
   });
 
   const [availableSubServices, setAvailableSubServices] = useState([]);
+
+  const router = useRouter();
 
   useEffect(() => {
     if (formData.service && services[formData.service]) {
@@ -284,53 +285,6 @@ export default function ServicesForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const resetForm = () => {
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      address: "",
-      service: "",
-      subService: "",
-      message: "",
-    });
-    setIsSuccess(false);
-    setIsError(false);
-    setErrorMessage("");
-    setUseFallback(false);
-  };
-
-  const sendWithEmailJS = async () => {
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-
-    if (!serviceID || !templateID || !publicKey) {
-      throw new Error(
-        "EmailJS configuration is missing. Please check your environment variables.",
-      );
-    }
-
-    const templateParams = {
-      to_name: "Admin",
-      from_name: formData.name,
-      from_email: formData.email,
-      phone: formData.phone,
-      address: formData.address,
-      service:
-        SERVICE_OPTIONS.find((s) => s.value === formData.service)?.label ||
-        formData.service,
-      sub_service: formData.subService
-        ? availableSubServices.find((s) => s.id === formData.subService)
-            ?.title || formData.subService
-        : "Not specified",
-      message: formData.message || "No additional message",
-      time: new Date().toLocaleString(),
-    };
-
-    await emailjs.send(serviceID, templateID, templateParams, publicKey);
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -338,107 +292,52 @@ export default function ServicesForm() {
     setErrorMessage("");
 
     try {
-      if (useFallback) {
-        return;
+      const formPayload = new FormData(e.target);
+      formPayload.append(
+        "access_key",
+        process.env.NEXT_PUBLIC_WEB3_PUBLIC_KEY || "5b54b2db-ee98-4dee-a4ed-40b6f6e33e8b"
+      );
+
+      // We append readable service/subservice names instead of their internal slugs/ids
+      const selectedService =
+        SERVICE_OPTIONS.find((s) => s.value === formData.service)?.label ||
+        formData.service;
+      const selectedSubService = formData.subService
+        ? availableSubServices.find((s) => s.id === formData.subService)
+          ?.title || formData.subService
+        : "Not specified";
+
+      formPayload.set("service", selectedService);
+      if (formData.subService) {
+        formPayload.set("subService", selectedSubService);
       }
 
-      await sendWithEmailJS();
-      setIsSuccess(true);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formPayload,
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setIsSuccess(true);
+        e.target.reset();
+        router.push("/thank-you");
+      } else {
+        throw new Error(data.message || "Failed to submit form");
+      }
     } catch (error) {
-      console.error("EmailJS Error:", error);
+      console.error("Form Error:", error);
       setIsError(true);
       setErrorMessage(
-        error.message ||
-          "Failed to send message. Switching to fallback method.",
+        error.message || "Failed to send message. Please try again."
       );
-      setUseFallback(true);
     } finally {
       setIsLoading(false);
     }
   };
 
-  const getFormSubmitUrl = () => {
-    const email =
-      process.env.NEXT_PUBLIC_CONTACT_EMAIL || "your-email@example.com";
-    return `https://formsubmit.co/${email}`;
-  };
-
-  if (isSuccess) {
-    return (
-      <div className="w-full max-w-2xl mx-auto">
-        {/* Back arrow */}
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 mb-6 text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors group"
-        >
-          <span className="group-hover:-translate-x-1 transition-transform">
-            <Icons.ArrowLeft />
-          </span>
-          <span className="text-sm font-medium">Back to Home</span>
-        </Link>
-
-        <GlassCard className="p-8 md:p-12 text-center relative overflow-hidden">
-          {/* Animated background elements */}
-          <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-            <div className="absolute top-10 left-10 w-32 h-32 bg-green-400/20 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute bottom-10 right-10 w-40 h-40 bg-blue-400/20 rounded-full blur-3xl animate-pulse delay-700" />
-          </div>
-
-          {/* Success animation */}
-          <div className="relative">
-            <div className="w-24 h-24 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-green-500/30 animate-bounce">
-              <Icons.CheckCircle />
-            </div>
-
-            <div className="absolute -top-2 -right-2 text-yellow-400 animate-pulse">
-              <Icons.Sparkles />
-            </div>
-            <div className="absolute -bottom-2 -left-2 text-blue-400 animate-pulse delay-300">
-              <Icons.Sparkles />
-            </div>
-          </div>
-
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Thank You!
-          </h3>
-
-          <p className="text-gray-600 dark:text-gray-400 mb-4">
-            Your service request has been submitted successfully.
-          </p>
-
-          <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4 mb-8">
-            <p className="text-blue-700 dark:text-blue-400 font-semibold">
-              We'll contact you within 30 minutes!
-            </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              onClick={resetForm}
-              variant="primary"
-              className="flex items-center justify-center gap-2"
-            >
-              <Icons.Send />
-              Submit Another Request
-            </Button>
-
-            <Link href="/">
-              <Button
-                variant="outline"
-                className="flex items-center justify-center gap-2 w-full"
-              >
-                <Icons.Home />
-                Back to Home
-              </Button>
-            </Link>
-          </div>
-        </GlassCard>
-      </div>
-    );
-  }
-
   return (
-    <div className="w-full max-w-2xl mx-auto">
+    <div className="w-full max-w-2xl mx-auto bg-transparent backdrop-blur-3xl p-8">
       {/* Back arrow */}
       <Link
         href="/"
@@ -451,7 +350,7 @@ export default function ServicesForm() {
       </Link>
 
       <GlassCard className="overflow-hidden">
-        <div className="bg-gradient-to-r from-primary to-primary-dark p-6 md:p-8">
+        <div className="bg-linear-to-r from-orange-500 via-orange-600 to-orange-700 p-6 md:p-8">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
             Book a Service
           </h2>
@@ -463,32 +362,8 @@ export default function ServicesForm() {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          action={useFallback ? getFormSubmitUrl() : undefined}
-          method={useFallback ? "POST" : undefined}
           className="p-6 md:p-8 space-y-6"
         >
-          {useFallback && (
-            <input
-              type="hidden"
-              name="_subject"
-              value={`New Service Request: ${formData.service}`}
-            />
-          )}
-          {useFallback && <input type="hidden" name="_captcha" value="false" />}
-          {useFallback && (
-            <input type="hidden" name="_template" value="table" />
-          )}
-          {useFallback && (
-            <input
-              type="hidden"
-              name="_next"
-              value={
-                typeof window !== "undefined"
-                  ? `${window.location.origin}/thank-you`
-                  : "/thank-you"
-              }
-            />
-          )}
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
@@ -496,7 +371,7 @@ export default function ServicesForm() {
                 htmlFor="name"
                 className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2"
               >
-                <span className="text-primary">
+                <span className="text-orange-500">
                   <Icons.User />
                 </span>
                 Full Name *
@@ -509,7 +384,7 @@ export default function ServicesForm() {
                 onChange={handleChange}
                 required
                 placeholder="John Doe"
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+                className="w-full px-4 py-3 rounded-xl border-b-2 border-orange-500 dark:border-cyan-700 bg-slate-800/50 backdrop-blur-3xl dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
               />
             </div>
 
@@ -518,7 +393,7 @@ export default function ServicesForm() {
                 htmlFor="phone"
                 className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2"
               >
-                <span className="text-primary">
+                <span className="text-orange-500">
                   <Icons.Phone />
                 </span>
                 Phone Number *
@@ -531,7 +406,7 @@ export default function ServicesForm() {
                 onChange={handleChange}
                 required
                 placeholder="+1 234 567 890"
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+                className="w-full px-4 py-3 rounded-xl border-b-2 border-orange-500 dark:border-cyan-700 bg-slate-800/50 backdrop-blur-3xl dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
               />
             </div>
           </div>
@@ -541,7 +416,7 @@ export default function ServicesForm() {
               htmlFor="email"
               className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2"
             >
-              <span className="text-primary">
+              <span className="text-orange-500">
                 <Icons.Mail />
               </span>
               Email Address
@@ -553,7 +428,7 @@ export default function ServicesForm() {
               value={formData.email}
               onChange={handleChange}
               placeholder="john@example.com"
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+              className="w-full px-4 py-3 rounded-xl border-b-2 border-orange-500 dark:border-gray-700 bg-slate-800/50 backdrop-blur-3xl dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
             />
           </div>
 
@@ -562,7 +437,7 @@ export default function ServicesForm() {
               htmlFor="address"
               className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2"
             >
-              <span className="text-primary">
+              <span className="text-orange-500">
                 <Icons.MapPin />
               </span>
               Address *
@@ -575,7 +450,7 @@ export default function ServicesForm() {
               onChange={handleChange}
               required
               placeholder="Your complete address"
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+              className="w-full px-4 py-3 rounded-xl border-l-4 border-orange-500 dark:border-gray-700 bg-slate-800/50 backdrop-blur-3xl dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
             />
           </div>
 
@@ -585,7 +460,7 @@ export default function ServicesForm() {
                 htmlFor="service"
                 className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2"
               >
-                <span className="text-primary">
+                <span className="text-orange-500">
                   <Icons.Tool />
                 </span>
                 Select Service *
@@ -597,7 +472,7 @@ export default function ServicesForm() {
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none appearance-none cursor-pointer"
+                  className="w-full px-4 py-3 pr-12 rounded-xl border-l-2 border-orange-500 dark:border-cyan-700 bg-slate-800/50 backdrop-blur-3xl dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all outline-none appearance-none cursor-pointer"
                 >
                   <option value="">Choose a service</option>
                   {SERVICE_OPTIONS.map((service) => (
@@ -607,7 +482,10 @@ export default function ServicesForm() {
                   ))}
                 </select>
                 <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
-                  <Icons.ChevronDown />
+                  <span className="text-orange-500">
+                    <Icons.ChevronDown />
+
+                  </span>
                 </div>
               </div>
             </div>
@@ -617,7 +495,7 @@ export default function ServicesForm() {
                 htmlFor="subService"
                 className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2"
               >
-                <span className="text-primary">
+                <span className="text-orange-500">
                   <Icons.Tool />
                 </span>
                 Specific Issue
@@ -629,7 +507,7 @@ export default function ServicesForm() {
                   value={formData.subService}
                   onChange={handleChange}
                   disabled={!formData.service}
-                  className="w-full px-4 py-3 pr-12 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none appearance-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 pr-12 rounded-xl  border-l-2 border-orange-500 dark:border-gray-700 bg-slate-800/50 backdrop-blur-3xl dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none appearance-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <option value="">
                     {formData.service
@@ -643,7 +521,10 @@ export default function ServicesForm() {
                   ))}
                 </select>
                 <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
-                  <Icons.ChevronDown />
+                  <span className="text-orange-500">
+                    <Icons.ChevronDown />
+
+                  </span>
                 </div>
               </div>
             </div>
@@ -654,7 +535,7 @@ export default function ServicesForm() {
               htmlFor="message"
               className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2"
             >
-              <span className="text-primary">
+              <span className="text-orange-500">
                 <Icons.MessageSquare />
               </span>
               Additional Details
@@ -666,36 +547,29 @@ export default function ServicesForm() {
               onChange={handleChange}
               rows={4}
               placeholder="Describe your issue in detail..."
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none resize-none"
+              className="w-full px-4 py-3 rounded-xl  border-b-2 border-orange-500 dark:border-gray-700 bg-slate-800/50 backdrop-blur-3xl dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none resize-none"
             />
           </div>
 
           {isError && (
-            <div className="flex items-center gap-3 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <span className="text-red-600 dark:text-red-400 flex-shrink-0">
+            <div className="flex items-center gap-3 p-4 bg-red-500 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
+              <span className="text-red-600 dark:text-red-400 shrink-0">
                 <Icons.AlertCircle />
               </span>
               <div className="flex-1">
                 <p className="text-sm text-red-700 dark:text-red-400 font-medium">
-                  {useFallback
-                    ? "Switched to FormSubmit fallback method."
-                    : errorMessage}
+                  {errorMessage}
                 </p>
-                {useFallback && (
-                  <p className="text-xs text-red-600 dark:text-red-500 mt-1">
-                    Your message will be sent via an alternative method.
-                  </p>
-                )}
               </div>
             </div>
           )}
 
           <Button
             type="submit"
-            variant="primary"
+            variant=""
             size="lg"
             isLoading={isLoading}
-            className="w-full"
+            className="w-full bg-orange-500/80 hover:bg-orange-600 text-white"
           >
             {isLoading ? (
               <>
@@ -709,18 +583,13 @@ export default function ServicesForm() {
                 <span className="mr-2">
                   <Icons.Send />
                 </span>
-                {useFallback ? "Submit Request" : "Book Service Now"}
+                Book Service Now
               </>
             )}
           </Button>
 
           <p className="text-center text-xs text-gray-500 dark:text-gray-500">
             By submitting this form, you agree to our terms and conditions.
-            {useFallback && (
-              <span className="block mt-1">
-                Using FormSubmit fallback method.
-              </span>
-            )}
           </p>
         </form>
       </GlassCard>

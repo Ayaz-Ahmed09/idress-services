@@ -7,6 +7,7 @@ import TrustBadges from "@/components/modules/TrustBadges";
 import TrustSection from "@/components/modules/TrustSection";
 import FAQSection from "@/components/modules/FAQSection";
 import Testimonials from "@/components/modules/Services_test";
+import ContactForm from "@/components/modules/Contact";
 
 const homeTestimonials = [
   {
@@ -68,8 +69,9 @@ export default function Home() {
         <TrustSection />
         <Testimonials testimonials={homeTestimonials} />
         <FAQSection />
+        <ContactForm />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

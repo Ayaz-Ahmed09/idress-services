@@ -147,38 +147,23 @@ export default function ServiceCard({
     gradientClasses[gradient] || gradientClasses["from-blue-500 to-cyan-400"];
 
   return (
-    <div className="h-full group">
-      <div
-        className={`relative h-full rounded-2xl bg-gray-950 transition-all duration-300 overflow-hidden hover:shadow-2xl hover:shadow-blue-500/20 border border-white/10`}
-      >
-        {/* Background Image using Next Image */}
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover z-0 opacity-40 group-hover:opacity-50 transition-all duration-500 group-hover:scale-110"
-        />
+    <div className="w-full h-full flex flex-col group">
 
-        <div className="relative z-10 p-6 h-full flex flex-col">
-          {/* Icon and Emergency Badge */}
-          <div className="flex items-start justify-between mb-4">
-            <div
-              className={`text-4xl p-3 rounded-xl bg-linear-to-br ${selectedGradient} bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300`}
-            >
-              {icon}
-            </div>
-            {emergencyAvailable && (
-              <span
-                className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-bold bg-linear-to-r ${selectedGradient} text-white`}
-              >
-                <span className="relative flex h-1.5 w-1.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
-                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-white" />
-                </span>
-                24/7
-              </span>
-            )}
-          </div>
+      {/* Background Image using Next Image */}
+
+
+      <div className="p-6 flex-1 flex flex-col">
+        {/* Icon and Emergency Badge */}
+
+        <div className="border-2 border-orange-500/50 rounded-lg p-5 flex-1 flex flex-col">
+          <Image
+            src={image}
+            alt={title}
+            width={500}
+            height={500}
+            className="  opacity-80 group-hover:opacity-100 mb-2 transition-all duration-500 group-hover:scale-90"
+          />
+
 
           {/* Title */}
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-blue-600 group-hover:to-cyan-500 transition-all duration-300">
@@ -186,12 +171,12 @@ export default function ServiceCard({
           </h3>
 
           {/* Description */}
-          <p className="text-gray-300 dark:text-gray-300 text-md leading-relaxed mb-6 grow">
+          <p className="text-gray-300 content-center box-content dark:text-gray-300 text-md leading-relaxed mb-6 grow">
             {description}
           </p>
 
           {/* Buttons Container */}
-          <div className="flex items-center justify-between gap-3 mt-auto pt-4 border-t border-white/10">
+          <div className="flex items-center justify-between gap-3 mt-auto pt-4 border-t border-orange-500/50">
             {isMobile ? (
               <>
                 <Link
@@ -199,12 +184,14 @@ export default function ServiceCard({
                   className="group/btn inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300  hover:shadow-lg active:scale-95"
                   aria-label={`View details for ${title}`}
                 >
+                  Details
                   <ArrowRightCircle
                     size={18}
                     fill="black"
                     color="white"
                     className="transition-transform duration-700 group-hover/btn:translate-x-2"
                   />
+
                 </Link>
                 <a
                   href="tel:0557864636"
@@ -218,7 +205,10 @@ export default function ServiceCard({
               // Desktop: Call button + Book Now
               <>
                 <Link href={`/${slug}`}>
-                  <ArrowRightCircle />
+                  <div className="flex items-center gap-2">
+                    Details
+                    <ArrowRightCircle />
+                  </div>
                 </Link>
 
                 <Link
@@ -246,5 +236,6 @@ export default function ServiceCard({
         </div>
       </div>
     </div>
+
   );
 }

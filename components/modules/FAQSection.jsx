@@ -109,11 +109,10 @@ export default function FAQSection() {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-5 py-2 rounded-full font-semibold transition-all duration-300 ${
-                selectedCategory === cat
-                  ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-500/40"
-                  : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
-              }`}
+              className={`px-5 py-2 rounded-full font-semibold transition-all duration-300 ${selectedCategory === cat
+                ? "bg-linear-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-500/40"
+                : "glass-card text-gray-500 shadow-xl dark:text-gray-300 border border-orange-500  hover:border-cyan-500 dark:hover:border-cyan-500"
+                }`}
             >
               {cat}
             </button>
@@ -137,7 +136,7 @@ export default function FAQSection() {
                   onClick={() =>
                     setExpandedId(expandedId === faq.id ? null : faq.id)
                   }
-                  className="w-full text-left p-6 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-blue-500/50 dark:hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
+                  className="w-full text-left p-6 rounded-xl border-l-3 border-orange-500/80 border-b-2 glass-card backdrop-blur-3xl  hover:border-blue-500/50 dark:hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
                 >
                   <div className="flex items-center justify-between gap-4">
                     <div className="flex-1">
@@ -153,7 +152,7 @@ export default function FAQSection() {
                     <motion.div
                       animate={{ rotate: expandedId === faq.id ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
-                      className="flex-shrink-0 text-blue-600 dark:text-blue-400"
+                      className="shrink-0 text-blue-600 dark:text-blue-400"
                     >
                       <ChevronDown size={24} />
                     </motion.div>
@@ -169,8 +168,8 @@ export default function FAQSection() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="p-6 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-gray-900 dark:to-gray-800 border-t border-blue-200 dark:border-gray-700 rounded-b-xl">
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                      <div className="p-6 bg-transparent text-white  border-t-2 border-orange-500 border-r-4 rounded-b-xl">
+                        <p className=" leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>
@@ -184,7 +183,7 @@ export default function FAQSection() {
 
         {/* Contact CTA */}
         <motion.div
-          className="mt-12 md:mt-16 p-8 md:p-10 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-center"
+          className="mt-12 md:mt-16 p-8 md:p-10 rounded-2xl text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -196,15 +195,15 @@ export default function FAQSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:0557864636"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-cyan-500 hover:shadow-lg hover:shadow-blue-500/40 transition-all duration-300"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-white bg-cyan-500  hover:shadow-lg hover:shadow-blue-500/40 transition-all duration-300"
             >
-              📞 Call Now
+              Call Now
             </a>
             <a
               href="mailto:ahmedidrees392@gmail.com"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-gray-900 dark:text-white border-2 border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-gray-900 dark:text-white border-2 border-gray-300 dark:border-gray-600 hover:bg-sky-600 dark:hover:bg-gray-700 transition-all duration-300"
             >
-              ✉️ Email Us
+              Email Us
             </a>
           </div>
         </motion.div>

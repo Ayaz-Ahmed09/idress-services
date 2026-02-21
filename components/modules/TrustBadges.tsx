@@ -45,7 +45,7 @@ const badges = [
 
 export default function TrustBadges() {
         return (
-                <section className="py-16 bg-white dark:bg-gray-950">
+                <section className="py-16 bg-transparent dark:bg-gray-950">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                                         {badges.map((badge) => {
@@ -53,7 +53,7 @@ export default function TrustBadges() {
                                                 return (
                                                         <div
                                                                 key={badge.id}
-                                                                className="group relative p-6 rounded-2xl border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/50 hover:bg-white dark:hover:bg-gray-900 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                                                                className="group relative p-6 rounded-2xl border border-gray-200 dark:border-gray-800 bg-transparent  dark:bg-gray-900/50 hover:bg-glass hover:backdrop-blur-3xl dark:hover:bg-gray-900 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                                                         >
                                                                 {/* Top Colored Accent Bar */}
                                                                 <div className={`absolute top-0 left-0 w-full h-1 bg-linear-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${badge.color}`} />
@@ -67,7 +67,7 @@ export default function TrustBadges() {
                                                                                 {badge.title}
                                                                         </h4>
 
-                                                                        <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                                                        <p className="text-sm text-gray-800 dark:text-gray-900 leading-relaxed">
                                                                                 {badge.description}
                                                                         </p>
                                                                 </div>
