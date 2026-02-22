@@ -193,6 +193,16 @@ export default function ServiceCard({
                   />
 
                 </Link>
+                <a
+                  href="https://wa.me/+971557864636"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold text-white bg-green-500 hover:bg-green-600 transition-all duration-300 active:scale-95"
+                  aria-label={`WhatsApp for ${title} service`}
+                >
+                  <Icons.MessageCircle />
+                  Chat on Whatsapp
+                </a>
 
               </>
             ) : (
@@ -213,20 +223,22 @@ export default function ServiceCard({
                   <Icons.BookOpen />
                   <span>Book</span>
                 </Link>
+                <a
+                  href="https://wa.me/+971557864636"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold text-white bg-green-500 hover:bg-green-600 transition-all duration-300 active:scale-95"
+                  aria-label={`WhatsApp for ${title} service`}
+                >
+                  <Icons.MessageCircle />
+
+                </a>
               </>
+
             )}
 
             {/* WhatsApp button for both mobile and desktop */}
-            <a
-              href="https://wa.me/+971557864636"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold text-white bg-green-500 hover:bg-green-600 transition-all duration-300 active:scale-95"
-              aria-label={`WhatsApp for ${title} service`}
-            >
-              <Icons.MessageCircle />
-              Chat on Whatsapp
-            </a>
+
           </div>
         </div>
       </div>
