@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./globals.css";
 import { GoogleTagManager } from '@next/third-parties/google'
+import PageViewTracker from "@/components/modules/PageTracker_GTM";
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
@@ -106,6 +107,7 @@ export default function RootLayout({ children, page }) {
         className={`${outfit.variable} ${spaceGrotesk.variable} antialiased`}
       >
         <Navbar />
+        <PageViewTracker />
         {children}
         <Footer />
       </body>

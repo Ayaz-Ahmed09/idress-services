@@ -192,7 +192,7 @@ export default function WhyChooseUs() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 transition-all duration-300">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-blue-600 group-hover:to-cyan-500 transition-all duration-300">
                   {feature.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">

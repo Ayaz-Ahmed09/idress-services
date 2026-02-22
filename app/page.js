@@ -7,6 +7,7 @@ import TrustSection from "@/components/modules/TrustSection";
 import FAQSection from "@/components/modules/FAQSection";
 import Testimonials from "@/components/modules/Services_test";
 import ContactForm from "@/components/modules/Contact";
+import { StickyMobileNav } from "@/components/modules/StickyMobileNav";
 
 
 const homeTestimonials = [
@@ -68,7 +69,9 @@ export default function Home() {
         <TrustSection />
         <Testimonials testimonials={homeTestimonials} />
         <FAQSection />
+
         <ContactForm />
+        <StickyMobileNav />
       </main>
     </>
   );

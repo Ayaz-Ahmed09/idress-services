@@ -5,6 +5,7 @@ import { ArrowRightCircle } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Whatsapp } from "./Svg";
 
 // Inline SVG icons for optimal performance
 const Icons = {
@@ -171,7 +172,7 @@ export default function ServiceCard({
           </h3>
 
           {/* Description */}
-          <p className="text-gray-300 content-center box-content dark:text-gray-300 text-md leading-relaxed mb-6 grow">
+          <p className="text-gray-300 content-center dark:text-gray-300 text-md leading-relaxed mb-6 grow">
             {description}
           </p>
 
@@ -200,8 +201,9 @@ export default function ServiceCard({
                   className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold text-white bg-green-500 hover:bg-green-600 transition-all duration-300 active:scale-95"
                   aria-label={`WhatsApp for ${title} service`}
                 >
-                  <Icons.MessageCircle />
-                  Chat on Whatsapp
+                  <Whatsapp />
+                  Whatsapp
+
                 </a>
 
               </>
