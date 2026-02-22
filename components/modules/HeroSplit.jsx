@@ -92,7 +92,7 @@ export function HeroSplit({
         <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-primary/10 blur-[100px] rounded-full" />
       )}
 
-      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative -z-[10px]">
+      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative z-20">
         {/* Left Content */}
         <div className="space-y-8 text-center lg:text-left">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-sm font-medium text-accent animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -121,7 +121,18 @@ export function HeroSplit({
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start ">
-            <Link href="/book">
+            {/* Desktop / Tablet Link (Scrolls to form) */}
+            <Link href="/book" className="hidden md:block">
+              <Button
+                size="lg"
+                variant="accent"
+              >
+                Book Expert Now
+              </Button>
+            </Link>
+
+            {/* Mobile Link (Dials phone number) */}
+            <Link href="tel:+971557864636" className="block md:hidden">
               <Button
                 size="lg"
                 variant="accent"

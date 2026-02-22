@@ -194,7 +194,7 @@ export default function FAQSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:0557864636"
+              href="tel:+971557864636"
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-white bg-cyan-500  hover:shadow-lg hover:shadow-blue-500/40 transition-all duration-300"
             >
               Call Now

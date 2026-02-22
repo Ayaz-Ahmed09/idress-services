@@ -189,7 +189,7 @@ export const services = {
     heroSubheading: "Professional Fridge Repair for All Brands & Models",
     heroDescription: "Don't let a broken fridge spoil your food. Our certified technicians fix all refrigerator problems with same-day service and genuine spare parts.",
     icon: "🧊",
-    image: "/fridge/Referigentor-services.jpeg",
+    image: "/fridge/refrigentor-hero.png",
     color: "teal",
     gradient: "from-teal-500 to-emerald-400",
     emergencyAvailable: true,
@@ -199,7 +199,8 @@ export const services = {
         title: "Fridge Not Cooling",
         description: "Refrigerator not cooling or freezing? We fix thermostat issues, gas leaks, compressor problems, and fan motor failures.",
         icon: "🌡️",
-        price: "Starting ₹349",
+        image: "/fridge/Referigentor-services-min.jpeg",
+        // price: "Starting ₹349",
         keywords: ["fridge not cooling", "refrigerator not cold"],
         estimatedTime: "1-2 hours"
       },
@@ -208,7 +209,8 @@ export const services = {
         title: "Fridge Gas Refill",
         description: "Professional refrigerant gas charging for single door, double door, and side-by-side refrigerators.",
         icon: "⛽",
-        price: "Starting ₹1,299",
+        image: "/fridge/gas-refill.png",
+        // price: "Starting ₹1,299",
         keywords: ["fridge gas refill", "refrigerator gas charge"],
         estimatedTime: "1-2 hours"
       },
@@ -217,7 +219,8 @@ export const services = {
         title: "Fridge Compressor Repair",
         description: "Compressor diagnosis, repair, and replacement for all refrigerator brands with warranty.",
         icon: "⚙️",
-        price: "Starting ₹2,999",
+        image: "/fridge/comprssor.png",
+        // price: "Starting ₹2,999",
         keywords: ["fridge compressor repair", "refrigerator compressor"],
         estimatedTime: "2-4 hours"
       },
@@ -226,7 +229,8 @@ export const services = {
         title: "Thermostat Replacement",
         description: "Faulty thermostat causing temperature issues? Quick replacement with genuine parts.",
         icon: "🎛️",
-        price: "Starting ₹799",
+        image: "/fridge/thermostate.png",
+        // price: "Starting ₹799",
         keywords: ["fridge thermostat", "temperature control repair"],
         estimatedTime: "1 hour"
       },
@@ -235,7 +239,8 @@ export const services = {
         title: "Fridge Water Leaking",
         description: "Fix water pooling inside or under your refrigerator. Drain tube cleaning and door seal repair.",
         icon: "💧",
-        price: "Starting ₹299",
+        image: "/fridge/water-leak.jpeg",
+        // price: "Starting ₹299",
         keywords: ["fridge water leak", "refrigerator leaking water"],
         estimatedTime: "1 hour"
       },
@@ -244,7 +249,8 @@ export const services = {
         title: "Freezer Ice Build-up",
         description: "Excessive ice formation in freezer? We fix defrost timer, heater, and sensor problems.",
         icon: "🧊",
-        price: "Starting ₹499",
+        image: "/fridge/ice-tub.png",
+        // price: "Starting ₹499",
         keywords: ["freezer ice buildup", "fridge ice problem"],
         estimatedTime: "1-2 hours"
       },
@@ -253,7 +259,8 @@ export const services = {
         title: "Fridge Making Noise",
         description: "Diagnose and fix unusual fridge noises - humming, clicking, buzzing, or rattling sounds.",
         icon: "🔊",
-        price: "Starting ₹399",
+        image: "/fridge/noise.png",
+        // price: "Starting ₹399",
         keywords: ["fridge noise", "refrigerator loud sound"],
         estimatedTime: "1-2 hours"
       },
@@ -262,7 +269,8 @@ export const services = {
         title: "Door Gasket / Seal Replacement",
         description: "Worn-out door seal causing cooling loss? Quick gasket replacement for all fridge models.",
         icon: "🚪",
-        price: "Starting ₹599",
+        image: "/fridge/door-seal.png",
+        // price: "Starting ₹599",
         keywords: ["fridge door seal", "refrigerator gasket"],
         estimatedTime: "30 mins - 1 hour"
       }
@@ -294,6 +302,7 @@ export const services = {
     metaTitle: "TV Repair Service Near You | LED, LCD, Smart TV Repair | [City]",
     metaDescription: "Expert TV repair for LED, LCD, OLED, Smart TV. Fix display issues, no power, sound problems. All brands serviced. Call for same-day repair!",
     seoTitle: "TV Repair Dubai | LED, LCD, Smart TV Screen Fix & Motherboard Repair",
+
     seoDescription: "Expert TV repair in Dubai — LED, LCD, OLED & Smart TV. Black screen, no power, sound issues fixed at your doorstep. Samsung, Sony, LG certified. Call 055-786-4636.",
     seoKeywords: [
       "TV repair Dubai",
@@ -322,7 +331,7 @@ export const services = {
     heroSubheading: "LED, LCD, OLED & Smart TV Repair for All Brands",
     heroDescription: "Screen issues, no display, sound problems or smart TV glitches - our expert technicians fix all TV problems at your doorstep.",
     icon: "📺",
-    image: "/TV-services.jpeg",
+    image: "/tv-repair/TV-services.jpeg",
     color: "purple",
     gradient: "from-purple-500 to-pink-400",
     emergencyAvailable: false,
@@ -332,7 +341,8 @@ export const services = {
         title: "TV No Display / Black Screen",
         description: "TV turning on but no picture? We fix backlight issues, T-CON board failures, and panel problems.",
         icon: "🖥️",
-        price: "Starting ₹499",
+        image: "/tv-repair/TV-services.jpeg",
+        // price: "Starting ₹499",
         keywords: ["tv no display", "tv black screen", "tv no picture"],
         estimatedTime: "1-3 hours"
       },
@@ -341,7 +351,8 @@ export const services = {
         title: "TV Not Turning On",
         description: "TV won't power on? Power supply board repair, fuse replacement, and electrical diagnosis.",
         icon: "🔌",
-        price: "Starting ₹399",
+        image: "/tv-repair/no-power.png",
+        // price: "Starting ₹399",
         keywords: ["tv not turning on", "tv no power", "tv dead"],
         estimatedTime: "1-2 hours"
       },
@@ -350,7 +361,8 @@ export const services = {
         title: "TV Screen Replacement",
         description: "Cracked or damaged TV screen? Professional panel replacement for all TV sizes and brands.",
         icon: "💔",
-        price: "Starting ₹3,999",
+        image: "/tv-repair/screen-damage.png",
+        // price: "Starting ₹3,999",
         keywords: ["tv screen replacement", "tv panel replacement", "broken tv screen"],
         estimatedTime: "1-2 days"
       },
@@ -359,7 +371,8 @@ export const services = {
         title: "TV Sound Problems",
         description: "No sound, distorted audio, or speaker issues? Complete audio system diagnosis and repair.",
         icon: "🔊",
-        price: "Starting ₹399",
+        image: "/tv-repair/no-sound.png",
+        // price: "Starting ₹399",
         keywords: ["tv no sound", "tv audio problem", "tv speaker repair"],
         estimatedTime: "1-2 hours"
       },
@@ -368,7 +381,8 @@ export const services = {
         title: "Smart TV Software Issues",
         description: "WiFi not connecting, apps crashing, slow performance? Smart TV software update and optimization.",
         icon: "📡",
-        price: "Starting ₹299",
+        image: "/tv-repair/smart-issue.png",
+        // price: "Starting ₹299",
         keywords: ["smart tv repair", "tv wifi problem", "tv software update"],
         estimatedTime: "1 hour"
       },
@@ -377,7 +391,8 @@ export const services = {
         title: "TV Motherboard Repair",
         description: "Main board diagnosis, repair, and replacement for LED, LCD, and Smart TVs.",
         icon: "🔧",
-        price: "Starting ₹1,999",
+        image: "/tv-repair/tv-motherboard.png",
+        // price: "Starting ₹1,999",
         keywords: ["tv motherboard repair", "tv main board", "tv board replacement"],
         estimatedTime: "2-3 hours"
       },
@@ -386,7 +401,8 @@ export const services = {
         title: "TV Wall Mount Installation",
         description: "Professional TV wall mounting service. Includes bracket, cable management, and alignment.",
         icon: "🏗️",
-        price: "Starting ₹499",
+        image: "/tv-repair/tv-wall-install.png",
+        // price: "Starting ₹499",
         keywords: ["tv wall mount", "tv installation", "tv mounting service"],
         estimatedTime: "1 hour"
       },
@@ -395,7 +411,8 @@ export const services = {
         title: "TV Color / Display Issues",
         description: "Faded colors, lines on screen, flickering display? Complete display diagnosis and repair.",
         icon: "🌈",
-        price: "Starting ₹499",
+        image: "/tv-repair/no-color.png",
+        // price: "Starting ₹499",
         keywords: ["tv color problem", "tv lines on screen", "tv flickering"],
         estimatedTime: "1-2 hours"
       }
@@ -461,7 +478,8 @@ export const services = {
         title: "Washing Machine Repair",
         description: "Fix all washing machine problems - not spinning, water leaking, drum issues, error codes for front & top load.",
         icon: "👕",
-        price: "Starting ₹399",
+        image: "/electronics/washing-repair.png",
+        // price: "Starting ₹399",
         keywords: ["washing machine repair", "washer repair"],
         estimatedTime: "1-3 hours"
       },
@@ -470,7 +488,8 @@ export const services = {
         title: "Microwave Oven Repair",
         description: "Microwave not heating, turntable not working, sparking issues? Complete microwave repair service.",
         icon: "🍽️",
-        price: "Starting ₹349",
+        image: "/electronics/micro.png",
+        // price: "Starting ₹349",
         keywords: ["microwave repair", "oven repair", "microwave not heating"],
         estimatedTime: "1-2 hours"
       },
@@ -479,7 +498,8 @@ export const services = {
         title: "Water Purifier / RO Repair",
         description: "RO/UV water purifier repair, filter replacement, membrane change, and annual maintenance.",
         icon: "💧",
-        price: "Starting ₹299",
+        image: "/electronics/ro-repair.png",
+        // price: "Starting ₹299",
         keywords: ["water purifier repair", "ro repair", "ro service"],
         estimatedTime: "1 hour"
       },
@@ -488,7 +508,8 @@ export const services = {
         title: "Inverter / UPS Repair",
         description: "Inverter not charging, battery issues, beeping problems? Complete inverter and UPS repair service.",
         icon: "🔋",
-        price: "Starting ₹499",
+        image: "/electronics/ups-repair.png",
+        // price: "Starting ₹499",
         keywords: ["inverter repair", "ups repair", "inverter battery"],
         estimatedTime: "1-2 hours"
       },
@@ -497,17 +518,9 @@ export const services = {
         title: "Geyser / Water Heater Repair",
         description: "Geyser not heating, leaking, or thermostat issues? Quick repair and element replacement.",
         icon: "🚿",
-        price: "Starting ₹399",
+        image: "/electronics/gyser.png",
+        // price: "Starting ₹399",
         keywords: ["geyser repair", "water heater repair"],
-        estimatedTime: "1-2 hours"
-      },
-      {
-        id: "chimney-repair",
-        title: "Kitchen Chimney Repair",
-        description: "Chimney not working, motor issues, cleaning and filter replacement service.",
-        icon: "🏠",
-        price: "Starting ₹499",
-        keywords: ["chimney repair", "kitchen chimney service"],
         estimatedTime: "1-2 hours"
       },
       {
@@ -515,7 +528,8 @@ export const services = {
         title: "Dishwasher Repair",
         description: "Dishwasher not cleaning, draining, or starting? Complete diagnosis and repair service.",
         icon: "🍽️",
-        price: "Starting ₹499",
+        image: "/electronics/dishwasher.png",
+        // price: "Starting ₹499",
         keywords: ["dishwasher repair", "dishwasher not working"],
         estimatedTime: "1-3 hours"
       },
@@ -524,7 +538,8 @@ export const services = {
         title: "Small Appliance Repair",
         description: "Mixer grinder, iron, fan, induction cooktop, and other small appliance repairs.",
         icon: "🔌",
-        price: "Starting ₹199",
+        image: "/electronics/small.png",
+        // price: "Starting ₹199",
         keywords: ["mixer repair", "iron repair", "fan repair", "appliance repair"],
         estimatedTime: "1 hour"
       }
@@ -590,7 +605,8 @@ export const services = {
         title: "New CCTV Installation",
         description: "Complete CCTV camera system installation including cameras, DVR/NVR, cabling, and configuration.",
         icon: "📷",
-        price: "Starting ₹4,999",
+        image: "/cctv/cctv-installtion.png",
+        // price: "Starting ₹4,999",
         keywords: ["cctv installation", "security camera installation", "camera setup"],
         estimatedTime: "3-6 hours"
       },
@@ -599,7 +615,8 @@ export const services = {
         title: "IP Camera / WiFi Camera Setup",
         description: "Wireless IP camera installation with mobile app setup for remote viewing from anywhere.",
         icon: "📡",
-        price: "Starting ₹1,999",
+        image: "/cctv/ip-camers.png",
+        // price: "Starting ₹1,999",
         keywords: ["ip camera installation", "wifi camera setup", "wireless cctv"],
         estimatedTime: "1-2 hours"
       },
@@ -608,7 +625,8 @@ export const services = {
         title: "DVR / NVR Setup & Configuration",
         description: "Digital video recorder setup, hard disk installation, network configuration, and remote access setup.",
         icon: "💿",
-        price: "Starting ₹1,499",
+        image: "/cctv/dvr-setup.png",
+        // price: "Starting ₹1,499",
         keywords: ["dvr setup", "nvr configuration", "cctv recorder"],
         estimatedTime: "1-2 hours"
       },
@@ -617,7 +635,8 @@ export const services = {
         title: "CCTV Camera Repair",
         description: "Fix camera not working, blurry images, night vision issues, and recording problems.",
         icon: "🔧",
-        price: "Starting ₹499",
+        image: "/cctv/cctv-repair.png",
+        // price: "Starting ₹499",
         keywords: ["cctv repair", "camera not working", "cctv maintenance"],
         estimatedTime: "1-2 hours"
       },
@@ -626,7 +645,8 @@ export const services = {
         title: "CCTV AMC (Annual Maintenance)",
         description: "Annual maintenance contract for regular cleaning, software updates, and priority support.",
         icon: "📋",
-        price: "Starting ₹2,999/year",
+        image: "/cctv/amc.png",
+        // price: "Starting ₹2,999/year",
         keywords: ["cctv amc", "cctv maintenance contract", "camera service"],
         estimatedTime: "Ongoing"
       },
@@ -635,7 +655,8 @@ export const services = {
         title: "CCTV System Upgrade",
         description: "Upgrade from analog to IP cameras, add more cameras, or upgrade to higher resolution system.",
         icon: "⬆️",
-        price: "Starting ₹2,999",
+        image: "/cctv/cctv-upgrade.png",
+        // price: "Starting ₹2,999",
         keywords: ["cctv upgrade", "camera upgrade", "hd cctv upgrade"],
         estimatedTime: "2-4 hours"
       },
@@ -644,7 +665,8 @@ export const services = {
         title: "Remote Monitoring Setup",
         description: "Configure mobile app and cloud access to view your CCTV cameras from anywhere in the world.",
         icon: "📱",
-        price: "Starting ₹499",
+        image: "/cctv/remote.png",
+        // price: "Starting ₹499",
         keywords: ["cctv remote viewing", "camera mobile app", "remote monitoring"],
         estimatedTime: "30 mins - 1 hour"
       },
@@ -653,6 +675,7 @@ export const services = {
         title: "Commercial CCTV Solutions",
         description: "Large-scale CCTV installation for offices, warehouses, factories, retail stores, and commercial spaces.",
         icon: "🏢",
+        image: "/cctv/com-sys.png",
         price: "Custom Quote",
         keywords: ["commercial cctv", "office security camera", "business cctv"],
         estimatedTime: "1-3 days"
@@ -723,7 +746,8 @@ export const services = {
         title: "Electrical Wiring & Rewiring",
         description: "New house wiring, rewiring old buildings, concealed wiring, and open wiring installation.",
         icon: "🔌",
-        price: "Starting ₹999",
+        image: "/electricen/wiring.png",
+        // price: "Starting ₹999",
         keywords: ["electrical wiring", "house wiring", "rewiring service"],
         estimatedTime: "4-8 hours"
       },
@@ -732,6 +756,7 @@ export const services = {
         title: "Switch & Socket Repair",
         description: "Replace faulty switches, sockets, dimmers, and modular plates. All brands available.",
         icon: "🔲",
+        image: "/electricen/socket-repair.jpeg",
         price: "Starting ₹149",
         keywords: ["switch repair", "socket repair", "electrical switch"],
         estimatedTime: "30 mins"
@@ -741,7 +766,8 @@ export const services = {
         title: "MCB / Fuse Box Repair",
         description: "MCB tripping, fuse blowing, distribution board repair, and electrical panel upgrades.",
         icon: "⚡",
-        price: "Starting ₹299",
+        image: "/electricen/mcb-repair.png",
+        // price: "Starting ₹299",
         keywords: ["mcb repair", "fuse repair", "electrical panel", "mcb tripping"],
         estimatedTime: "1-2 hours"
       },
@@ -750,7 +776,8 @@ export const services = {
         title: "Fan Installation & Repair",
         description: "Ceiling fan, exhaust fan, wall fan installation and repair. Includes balancing and speed issues.",
         icon: "🌀",
-        price: "Starting ₹249",
+        image: "/electricen/fan.png",
+        // price: "Starting ₹249",
         keywords: ["fan installation", "ceiling fan repair", "fan fitting"],
         estimatedTime: "30 mins - 1 hour"
       },
@@ -759,7 +786,8 @@ export const services = {
         title: "Light & Fixture Installation",
         description: "LED lights, chandeliers, tube lights, spot lights, and decorative lighting installation.",
         icon: "💡",
-        price: "Starting ₹199",
+        image: "/electricen/light.png",
+        // price: "Starting ₹199",
         keywords: ["light installation", "led light fitting", "chandelier installation"],
         estimatedTime: "30 mins - 2 hours"
       },
@@ -768,7 +796,8 @@ export const services = {
         title: "Short Circuit Repair",
         description: "Emergency short circuit diagnosis and repair. Identify faulty wiring and prevent electrical hazards.",
         icon: "🔥",
-        price: "Starting ₹499",
+        image: "/electricen/short.png",
+        // price: "Starting ₹499",
         keywords: ["short circuit repair", "electrical short", "power trip"],
         estimatedTime: "1-3 hours"
       },
@@ -777,7 +806,8 @@ export const services = {
         title: "Earthing / Grounding Service",
         description: "Professional electrical earthing installation and testing for home and commercial safety.",
         icon: "🌍",
-        price: "Starting ₹1,499",
+        image: "/electricen/earthing.png",
+        // price: "Starting ₹1,499",
         keywords: ["earthing service", "grounding", "electrical earthing"],
         estimatedTime: "2-4 hours"
       },
@@ -786,7 +816,8 @@ export const services = {
         title: "Doorbell & Intercom Installation",
         description: "Video doorbell, wireless doorbell, and intercom system installation and setup.",
         icon: "🔔",
-        price: "Starting ₹299",
+        image: "/electricen/doorbell.png",
+        // price: "Starting ₹299",
         keywords: ["doorbell installation", "video doorbell", "intercom setup"],
         estimatedTime: "30 mins - 1 hour"
       }

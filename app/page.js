@@ -1,5 +1,4 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+
 import ScrollAnimations from "./components/ScrollAnimations";
 import PremiumHero from "@/components/modules/PremiumHero";
 import ServicesSection from "@/components/modules/ServicesSection";
@@ -8,7 +7,7 @@ import TrustSection from "@/components/modules/TrustSection";
 import FAQSection from "@/components/modules/FAQSection";
 import Testimonials from "@/components/modules/Services_test";
 import ContactForm from "@/components/modules/Contact";
-import Link from "next/link";
+
 
 const homeTestimonials = [
   {
@@ -62,21 +61,15 @@ export default function Home() {
   return (
     <>
       <ScrollAnimations />
-      {/* <Navbar /> */}
-
       <main>
         <PremiumHero />
-
-
         <ServicesSection />
         <TrustBadges />
         <TrustSection />
         <Testimonials testimonials={homeTestimonials} />
         <FAQSection />
-        <Link href="/thank-you">Thank You</Link>
         <ContactForm />
       </main>
-      {/* <Footer /> */}
     </>
   );
 }

@@ -194,7 +194,7 @@ export default function ServiceCard({
 
                 </Link>
                 <a
-                  href="tel:0557864636"
+                  href="tel:+971557864636"
                   className="inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-sm font-semibold text-white transition-all duration-300 bg-linear-to-r from-green-600 to-emerald-500 hover:shadow-lg hover:shadow-green-500/30 active:scale-95"
                   aria-label={`Call for ${title} service`}
                 >
@@ -224,7 +224,7 @@ export default function ServiceCard({
 
             {/* WhatsApp button for both mobile and desktop */}
             <a
-              href="https://wa.me/0557864636"
+              href="https://wa.me/+971557864636"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold text-white bg-green-500 hover:bg-green-600 transition-all duration-300 active:scale-95"

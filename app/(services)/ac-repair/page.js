@@ -1,5 +1,4 @@
-import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
+
 import { HeroSplit } from "@/components/modules/HeroSplit";
 import { ServiceProcess } from "@/components/modules/ServiceProcess";
 import { StickyMobileNav } from "@/components/modules/StickyMobileNav";

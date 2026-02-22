@@ -66,7 +66,7 @@ export default function ServicesSection() {
             Can't find what you're looking for?
           </p>
           <a
-            href="#contact"
+            href="https://wa.me/971557864636"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-linear-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105"
           >
             Contact Support

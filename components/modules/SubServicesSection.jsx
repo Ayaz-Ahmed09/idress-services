@@ -109,7 +109,7 @@ export default function SubServicesSection({
                   {/* ── CTA BUTTONS — pushed to bottom of card ── */}
                   <div className="flex gap-2.5 pt-1 mt-auto">
                     <a
-                      href="https://wa.me/0557864636"
+                      href="https://wa.me/+971557864636"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 inline-flex items-center justify-center px-4 py-2.5 rounded-xl font-semibold text-sm text-white bg-green-500 hover:bg-green-600 border border-green-500 transition-all duration-300 active:scale-95"
@@ -119,7 +119,7 @@ export default function SubServicesSection({
 
                     {mounted && isMobile ? (
                       <a
-                        href="tel:0557864636"
+                        href="tel:+971557864636"
                         className="flex-1 inline-flex items-center justify-center px-4 py-2.5 rounded-xl font-semibold text-sm text-white bg-gray-700 hover:bg-gray-600 border border-gray-600 transition-all duration-300 active:scale-95"
                       >
                         Call Now
@@ -146,7 +146,7 @@ export default function SubServicesSection({
             {serviceTitle.toLowerCase()} issues.
           </p>
           <a
-            href="tel:0557864636"
+            href="tel:+971557864636"
             className="inline-flex items-center px-8 py-4 rounded-xl font-semibold text-white bg-sky-600 hover:bg-sky-700 hover:shadow-2xl transition-all duration-300 hover:scale-105"
           >
             Call for Custom Quote

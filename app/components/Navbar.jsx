@@ -114,7 +114,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <a
-          href="#booking"
+          href="/book"
           className="hidden rounded-xl bg-linear-to-r from-(--accent-cyan) to-[#00B8D4] px-6 py-2.5 text-sm font-semibold text-(--bg-primary) transition-all duration-300 hover:shadow-lg hover:shadow-(--accent-cyan)/25 hover:scale-105 lg:block"
         >
           Book Now
@@ -210,7 +210,7 @@ export default function Navbar() {
 
 
             <Link
-              href="/book"
+              href="tel:+971557864636"
               onClick={() => setIsOpen(false)}
               className="mt-4 block rounded-xl bg-linear-to-r from-(--accent-cyan) to-[#00B8D4] px-6 py-3 text-center text-base font-semibold text-(--bg-primary) transition-all duration-300 hover:shadow-lg hover:shadow-(--accent-cyan)/25"
             >

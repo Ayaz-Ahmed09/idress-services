@@ -1,5 +1,4 @@
-import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
+
 import { HeroSplit } from "@/components/modules/HeroSplit";
 import { ServiceProcess } from "@/components/modules/ServiceProcess";
 import { StickyMobileNav } from "@/components/modules/StickyMobileNav";
@@ -78,7 +77,7 @@ export default function TvRepairPage() {
           title="Professional TV Repair & Installation in Dubai"
           subtitle="LED, LCD, OLED or Smart TV — we fix black screens, no power, sound issues, and broken displays at your doorstep. All brands serviced."
           serviceName="TV Repair"
-          heroImage="/TV-services.jpeg"
+          heroImage="/tv-repair/tv-hero.png"
           features={[
             "Screen Replacement Experts",
             "Motherboard & PCB Repair",

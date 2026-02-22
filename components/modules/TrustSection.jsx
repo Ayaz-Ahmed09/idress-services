@@ -156,7 +156,7 @@ export default function TrustSection() {
                 Book Service
               </a>
               <a
-                href="tel:0557864636"
+                href="tel:+971557864636"
                 className="inline-flex items-center justify-center px-8 py-3 rounded-xl font-semibold text-gray-900 dark:text-white bg-cyan-500 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300"
               >
                 Call Now
