@@ -181,7 +181,7 @@ export default function ServiceCard({
               <>
                 <Link
                   href={`/${slug}`}
-                  className="group/btn inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300  hover:shadow-lg active:scale-95"
+                  className="group/btn inline-flex items-center justify-center ring-1 ring-orange-500 gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300  hover:shadow-lg active:scale-95"
                   aria-label={`View details for ${title}`}
                 >
                   Details
@@ -193,13 +193,7 @@ export default function ServiceCard({
                   />
 
                 </Link>
-                <a
-                  href="tel:+971557864636"
-                  className="inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-sm font-semibold text-white transition-all duration-300 bg-linear-to-r from-green-600 to-emerald-500 hover:shadow-lg hover:shadow-green-500/30 active:scale-95"
-                  aria-label={`Call for ${title} service`}
-                >
-                  <Icons.Phone />
-                </a>
+
               </>
             ) : (
               // Desktop: Call button + Book Now
@@ -231,6 +225,7 @@ export default function ServiceCard({
               aria-label={`WhatsApp for ${title} service`}
             >
               <Icons.MessageCircle />
+              Chat on Whatsapp
             </a>
           </div>
         </div>

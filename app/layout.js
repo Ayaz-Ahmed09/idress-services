@@ -2,7 +2,7 @@ import { Outfit, Space_Grotesk } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./globals.css";
-
+import { GoogleTagManager } from '@next/third-parties/google'
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
@@ -98,15 +98,10 @@ const jsonLd = {
   ],
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, page }) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
+      <GoogleTagManager gtmId="GTM-KCPJ9C9M" dataLayerName={`VISTED PAGES ${page}`} />
       <body
         className={`${outfit.variable} ${spaceGrotesk.variable} antialiased`}
       >

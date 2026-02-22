@@ -198,7 +198,7 @@ export default function ContactUs() {
 
                         {/* ─── Contact Form Section ─── */}
                         <div className="max-w-6xl mx-auto">
-                                <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-start">
+                                <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-start p-4">
                                         {/* Left column — info */}
                                         <div className="lg:col-span-2 pt-4">
                                                 <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-3 py-1 text-[10px] font-bold tracking-[0.2em] text-violet-300 uppercase">
@@ -208,7 +208,7 @@ export default function ContactUs() {
                                                         </svg>
                                                         Send Message
                                                 </div>
-                                                <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4 leading-tight">
+                                                <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4 p-3 leading-tight">
                                                         Let's Start a<br />
                                                         <span className="bg-linear-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
                                                                 Conversation

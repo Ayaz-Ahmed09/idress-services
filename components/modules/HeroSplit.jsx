@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { CheckCircle2, Star } from "lucide-react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import Link from "next/link";
+import { Whatsapp } from "../ui/Svg";
 
 export function HeroSplit({
   title,
@@ -137,7 +138,7 @@ export function HeroSplit({
                 size="lg"
                 variant="accent"
               >
-                Book Expert Now
+                <Whatsapp />
               </Button>
             </Link>
           </div>

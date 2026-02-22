@@ -8,6 +8,7 @@ import Image from "next/image";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
 import { services } from "@/data/services";
+import { Whatsapp } from "../ui/Svg";
 
 const SERVICE_OPTIONS = Object.values(services).map((s) => ({
   value: s.slug,
@@ -134,7 +135,7 @@ export default function PremiumHero() {
             >
               <Link
                 href="/book"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-white bg-linear-to-r from-blue-600 to-cyan-500 hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105 active:scale-95"
+                className="lg:inline-flex items-center hidden md:block justify-center px-8 py-4 rounded-xl font-semibold text-white bg-linear-to-r from-blue-600 to-cyan-500 hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105 active:scale-95"
               >
                 <span>Book Now</span>
                 <svg
@@ -151,6 +152,16 @@ export default function PremiumHero() {
                   <line x1="5" y1="12" x2="19" y2="12" />
                   <polyline points="12 5 19 12 12 19" />
                 </svg>
+              </Link>
+
+              <Link href="tel:+971557864636" className="block md:hidden ">
+                <Button
+                  size="lg"
+                  variant="blue"
+                  className="justify-center px-8 py-4 rounded-xl font-semibold text-white bg-linear-to-r from-blue-600 to-cyan-500 hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105 active:scale-95 "
+                >
+                  <Whatsapp />
+                </Button>
               </Link>
 
             </motion.div>
