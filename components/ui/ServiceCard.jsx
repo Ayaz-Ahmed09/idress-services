@@ -148,103 +148,92 @@ export default function ServiceCard({
     gradientClasses[gradient] || gradientClasses["from-blue-500 to-cyan-400"];
 
   return (
-    <div className="w-full h-full flex flex-col group">
+    <div className="w-full h-full flex flex-col group p-1 sm:p-2 md:p-3 lg:p-4">
+      <div className="border border-orange-500/30 hover:border-orange-500/60 transition-all duration-300 rounded-2xl p-4 sm:p-5 flex-1 flex flex-col bg-transparent dark:group-hover:bg-gray-900/20 group-hover:bg-gray-50/50">
 
-      {/* Background Image using Next Image */}
-
-
-      <div className="p-6 flex-1 flex flex-col">
-        {/* Icon and Emergency Badge */}
-
-        <div className="border-2 border-orange-500/50 rounded-lg p-5 flex-1 flex flex-col">
+        {/* Image Container with fixed responsive height */}
+        <div className="w-full h-[180px] sm:h-[190px] md:h-[210px] items-center justify-center flex rounded-xl overflow-hidden mb-4 shrink-0 relative bg-gray-100 dark:bg-gray-800">
           <Image
             src={image}
             alt={title}
             width={500}
             height={500}
-            className="  opacity-80 group-hover:opacity-100 mb-2 transition-all duration-500 group-hover:scale-90"
+            className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105"
           />
+        </div>
 
-
+        {/* Content Container */}
+        <div className="flex-1 flex flex-col">
           {/* Title */}
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-blue-600 group-hover:to-cyan-500 transition-all duration-300">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-blue-600 group-hover:to-cyan-500 transition-all duration-300 line-clamp-2">
             {title}
           </h3>
 
           {/* Description */}
-          <p className="text-gray-300 content-center dark:text-gray-300 text-md leading-relaxed mb-6 grow">
+          <p className="text-sm sm:text-base text-gray-400 dark:text-gray-300 leading-relaxed mb-6 flex-1 line-clamp-3">
             {description}
           </p>
 
           {/* Buttons Container */}
-          <div className="flex items-center justify-between gap-3 mt-auto pt-4 border-t border-orange-500/50">
+          <div className="flex flex-wrap items-center justify-between gap-2 mt-auto pt-4 border-t border-gray-200 dark:border-gray-800">
             {isMobile ? (
               <>
                 <Link
                   href={`/${slug}`}
-                  className="group/btn inline-flex items-center justify-center ring-1 ring-orange-500 gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300  hover:shadow-lg active:scale-95"
+                  className="group/btn flex-1 min-w-[120px] inline-flex items-center justify-center ring-1 ring-orange-500 gap-1.5 px-3 py-2.5 rounded-lg text-sm font-semibold text-gray-900 dark:text-white transition-all duration-300 hover:shadow-lg active:scale-95"
                   aria-label={`View details for ${title}`}
                 >
-                  Details
+                  <span className="whitespace-nowrap">Details</span>
                   <ArrowRightCircle
                     size={18}
                     fill="black"
                     color="white"
-                    className="transition-transform duration-700 group-hover/btn:translate-x-2"
+                    className="transition-transform duration-700 group-hover/btn:translate-x-1"
                   />
-
                 </Link>
                 <a
                   href="https://wa.me/+971557864636"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold text-white bg-green-500 hover:bg-green-600 transition-all duration-300 active:scale-95"
+                  className="flex-1 min-w-[120px] inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-lg text-sm font-semibold text-white bg-green-500 hover:bg-green-600 transition-all duration-300 active:scale-95"
                   aria-label={`WhatsApp for ${title} service`}
                 >
-                  <Whatsapp />
-                  Whatsapp
-
+                  <Whatsapp className="w-5 h-5 text-white" />
+                  <span className="whitespace-nowrap text-white">Whatsapp</span>
                 </a>
-
               </>
             ) : (
-              // Desktop: Call button + Book Now
+              // Desktop: Details link + Book Now + WhatsApp icon
               <>
-                <Link href={`/${slug}`}>
-                  <div className="flex items-center gap-2">
-                    Details
-                    <ArrowRightCircle />
-                  </div>
+                <Link href={`/${slug}`} className="group/link flex items-center gap-1.5 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 transition-colors">
+                  Details
+                  <ArrowRightCircle size={16} className="transition-transform duration-300 group-hover/link:translate-x-1" />
                 </Link>
 
-                <Link
-                  href={`/book?service=${slug}`}
-                  className={`inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-white transition-all duration-300 bg-linear-to-r ${selectedGradient} hover:shadow-lg active:scale-95`}
-                  aria-label={`Book ${title} service`}
-                >
-                  <Icons.BookOpen />
-                  <span>Book</span>
-                </Link>
-                <a
-                  href="https://wa.me/+971557864636"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold text-white bg-green-500 hover:bg-green-600 transition-all duration-300 active:scale-95"
-                  aria-label={`WhatsApp for ${title} service`}
-                >
-                  <Icons.MessageCircle />
-
-                </a>
+                <div className="flex items-center ml-auto gap-24  ">
+                  <Link
+                    href={`/book?service=${slug}`}
+                    className={`inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold text-white transition-all duration-300 bg-linear-to-r from-blue-500 to-cyan-400 hover:shadow-lg hover:-translate-y-0.5 active:scale-95`}
+                    aria-label={`Book ${title} service`}
+                  >
+                    <Icons.BookOpen />
+                    {/* <span>Book</span> */}
+                  </Link>
+                  <a
+                    href="https://wa.me/+971557864636"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center p-2.5 rounded-lg text-white bg-green-500 hover:bg-green-600 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg active:scale-95"
+                    aria-label={`WhatsApp for ${title} service`}
+                  >
+                    <Whatsapp className="w-5 h-5 text-white" />
+                  </a>
+                </div>
               </>
-
             )}
-
-            {/* WhatsApp button for both mobile and desktop */}
-
           </div>
         </div>
       </div>
     </div>
-
   );
 }

@@ -11,7 +11,8 @@ export default function PageViewTracker() {
                 sendGTMEvent({
                         event: "page_view",
                         page_path: pathname,
-                        page_name: document.title // Sends the actual name/title of the visited page
+                        page_name: document.title
+
                 });
         }, [pathname]);
 

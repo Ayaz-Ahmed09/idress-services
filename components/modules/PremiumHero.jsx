@@ -158,9 +158,10 @@ export default function PremiumHero() {
                 <Button
                   size="lg"
                   variant="blue"
-                  className="justify-center px-8 py-4 rounded-xl font-semibold text-white bg-linear-to-r from-blue-600 to-cyan-500 hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105 active:scale-95 "
+                  className="justify-center px-9 py-4 rounded-xl font-semibold text-white bg-linear-to-r from-blue-600 to-cyan-500 hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105 active:scale-95 "
                 >
                   <Whatsapp />
+                  <span className="ml-3">Chat via Whatsapp</span>
                 </Button>
               </Link>
 
