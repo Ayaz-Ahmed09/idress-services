@@ -19,9 +19,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  title: "Precision AC Repair & Diagnostics | Premium HVAC Service Dubai",
+  title: "Idress electronices Services | In Dubai",
   description:
-    "Expert AC repair, maintenance, and diagnostics for all brands in Dubai. 24/7 emergency service, certified technicians, and smart diagnostic tools. Book your AC service today.",
+    "Professional Electronics Repair Services in Dubai. Expert technicians for AC, Fridge, TV, Washing Machine, and all home appliances. 24/7 Emergency Service.",
   keywords: [
     "AC repair Dubai",
     "HVAC service",
@@ -33,11 +33,20 @@ export const metadata = {
     "AC deep cleaning Dubai",
   ],
   openGraph: {
-    title: "Precision AC Repair & Diagnostics | Premium HVAC Service Dubai",
+    title: "Idress electronices Services | In Dubai",
     description:
-      "Expert AC repair, maintenance, and diagnostics for all brands in Dubai. 24/7 emergency service.",
+      "Professional Electronics Repair Services in Dubai. Expert technicians for AC, Fridge, TV, Washing Machine, and all home appliances. 24/7 Emergency Service.",
     type: "website",
     locale: "en_AE",
+    images: [
+      {
+        url: "https://idresselectronicesservices.com/graphgql.webp",
+        alt: "Idress electronices Services",
+        width: 1200,
+        height: 600,
+
+      },
+    ],
   },
   robots: {
     index: true,
@@ -50,22 +59,18 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "LocalBusiness",
-      name: "Precision AC Repair & Diagnostics",
+      name: "Idress electronices Services",
       description:
-        "Premium AC repair, maintenance, and diagnostic services for all brands in Dubai.",
-      url: "https://precisionac.ae",
-      telephone: "+971-50-123-4567",
+        "Professional Electronics Repair Services in Dubai. Expert technicians for AC, Fridge, TV, Washing Machine, and all home appliances. 24/7 Emergency Service.",
+      url: "https://idresselectronicesservices.com/",
+      logo: "https://idresselectronicesservices.com/3d-logo.png",
+
+      telephone: "+971 55 786 4636",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Business Bay",
         addressLocality: "Dubai",
         addressRegion: "Dubai",
         addressCountry: "AE",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 25.1865,
-        longitude: 55.2628,
       },
       openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
@@ -81,31 +86,37 @@ const jsonLd = {
         opens: "00:00",
         closes: "23:59",
       },
-      priceRange: "$$",
+
       areaServed: "Dubai, UAE",
     },
     {
       "@type": "Service",
-      name: "AC Repair & Maintenance",
+      name: "Repair & Maintenance",
       provider: {
         "@type": "LocalBusiness",
-        name: "Precision AC Repair & Diagnostics",
+        name: "Idress electronices Services",
+        licenseNumber: "213983",
+        licencseName: "IDREES HUSSAIN ELECTRONICES SERVICES REP DEVICES",
       },
-      serviceType: "HVAC Repair",
+      serviceType: "Electronics Repair Services",
       areaServed: "Dubai, UAE",
       description:
-        "Professional AC repair, deep cleaning, installation, and maintenance services for residential and commercial properties.",
+        "Professional Electronics Repair Services in Dubai. Expert technicians for AC, Fridge, TV, Washing Machine, and all home appliances. 24/7 Emergency Service.",
     },
   ],
 };
 
-export default function RootLayout({ children, page }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <GoogleTagManager gtmId="GTM-KCPJ9C9M" dataLayerName={`VISTED PAGES ${page}`} />
+      <GoogleTagManager gtmId="GTM-KCPJ9C9M" />
       <body
         className={`${outfit.variable} ${spaceGrotesk.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Navbar />
         <PageViewTracker />
         {children}

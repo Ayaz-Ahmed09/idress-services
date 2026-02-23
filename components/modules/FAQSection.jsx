@@ -154,7 +154,7 @@ export default function FAQSection() {
                       transition={{ duration: 0.3 }}
                       className="shrink-0 text-blue-600 dark:text-blue-400"
                     >
-                      <ChevronDown size={24} />
+                      <ChevronDown size={24} className="text-orange-700" />
                     </motion.div>
                   </div>
                 </button>

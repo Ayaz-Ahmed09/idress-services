@@ -2,7 +2,7 @@ export const dynamic = "force-static";
 
 
 export default function sitemap() {
-  const baseUrl = "https://yourdomain.com";
+  const baseUrl = "https://idresselectronicesservices.com";
   const services = [
     "ac-repair",
     "fridge-repair",

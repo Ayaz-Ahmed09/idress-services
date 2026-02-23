@@ -169,7 +169,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-(--border-glass) pt-8 sm:flex-row">
           <p className="text-xs text-(--text-muted)">
-            © 2026 PrecisionAC. All rights reserved. Licensed & Insured in UAE.
+            © 2026 Idress electronices Services. All rights reserved. Licensed & Insured in UAE.
           </p>
           <div className="flex items-center gap-4 text-xs text-(--text-muted)">
             <a

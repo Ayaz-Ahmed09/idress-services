@@ -88,10 +88,10 @@ const rightColumn = testimonials.filter((_, i) => i % 2 !== 0);
 
 function TestimonialCard({ name, location, text, rating }) {
   return (
-    <div className="bg-gradient-to-br from-cream-50 to-cream-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-5 mb-4 shadow-md hover:shadow-xl transition-all duration-300 border border-sky-200/50 dark:border-sky-800/30 relative overflow-hidden group">
+    <div className="bg-linear-to-br from-cream-50 to-cream-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-5 mb-4 shadow-md hover:shadow-xl transition-all duration-300 border border-sky-200/50 dark:border-sky-800/30 relative overflow-hidden group">
       {/* Sky blue edge accent */}
-      <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-sky-400 to-sky-500" />
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sky-400 to-transparent" />
+      <div className="absolute top-0 left-0 w-1 h-full bg-linear-to-b from-sky-400 to-sky-500" />
+      <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-sky-400 to-transparent" />
 
       {/* Quote icon */}
       <div className="absolute top-3 right-3 text-sky-200 dark:text-sky-800 opacity-50">
@@ -116,7 +116,7 @@ function TestimonialCard({ name, location, text, rating }) {
         </p>
 
         {/* Author info */}
-        <div className="border-t border-gray-200 dark:border-gray-700 pt-3">
+        <div className="border-t border-violet-500 dark:border-violet-700 pt-3">
           <p className="font-bold text-gray-900 dark:text-white text-sm">
             {name}
           </p>
@@ -139,7 +139,7 @@ export default function TestimonialSlider() {
 
     let leftPos = 0;
     let rightPos = -50; // Start at different position for reverse effect
-    const speed = 0.3;
+    const speed = 0.8;
 
     const animate = () => {
       leftPos += speed;
@@ -181,10 +181,10 @@ export default function TestimonialSlider() {
         {/* Testimonials container with fade edges */}
         <div className="relative h-[500px] md:h-[600px] overflow-hidden">
           {/* Top fade */}
-          <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-gray-50 dark:from-gray-950 to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 left-0 right-0 h-20 bg-linear-to-b from-gray-50 dark:from-blue-950 to-transparent z-10 pointer-events-none" />
 
           {/* Bottom fade */}
-          <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-50 dark:from-gray-950 to-transparent z-10 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-20 bg-linear-to-t from-gray-50 dark:from-blue-950 to-transparent z-10 pointer-events-none" />
 
           {/* Two columns */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 h-full">

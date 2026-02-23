@@ -7,6 +7,6 @@ export default function robots() {
       allow: "/",
       disallow: ["/api/", "/book", "/thank-you"],
     },
-    sitemap: "https://yourdomain.com/sitemap.xml",
+    sitemap: "https://idresselectronicesservices.com/sitemap.xml",
   };
 }

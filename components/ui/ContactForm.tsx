@@ -102,7 +102,7 @@ export function ContactForm() {
                                         {Array.from({ length: 8 }, (_, i) => (
                                                 <div
                                                         key={i}
-                                                        className="absolute border border-violet-300 rounded-full"
+                                                        className="absolute border border-violet-500 rounded-full"
                                                         style={{
                                                                 width: 100 + i * 80,
                                                                 height: 100 + i * 80,

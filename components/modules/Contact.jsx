@@ -29,7 +29,7 @@ export default function ContactForm({ heading = "GET IN TOUCH" }) {
         };
 
         return (
-                <section className="relative min-h-screen flex items-center justify-center p-6 bg-slate-950">
+                <section className="relative min-h-screen flex items-center justify-center p-6 ">
                         {/* Background Glows */}
                         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-600/20 rounded-full blur-[100px] animate-pulse" />
                         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-indigo-600/20 rounded-full blur-[120px] animate-pulse" />
