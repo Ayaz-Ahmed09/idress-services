@@ -154,7 +154,7 @@ export default function PremiumHero() {
                 </svg>
               </Link>
 
-              <Link href="tel:+971557864636" className="block md:hidden ">
+              <Link href="https://wa.me/971557864636" className="block md:hidden ">
                 <Button
                   size="lg"
                   variant="blue"

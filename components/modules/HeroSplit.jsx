@@ -133,7 +133,7 @@ export function HeroSplit({
             </Link>
 
             {/* Mobile Link (Dials phone number) */}
-            <Link href="tel:+971557864636" className="block md:hidden ">
+            <Link href="https://wa.me/971557864636" className="block md:hidden ">
               <Button
                 size="lg"
                 variant="accent"
