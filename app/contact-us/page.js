@@ -1,56 +1,28 @@
 import React from 'react'
+import { FloatingParticles } from '@/components/ui/FloatingParticles'
 import { ParallaxCard } from '@/components/ui/ParallaxCard'
 import { ContactForm } from '@/components/ui/ContactForm'
-function GeometricPattern({ color }) {
+function GeometricPattern ({ color }) {
         return (
                 <div className="absolute inset-0 overflow-hidden rounded-2xl opacity-[0.07]">
-                        {Array.from({ length: 6 }, (_, i) => (
+                        { Array.from({ length: 6 }, (_, i) => (
                                 <div
-                                        key={i}
+                                        key={ i }
                                         className="absolute border rounded-full"
-                                        style={{
+                                        style={ {
                                                 borderColor: color,
                                                 width: 50 + i * 40,
                                                 height: 50 + i * 40,
-                                                left: `${50 - (50 + i * 40) / 6}%`,
-                                                top: `${50 - (50 + i * 40) / 8}%`,
-                                        }}
+                                                left: `${ 50 - (50 + i * 40) / 6 }%`,
+                                                top: `${ 50 - (50 + i * 40) / 8 }%`,
+                                        } }
                                 />
-                        ))}
+                        )) }
                 </div>
         );
 }
-function FloatingParticles({ count, color }) {
-        const particles = Array.from({ length: count }, (_, i) => ({
-                id: i,
-                x: Math.random() * 100,
-                y: Math.random() * 100,
-                size: Math.random() * 4 + 1,
-                opacity: Math.random() * 0.4 + 0.1,
-                delay: Math.random() * 5,
-        }));
-        return (
-                <div className="absolute inset-0 overflow-hidden rounded-2xl">
-                        {particles.map((p) => (
-                                <div
-                                        key={p.id}
-                                        className="absolute rounded-full animate-pulse"
-                                        style={{
-                                                left: `${p.x}%`,
-                                                top: `${p.y}%`,
-                                                width: p.size,
-                                                height: p.size,
-                                                backgroundColor: color,
-                                                opacity: p.opacity,
-                                                animationDelay: `${p.delay}s`,
-                                                animationDuration: `${2 + Math.random() * 3}s`,
-                                        }}
-                                />
-                        ))}
-                </div>
-        );
-}
-export default function ContactUs() {
+
+export default async function ContactUs () {
         const contactCards = [
                 {
                         title: "Email Us",
@@ -101,7 +73,7 @@ export default function ContactUs() {
 
         return (
                 <div className="min-h-screen bg-[#08080e] relative overflow-hidden py-20 ">
-                        {/* Ambient background blurs */}
+                        {/* Ambient background blurs */ }
                         <div className="fixed inset-0 pointer-events-none">
                                 <div className="absolute top-[-15%] left-[-5%] w-[500px] h-[500px] rounded-full bg-violet-900/20 blur-[150px]" />
                                 <div className="absolute top-[30%] right-[-10%] w-[600px] h-[600px] rounded-full bg-blue-900/15 blur-[150px]" />
@@ -110,13 +82,13 @@ export default function ContactUs() {
                         </div>
                         <div
                                 className="fixed inset-0 opacity-[0.025] pointer-events-none"
-                                style={{
+                                style={ {
                                         backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
                                         backgroundSize: "60px 60px",
-                                }}
+                                } }
                         />
                         <div className="relative z-10 px-4 md:px-8 pb-20">
-                                {/* ─── Hero Header ─── */}
+                                {/* ─── Hero Header ─── */ }
                                 <div className="text-center pt-12 md:pt-16 pb-14 md:pb-20 max-w-3xl mx-auto">
                                         <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium tracking-[0.2em] text-white/50 backdrop-blur-sm">
                                                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -130,26 +102,26 @@ export default function ContactUs() {
                                         </p>
                                 </div>
                         </div>
-                        {/* ─── Contact Cards Grid ─── */}
+                        {/* ─── Contact Cards Grid ─── */ }
                         <div className="flex flex-wrap items-stretch justify-center gap-6 lg:gap-8 max-w-5xl mx-auto mb-20 md:mb-28">
-                                {contactCards.map((card, i) => (
+                                { contactCards.map((card, i) => (
                                         <ParallaxCard
-                                                key={i}
-                                                layers={[
-                                                        { depth: -5, content: <GeometricPattern color={card.accentColor} /> },
-                                                        { depth: 0.2, content: <FloatingParticles count={10} color={card.accentColor} /> },
+                                                key={ i }
+                                                layers={ [
+                                                        { depth: -5, content: <GeometricPattern color={ card.accentColor } /> },
+                                                        { depth: 0.2, content: <FloatingParticles count={ 10 } color={ card.accentColor } /> },
                                                         {
                                                                 depth: 1.5,
                                                                 content: (
                                                                         <div className="mt-[-70px] flex items-center justify-center">
-                                                                                {/* Lottie glow backdrop */}
+                                                                                {/* Lottie glow backdrop */ }
                                                                                 <div
                                                                                         className="absolute rounded-full blur-2xl"
-                                                                                        style={{
+                                                                                        style={ {
                                                                                                 width: 80,
                                                                                                 height: 80,
                                                                                                 background: card.glowColor,
-                                                                                        }}
+                                                                                        } }
                                                                                 />
 
                                                                         </div>
@@ -158,48 +130,48 @@ export default function ContactUs() {
                                                         {
                                                                 depth: 2.5,
                                                                 content: (
-                                                                        <div className={`absolute top-6 right-6 text-[10px] font-bold tracking-[0.3em] ${card.numberColor}`}>
-                                                                                {card.numberLabel}
+                                                                        <div className={ `absolute top-6 right-6 text-[10px] font-bold tracking-[0.3em] ${ card.numberColor }` }>
+                                                                                { card.numberLabel }
                                                                         </div>
                                                                 ),
                                                         },
-                                                ]}
-                                                backgroundGradient={card.gradient}
-                                                width={300}
-                                                height={370}
-                                                maxTilt={18}
-                                                glareOpacity={0.3}
+                                                ] }
+                                                backgroundGradient={ card.gradient }
+                                                width={ 300 }
+                                                height={ 370 }
+                                                maxTilt={ 18 }
+                                                glareOpacity={ 0.3 }
                                         >
                                                 <div
                                                         className="relative z-10"
-                                                        style={{ transform: "translateZ(40px)", transformStyle: "preserve-3d" }}
+                                                        style={ { transform: "translateZ(40px)", transformStyle: "preserve-3d" } }
                                                 >
                                                         <div className="mb-2 flex items-center gap-2">
-                                                                <span className={`inline-block h-2 w-2 rounded-full ${card.dotColor} animate-pulse`} />
+                                                                <span className={ `inline-block h-2 w-2 rounded-full ${ card.dotColor } animate-pulse` } />
                                                                 <span className="text-[10px] font-bold tracking-[0.25em] text-white/40 uppercase">
-                                                                        {card.subtitle}
+                                                                        { card.subtitle }
                                                                 </span>
                                                         </div>
-                                                        <h3 className="text-xl font-bold text-white mb-3 tracking-tight">{card.title}</h3>
-                                                        <p className="text-sm text-white/60 leading-relaxed font-medium">{card.value}</p>
-                                                        <p className="text-xs text-white/30 mt-0.5 mb-4">{card.secondaryValue}</p>
+                                                        <h3 className="text-xl font-bold text-white mb-3 tracking-tight">{ card.title }</h3>
+                                                        <p className="text-sm text-white/60 leading-relaxed font-medium">{ card.value }</p>
+                                                        <p className="text-xs text-white/30 mt-0.5 mb-4">{ card.secondaryValue }</p>
                                                         <span
-                                                                className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-semibold ${card.tagColor}`}
+                                                                className={ `inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-semibold ${ card.tagColor }` }
                                                         >
-                                                                {card.tag}
+                                                                { card.tag }
                                                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="ml-0.5">
                                                                         <path d="M4.5 3L7.5 6L4.5 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                                                 </svg>
                                                         </span>
                                                 </div>
                                         </ParallaxCard>
-                                ))}
+                                )) }
                         </div>
 
-                        {/* ─── Contact Form Section ─── */}
+                        {/* ─── Contact Form Section ─── */ }
                         <div className="max-w-6xl mx-auto">
                                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-start p-4">
-                                        {/* Left column — info */}
+                                        {/* Left column — info */ }
                                         <div className="lg:col-span-2 pt-4">
                                                 <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-3 py-1 text-[10px] font-bold tracking-[0.2em] text-violet-300 uppercase">
                                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -218,36 +190,36 @@ export default function ContactUs() {
                                                         Whether you have a question about features, pricing, or anything else — our team is ready to answer all your questions.
                                                 </p>
 
-                                                {/* Quick info items */}
+                                                {/* Quick info items */ }
                                                 <div className="space-y-5">
-                                                        {[
+                                                        { [
                                                                 { icon: "⚡", label: "Fast Response", desc: "Usually within 2 hours" },
                                                                 { icon: "🌍", label: "Global Team", desc: "Support across all timezones" },
                                                                 { icon: "🔒", label: "Secure & Private", desc: "Your data is always protected" },
                                                         ].map((item, idx) => (
-                                                                <div key={idx} className="flex items-start gap-3.5 group">
-                                                                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/[0.04] border border-white/[0.06] text-lg group-hover:bg-white/[0.08] transition-colors">
-                                                                                {item.icon}
+                                                                <div key={ idx } className="flex items-start gap-3.5 group">
+                                                                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/4 border border-white/6 text-lg group-hover:bg-white/8 transition-colors">
+                                                                                { item.icon }
                                                                         </div>
                                                                         <div>
-                                                                                <div className="text-sm font-semibold text-white/80">{item.label}</div>
-                                                                                <div className="text-xs text-white/30 mt-0.5">{item.desc}</div>
+                                                                                <div className="text-sm font-semibold text-white/80">{ item.label }</div>
+                                                                                <div className="text-xs text-white/30 mt-0.5">{ item.desc }</div>
                                                                         </div>
                                                                 </div>
-                                                        ))}
+                                                        )) }
                                                 </div>
 
 
                                         </div>
 
-                                        {/* Right column — form */}
+                                        {/* Right column — form */ }
                                         <div className="lg:col-span-3 flex justify-center">
                                                 <ContactForm />
                                         </div>
                                 </div>
                         </div>
 
-                        {/* ─── FAQ / Extra section ─── */}
+                        {/* ─── FAQ / Extra section ─── */ }
                         <div className="max-w-4xl mx-auto mt-24 md:mt-32 text-center">
                                 <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold tracking-[0.2em] text-white/40 uppercase">
                                         FAQ
@@ -257,23 +229,23 @@ export default function ContactUs() {
                                 </h3>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                        {[
+                                        { [
                                                 { q: "How quickly do you respond?", a: "We typically respond within 2–4 hours during business hours, and within 24 hours on weekends." },
                                                 { q: "Do you offer free consultations?", a: "Yes! We offer a free 30-minute consultation to discuss your project needs and goals." },
                                                 { q: "What services do you provide?", a: "We specialize in web development, UI/UX design, branding, and digital strategy consulting." },
                                                 { q: "Can I schedule a video call?", a: "Absolutely. After initial contact, we'll set up a video meeting at your convenience." },
                                         ].map((faq, idx) => (
                                                 <div
-                                                        key={idx}
-                                                        className="text-left p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/[0.1] transition-all duration-300 group"
+                                                        key={ idx }
+                                                        className="text-left p-6 rounded-2xl border border-white/6 bg-white/2 hover:bg-white/4 hover:border-white/10 transition-all duration-300 group"
                                                 >
                                                         <h4 className="text-sm font-semibold text-white/80 mb-2 flex items-start gap-2">
                                                                 <span className="text-violet-400 shrink-0 mt-0.5">Q.</span>
-                                                                {faq.q}
+                                                                { faq.q }
                                                         </h4>
-                                                        <p className="text-xs text-white/30 leading-relaxed pl-5">{faq.a}</p>
+                                                        <p className="text-xs text-white/30 leading-relaxed pl-5">{ faq.a }</p>
                                                 </div>
-                                        ))}
+                                        )) }
                                 </div>
                         </div>
 

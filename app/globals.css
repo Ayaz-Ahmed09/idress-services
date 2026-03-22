@@ -17,7 +17,7 @@
   --color-bg-secondary: #1a1a2e;
   --color-bg-card: #16162a;
   --color-bg-glass: rgba(26, 26, 46, 0.6);
-  --color-border-glass: rgba(0, 240, 255, 0.12);
+  --color-border-glass: rgba(255, 255, 255, 0.08);
 
   --color-accent-cyan: #00f0ff;
   --color-accent-orange: #ff5f1f;
@@ -91,9 +91,7 @@ h6 {
   @apply font-display font-bold text-white;
 }
 
-p {
-  @apply text-gray-400;
-}
+
 
 a {
   @apply text-inherit;

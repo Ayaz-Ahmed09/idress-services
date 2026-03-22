@@ -9,7 +9,7 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import Link from "next/link";
 import { Whatsapp } from "../ui/Svg";
 
-export function HeroSplit({
+export function HeroSplit ({
   title,
   subtitle,
   features = [
@@ -68,34 +68,33 @@ export function HeroSplit({
 
   return (
     <section className="relative pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden text-white">
-      {/* ── Background Image via next/image (auto WebP/AVIF, srcset, zero CLS) ── */}
-      {heroImage && (
-        <div className="absolute inset-0 backdrop-brightness-50 ">
+      {/* ── Background Image via next/image (auto WebP/AVIF, srcset, zero CLS) ── */ }
+      { heroImage && (
+        <div className="absolute inset-0  ">
           <Image
-            src={heroImage}
-            alt={`${serviceName || "Service"} background`}
+            src={ heroImage }
+            alt={ `${ serviceName || "Service" } background` }
             fill
             sizes="100vw"
             className="object-cover object-center"
-            quality={85}
+            quality={ 90 }
             loading="eager"
           />
         </div>
-      )}
+      ) }
 
-      {/* ── Gradient overlay: readable text + image still visible ── */}
-      {heroImage && (
-        <div className="absolute inset-0 z-10 " />
-      )}
+      {/* ── Full-screen overlay removed to keep background image completely bright ── */ }
 
-      {/* Background decoration (fallback when no image) */}
-      {!heroImage && (
+      {/* Background decoration (fallback when no image) */ }
+      { !heroImage && (
         <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-primary/10 blur-[100px] rounded-full" />
-      )}
+      ) }
 
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative z-20">
-        {/* Left Content */}
-        <div className="space-y-8 text-center lg:text-left">
+        {/* Left Content */ }
+        <div className="relative z-10 space-y-8 text-center lg:text-left">
+          {/* Subtle localized dark shadow behind just the text for perfect readability without hard edges */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] lg:w-[120%] lg:h-[140%] bg-black/50 lg:bg-black/40 blur-[100px] rounded-full pointer-events-none -z-10" />
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-sm font-medium text-accent animate-in fade-in slide-in-from-bottom-4 duration-500">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
@@ -104,25 +103,25 @@ export function HeroSplit({
             Available Now in Your Area
           </div>
 
-          <h1 className="text-4xl lg:text-6xl font-extrabold tracking-tight leading-tight animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100 drop-shadow-lg">
-            {title}
+          <h1 className="text-4xl lg:text-6xl font-extrabold tracking-tight leading-tight animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100 drop-shadow-2xl text-white">
+            { title }
           </h1>
 
-          <p className="text-lg font-display text-gray-100 max-w-xl mx-auto lg:mx-0 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200 drop-shadow-md">
-            {subtitle}
+          <p className="text-lg font-sans font-semibold text-gray-100 max-w-xl mx-auto lg:mx-0 drop-shadow-lg">
+            { subtitle }
           </p>
 
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm font-medium text-gray-200 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
-            {features.map((feature, i) => (
-              <div key={i} className="flex items-center gap-2 drop-shadow-sm">
+            { features.map((feature, i) => (
+              <div key={ i } className="flex items-center gap-2 drop-shadow-sm">
                 <CheckCircle2 className="h-5 w-5 text-green-400" />
-                {feature}
+                { feature }
               </div>
-            ))}
+            )) }
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start ">
-            {/* Desktop / Tablet Link (Scrolls to form) */}
+            {/* Desktop / Tablet Link (Scrolls to form) */ }
             <Link href="/book" className="hidden md:block">
               <Button
                 size="lg"
@@ -132,7 +131,7 @@ export function HeroSplit({
               </Button>
             </Link>
 
-            {/* Mobile Link (Dials phone number) */}
+            {/* Mobile Link (Dials phone number) */ }
             <Link href="https://wa.me/971557864636" className="block md:hidden ">
               <Button
                 size="lg"
@@ -146,14 +145,14 @@ export function HeroSplit({
 
           <div className="pt-4 flex items-center justify-center lg:justify-start gap-4">
             <div className="flex -space-x-2">
-              {[1, 2, 3, 4].map((i) => (
+              { [1, 2, 3, 4].map((i) => (
                 <div
-                  key={i}
+                  key={ i }
                   className="h-10 w-10 rounded-full border-2 border-surface-dark bg-gray-600 relative overflow-hidden"
                 >
-                  {/* Placeholder avatars would go here */}
+                  {/* Placeholder avatars would go here */ }
                 </div>
-              ))}
+              )) }
             </div>
             <div className="text-left">
               <div className="flex items-center text-yellow-400">
@@ -170,7 +169,7 @@ export function HeroSplit({
           </div>
         </div>
 
-        {/* Right Content - Lead Form */}
+        {/* Right Content - Lead Form */ }
         <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 md:block hidden">
           <GlassCard
             id="lead-form"
@@ -185,14 +184,14 @@ export function HeroSplit({
               </div>
 
               <form
-                ref={formRef}
-                onSubmit={handleSubmit}
+                ref={ formRef }
+                onSubmit={ handleSubmit }
                 className="space-y-4"
               >
                 <input
                   type="hidden"
                   name="form_source"
-                  value={`Hero Callback – ${serviceName || "Service Page"}`}
+                  value={ `Hero Callback – ${ serviceName || "Service Page" }` }
                 />
 
                 <div className="grid grid-cols-1 gap-4">
@@ -216,28 +215,28 @@ export function HeroSplit({
                     className="w-full px-4 py-3 rounded-lg text-gray-300 border-b-2 border-orange-500 bg-transparent focus:border-primary focus:bg-gray-700 focus:ring-2 transition-all outline-none"
                   >
                     <option value="">Select Issue</option>
-                    {issueOptions.map((option, i) => (
-                      <option key={i} value={option}>
-                        {option}
+                    { issueOptions.map((option, i) => (
+                      <option key={ i } value={ option }>
+                        { option }
                       </option>
-                    ))}
+                    )) }
                   </select>
                 </div>
 
-                {errorMsg && (
+                { errorMsg && (
                   <p className="text-sm text-red-400 text-center">
-                    {errorMsg}
+                    { errorMsg }
                   </p>
-                )}
+                ) }
 
                 <Button
                   type="submit"
                   size="lg"
                   variant="black"
                   className="w-full font-bold text-lg border-b-4 border-orange-500 border-t-2"
-                  disabled={isLoading}
+                  disabled={ isLoading }
                 >
-                  {isLoading ? "Sending..." : "Request Callback"}
+                  { isLoading ? "Sending..." : "Request Callback" }
                 </Button>
                 <p className="text-xs text-center text-gray-400">
                   No hidden fees. Free cancellation.

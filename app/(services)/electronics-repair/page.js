@@ -62,59 +62,59 @@ const electronicsTestimonials = [
   },
 ];
 
-export default function ElectronicsRepairPage() {
+export default function ElectronicsRepairPage () {
   return (
     <>
-      {/* JSON-LD Structured Data */}
+      {/* JSON-LD Structured Data */ }
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={ { __html: JSON.stringify(jsonLd) } }
       />
 
-      {/* <Navbar /> */}
+      {/* <Navbar /> */ }
       <main className="min-h-screen bg-dark">
-        {/* ─── h1 lives here ─── */}
+        {/* ─── h1 lives here ─── */ }
         <HeroSplit
           title="Home Appliance & Electronics Repair in Dubai"
           subtitle="Washing machine, microwave, water purifier, or geyser broken? Our expert technicians repair all home electronics at your doorstep with genuine parts."
           serviceName="Electronics Repair"
           heroImage="/electronics.webp"
-          features={[
+          features={ [
             "All Major Brands Covered",
             "Genuine Spare Parts",
             "Same-Day Service Available",
-          ]}
-          issueOptions={[
+          ] }
+          issueOptions={ [
             "Washing Machine Repair",
             "Microwave Repair",
             "Water Purifier / RO",
             "Geyser / Water Heater",
             "Dishwasher Repair",
             "Other",
-          ]}
+          ] }
         />
 
         <TrustBar title="electronics-repair" />
 
-        {/* ─── h2: service catalog ─── */}
+        {/* ─── h2: service catalog ─── */ }
         <SubServicesSection
-          subServices={serviceData.subServices || []}
+          subServices={ serviceData.subServices || [] }
           serviceSlug="electronics-repair"
           serviceTitle="Electronics Repair"
           sectionHeading="Home Appliance Repair Solutions Across Dubai"
           gradient="from-orange-500 to-amber-400"
         />
 
-        {/* ─── h2: process / trust ─── */}
+        {/* ─── h2: process / trust ─── */ }
         <ServiceProcess heading="How We Repair Your Appliances — Hassle-Free" />
 
-        {/* ─── h2: FAQ signals ─── */}
+        {/* ─── h2: FAQ signals ─── */ }
         <ServiceFAQSection
           title="electronics-repair"
           heading="Appliance Repair FAQs — Common Questions Answered"
         />
 
-        {/* ─── h4: booking CTA ─── */}
+        {/* ─── h4: booking CTA ─── */ }
         <section className="py-16 md:py-24 bg-gray-950">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -132,20 +132,20 @@ export default function ElectronicsRepairPage() {
           </div>
         </section>
 
-        {/* ─── h2: social proof ─── */}
+        {/* ─── h2: social proof ─── */ }
         <Testimonials
-          testimonials={electronicsTestimonials}
+          testimonials={ electronicsTestimonials }
           title="Dubai Customers Trust Our Appliance Repair Service"
           subtitle="Genuine reviews from homeowners and businesses we've helped."
           className="mt-4"
         />
 
-        {/* ─── h2: contact / conversion ─── */}
+        {/* ─── h2: contact / conversion ─── */ }
         <ContactForm heading="Get a Free Appliance Repair Estimate" />
 
         <StickyMobileNav />
       </main>
-      {/* <Footer /> */}
+      {/* <Footer /> */ }
     </>
   );
 }

@@ -22,9 +22,6 @@ const footerLinks = {
   ],
 };
 
-const handleSubscribe = (e) => {
-
-};
 
 export default function Footer() {
   return (
@@ -44,14 +41,13 @@ export default function Footer() {
           <div className="lg:col-span-1 text-center items-center justify-center">
             <Link href="#" className="flex items-center gap-2 mb-4">
               <div className="flex   items-center justify-center rounded-lg bg-linear-to-br from-(--accent-cyan) to-(--accent-orange) p-px">
-                <Image src="/3d-logo.png" alt="Logo" width={400} height={300} />
+                <Image src="/logo-2.webp" alt="Logo" width={200} height={200} />
               </div>
               {/* <div className="bg-linear-to-r from-tranparent via-cyan-500 to-transparent  h-2" /> */}
             </Link>
-            <p className="text-sm text-center content-center text-(--text-muted)  mb-6 ">
-              Industrial-grade Repair, diagnostics, and maintenance services
-              for residential and commercial properties across Dubai
-            </p>
+            <div className="text-sm text-center content-center text-(--text-muted) font-bold  mb-6 ">
+              IDRESS HUSSAIN ELECTRONICES DEVICES REP SERVICES
+            </div>
             {/* Contact */}
             <div className="space-y-3 flex flex-col items-center justify-center-safe text-center">
               <a
@@ -150,40 +146,28 @@ export default function Footer() {
               </button>
             </div>
 
-            {/* Social Links */}
-            {/* <div className="mt-6 flex items-center gap-3">
-              {["Instagram", "Facebook", "WhatsApp"].map((social) => (
-                <a
-                  key={social}
-                  href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-(--border-glass) text-(--text-muted) transition-all duration-200 hover:border-(--accent-cyan)/30 hover:text-(--accent-cyan) hover:bg-[var(--accent-cyan-dim)]"
-                  aria-label={social}
-                >
-                  <span className="text-xs font-bold">{social[0]}</span>
-                </a>
-              ))}
-            </div> */}
+
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-(--border-glass) pt-8 sm:flex-row">
           <p className="text-xs text-(--text-muted)">
-            © 2026 Idress electronices Services. All rights reserved. Licensed & Insured in UAE.
+            Sarjah, UAE
           </p>
           <div className="flex items-center gap-4 text-xs text-(--text-muted)">
-            <a
-              href="#"
+            <p
+
               className="hover:text-(--text-secondary) transition-colors"
             >
-              Privacy
-            </a>
-            <a
+              Licence No: 213983
+            </p>
+            {/* <a
               href="#"
               className="hover:text-(--text-secondary) transition-colors"
             >
               Terms
-            </a>
+            </a> */}
             <a
               href="/sitemap.xml"
               className="hover:text-(--text-secondary) transition-colors"

@@ -61,29 +61,26 @@ const tvTestimonials = [
   },
 ];
 
-export default function TvRepairPage() {
+export default function TvRepairPage () {
   return (
     <>
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {/* JSON-LD Structured Data */ }
 
-      {/* <Navbar /> */}
+
+      {/* <Navbar /> */ }
       <main className="min-h-screen bg-dark">
-        {/* ─── h1 lives here ─── */}
+        {/* ─── h1 lives here ─── */ }
         <HeroSplit
-          title="Professional TV Repair & Installation in Dubai"
+          title="Professional TV Repair & Installation in Sharjah"
           subtitle="LED, LCD, OLED or Smart TV — we fix black screens, no power, sound issues, and broken displays at your doorstep. All brands serviced."
-          serviceName="TV Repair"
+          serviceName="TV Repair in Sharjah & Dubai"
           heroImage="/tv-repair/tv-hero.png"
-          features={[
+          features={ [
             "Screen Replacement Experts",
             "Motherboard & PCB Repair",
             "Wall Mount Installation",
-          ]}
-          issueOptions={[
+          ] }
+          issueOptions={ [
             "Black Screen / No Display",
             "No Power / Won't Turn On",
             "Sound Issue",
@@ -91,30 +88,30 @@ export default function TvRepairPage() {
             "Wall Mount Installation",
             "HDMI / Port Issue",
             "Other",
-          ]}
+          ] }
         />
 
         <TrustBar title="tv-repair" />
 
-        {/* ─── h2: service catalog ─── */}
+        {/* ─── h2: service catalog ─── */ }
         <SubServicesSection
-          subServices={serviceData.subServices || []}
+          subServices={ serviceData.subServices || [] }
           serviceSlug="tv-repair"
           serviceTitle="TV Repair"
           sectionHeading="Comprehensive TV Repair Services We Offer"
           gradient="from-purple-500 to-pink-400"
         />
 
-        {/* ─── h2: process / trust ─── */}
+        {/* ─── h2: process / trust ─── */ }
         <ServiceProcess heading="Our TV Repair Process — Diagnosis to Delivery" />
 
-        {/* ─── h2: FAQ signals ─── */}
+        {/* ─── h2: FAQ signals ─── */ }
         <ServiceFAQSection
           title="tv-repair"
           heading="TV Repair FAQs — Your Questions Answered by Experts"
         />
 
-        {/* ─── h4: booking CTA ─── */}
+        {/* ─── h4: booking CTA ─── */ }
         <section className="py-16 md:py-24 bg-gray-950">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -132,20 +129,20 @@ export default function TvRepairPage() {
           </div>
         </section>
 
-        {/* ─── h2: social proof ─── */}
+        {/* ─── h2: social proof ─── */ }
         <Testimonials
-          testimonials={tvTestimonials}
+          testimonials={ tvTestimonials }
           title="What Dubai Residents Say About Our TV Repair Service"
           subtitle="Real reviews from customers who trusted us with their TV repairs."
           className="mt-4"
         />
 
-        {/* ─── h2: contact / conversion ─── */}
+        {/* ─── h2: contact / conversion ─── */ }
         <ContactForm heading="Request a Free TV Repair Quote" />
 
         <StickyMobileNav />
       </main>
-      {/* <Footer /> */}
+      {/* <Footer /> */ }
     </>
   );
 }

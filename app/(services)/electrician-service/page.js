@@ -62,29 +62,29 @@ const electricianTestimonials = [
   },
 ];
 
-export default function ElectricianPage() {
+export default async function ElectricianPage () {
+
+
   return (
     <>
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {/* JSON-LD Structured Data */ }
 
-      {/* <Navbar /> */}
+
+      {/* <Navbar /> */ }
       <main className="min-h-screen bg-dark">
-        {/* ─── h1 lives here ─── */}
+        {/* ─── h1 lives here ─── */ }
         <HeroSplit
-          title="Licensed Electrician Services in Dubai — 24/7"
-          subtitle="Short circuit? Power tripping? Need new wiring? Our certified electricians fix all electrical issues safely and fast across Dubai."
+          title="Electrician Near You - Fast & Affordable 24/7"
+          subtitle=" Emergency electrician available near you
+Same-day service – Call now."
           serviceName="Electrician Services"
-          heroImage="/electricen-hero.webp"
-          features={[
+          heroImage="/electricen.jpeg"
+          features={ [
             "24/7 Emergency Response",
             "Licensed & Certified Pros",
             "Safety-First Approach",
-          ]}
-          issueOptions={[
+          ] }
+          issueOptions={ [
             "Short Circuit / Tripping",
             "Wiring & Rewiring",
             "Switch & Socket Repair",
@@ -92,30 +92,30 @@ export default function ElectricianPage() {
             "DB Box / Breaker Issue",
             "New Electrical Fitting",
             "Other",
-          ]}
+          ] }
         />
 
         <TrustBar title="electrician-service" />
 
-        {/* ─── h2: service catalog ─── */}
+        {/* ─── h2: service catalog ─── */ }
         <SubServicesSection
-          subServices={serviceData.subServices || []}
+          subServices={ serviceData.subServices || [] }
           serviceSlug="electrician-service"
           serviceTitle="Electrician Service"
           sectionHeading="Full-Range Electrical Services for Dubai Properties"
           gradient="from-yellow-500 to-orange-400"
         />
 
-        {/* ─── h2: process / trust ─── */}
+        {/* ─── h2: process / trust ─── */ }
         <ServiceProcess heading="Our Electrical Service Process — Safe & Certified" />
 
-        {/* ─── h2: FAQ signals ─── */}
+        {/* ─── h2: FAQ signals ─── */ }
         <ServiceFAQSection
           title="electrician-service"
           heading="Electrical Service Questions & Expert Guidance"
         />
 
-        {/* ─── h4: booking CTA ─── */}
+        {/* ─── h4: booking CTA ─── */ }
         <section className="py-16 md:py-24 bg-gray-950">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -133,20 +133,20 @@ export default function ElectricianPage() {
           </div>
         </section>
 
-        {/* ─── h2: social proof ─── */}
+        {/* ─── h2: social proof ─── */ }
         <Testimonials
-          testimonials={electricianTestimonials}
+          testimonials={ electricianTestimonials }
           title="Verified Electrician Service Reviews in Dubai"
           subtitle="Hear from homeowners and businesses who rely on our electrical expertise."
           className="mt-4"
         />
 
-        {/* ─── h2: contact / conversion ─── */}
+        {/* ─── h2: contact / conversion ─── */ }
         <ContactForm heading="Request a Free Electrical Consultation" />
 
         <StickyMobileNav />
       </main>
-      {/* <Footer /> */}
+      {/* <Footer /> */ }
     </>
   );
 }

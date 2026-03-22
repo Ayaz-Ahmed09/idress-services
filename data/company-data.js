@@ -1,8 +1,8 @@
 // data/company.js
 
 export const company = {
-        name: "IDRESS ELECTRONICS SERVICES",
-        legalName: "IDREES HUSSAIN ELECTRONICES SERVICES REP DEVICES   ",
+        name: "IDRESS HUSSAIN ELECTRONICES SERVICES REP DEVICES",
+        legalName: "IDRESS HUSSAIN ELECTRONICES SERVICES REP DEVICES",
         tagline: "Your Trusted Service Partner",
         licensseNumber: "213983",
         phone: "0557864636",

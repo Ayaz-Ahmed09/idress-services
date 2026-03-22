@@ -143,9 +143,10 @@ export default function FridgeRepairPage() {
         {/* ─── h2: contact / conversion ─── */}
         <ContactForm heading="Get a Free Fridge Repair Estimate" />
 
-        <StickyMobileNav />
       </main>
       {/* <Footer /> */}
+      <StickyMobileNav />
+
     </>
   );
 }
