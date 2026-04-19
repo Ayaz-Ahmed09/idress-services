@@ -67,7 +67,7 @@ export default function TrustBadges() {
                                                                                 {badge.title}
                                                                         </h4>
 
-                                                                        <p className="text-sm text-gray-800 dark:text-gray-900 leading-relaxed">
+                                                                        <p className="text-sm text-white/80 dark:text-gray-200 leading-relaxed">
                                                                                 {badge.description}
                                                                         </p>
                                                                 </div>

@@ -65,7 +65,7 @@ export const services = {
         image: "/ac-repair/ac-gas-refill.webp",
         description: "Professional refrigerant gas refilling service. R22, R32, R410A for all AC types with leak detection included.",
         icon: "⛽",
-        // price: "Starting ₹1,499",
+        // price: "Starting AED1,499",
         keywords: ["ac gas refill", "ac gas charge", "refrigerant refill"],
         estimatedTime: "1 hour"
       },
@@ -75,7 +75,7 @@ export const services = {
         image: "/ac-repair/ac-1.jpeg",
         description: "Professional split AC, window AC installation. Includes copper piping, bracket, and electrical wiring setup.",
         icon: "🔧",
-        // price: "Starting ₹999",
+        // price: "Starting AED999",
         keywords: ["ac installation", "split ac installation", "ac fitting"],
         estimatedTime: "2-3 hours"
       },
@@ -85,7 +85,7 @@ export const services = {
         image: "/ac-repair/Ac-Service.webp",
         description: "Complete AC servicing - filter cleaning, coil cleaning, drain pipe cleaning, and performance check.",
         icon: "🧹",
-        // price: "Starting ₹499",
+        // price: "Starting AED499",
         keywords: ["ac service", "ac cleaning", "ac maintenance"],
         estimatedTime: "1-2 hours"
       },
@@ -95,7 +95,7 @@ export const services = {
         description: "Expert compressor diagnosis, repair, and replacement service for all AC brands and models.",
         icon: "⚙️",
         image: "/ac-repair/compressor.jpeg",
-        // price: "Starting ₹2,499",
+        // price: "Starting AED2,499",
         keywords: ["ac compressor repair", "compressor replacement"],
         estimatedTime: "2-4 hours"
       },
@@ -105,7 +105,7 @@ export const services = {
         description: "Circuit board repair, replacement, and troubleshooting for indoor and outdoor AC units.",
         icon: "🔌",
         image: "/ac-repair/ac-pcb.png",
-        // price: "Starting ₹1,999",
+        // price: "Starting AED1,999",
         keywords: ["ac pcb repair", "ac control board", "ac motherboard"],
         estimatedTime: "2-3 hours"
       },
@@ -115,7 +115,7 @@ export const services = {
         description: "Diagnose and fix unusual AC noises - rattling, buzzing, clicking, or humming sounds.",
         icon: "🔊",
         image: "/ac-repair/noise.jpeg",
-        // price: "Starting ₹399",
+        // price: "Starting AED399",
         keywords: ["ac noise", "ac making sound", "ac vibration"],
         estimatedTime: "1-2 hours"
       },
@@ -125,7 +125,7 @@ export const services = {
         description: "Fix water dripping from indoor or outdoor AC unit. Drain pipe cleaning and tray repair included.",
         icon: "💧",
         image: "/ac-repair/water-leaking.png",
-        // price: "Starting ₹349",
+        // price: "Starting AED349",
         keywords: ["ac water leak", "ac dripping water", "ac drain problem"],
         estimatedTime: "1 hour"
       }
@@ -200,7 +200,7 @@ export const services = {
         description: "Refrigerator not cooling or freezing? We fix thermostat issues, gas leaks, compressor problems, and fan motor failures.",
         icon: "🌡️",
         image: "/fridge/Referigentor-services-min.jpeg",
-        // price: "Starting ₹349",
+        // price: "Starting AED349",
         keywords: ["fridge not cooling", "refrigerator not cold"],
         estimatedTime: "1-2 hours"
       },
@@ -210,7 +210,7 @@ export const services = {
         description: "Professional refrigerant gas charging for single door, double door, and side-by-side refrigerators.",
         icon: "⛽",
         image: "/fridge/gas-refill.png",
-        // price: "Starting ₹1,299",
+        // price: "Starting AED1,299",
         keywords: ["fridge gas refill", "refrigerator gas charge"],
         estimatedTime: "1-2 hours"
       },
@@ -220,7 +220,7 @@ export const services = {
         description: "Compressor diagnosis, repair, and replacement for all refrigerator brands with warranty.",
         icon: "⚙️",
         image: "/fridge/comprssor.png",
-        // price: "Starting ₹2,999",
+        // price: "Starting AED2,999",
         keywords: ["fridge compressor repair", "refrigerator compressor"],
         estimatedTime: "2-4 hours"
       },
@@ -230,7 +230,7 @@ export const services = {
         description: "Faulty thermostat causing temperature issues? Quick replacement with genuine parts.",
         icon: "🎛️",
         image: "/fridge/thermostate.png",
-        // price: "Starting ₹799",
+        // price: "Starting AED799",
         keywords: ["fridge thermostat", "temperature control repair"],
         estimatedTime: "1 hour"
       },
@@ -240,7 +240,7 @@ export const services = {
         description: "Fix water pooling inside or under your refrigerator. Drain tube cleaning and door seal repair.",
         icon: "💧",
         image: "/fridge/water-leak.jpeg",
-        // price: "Starting ₹299",
+        // price: "Starting AED299",
         keywords: ["fridge water leak", "refrigerator leaking water"],
         estimatedTime: "1 hour"
       },
@@ -250,7 +250,7 @@ export const services = {
         description: "Excessive ice formation in freezer? We fix defrost timer, heater, and sensor problems.",
         icon: "🧊",
         image: "/fridge/ice-tub.png",
-        // price: "Starting ₹499",
+        // price: "Starting AED499",
         keywords: ["freezer ice buildup", "fridge ice problem"],
         estimatedTime: "1-2 hours"
       },
@@ -260,7 +260,7 @@ export const services = {
         description: "Diagnose and fix unusual fridge noises - humming, clicking, buzzing, or rattling sounds.",
         icon: "🔊",
         image: "/fridge/noise.png",
-        // price: "Starting ₹399",
+        // price: "Starting AED399",
         keywords: ["fridge noise", "refrigerator loud sound"],
         estimatedTime: "1-2 hours"
       },
@@ -270,7 +270,7 @@ export const services = {
         description: "Worn-out door seal causing cooling loss? Quick gasket replacement for all fridge models.",
         icon: "🚪",
         image: "/fridge/door-seal.png",
-        // price: "Starting ₹599",
+        // price: "Starting AED599",
         keywords: ["fridge door seal", "refrigerator gasket"],
         estimatedTime: "30 mins - 1 hour"
       }
@@ -278,8 +278,8 @@ export const services = {
     brands: ["LG", "Samsung", "Whirlpool", "Godrej", "Haier", "Bosch", "Hitachi", "Panasonic", "Electrolux", "Voltas Beko", "Liebherr", "Kelvinator"],
     faqs: [
       {
-        question: "How much does fridge repair cost?",
-        answer: "Basic fridge repair starts from ₹299. Gas refill from ₹1,299, compressor repair from ₹2,999. Exact cost depends on the issue diagnosed."
+        question: "Will the technician fix my fridge at home or take it to a workshop?",
+        answer: "In most cases, our technician repairs the fridge right at your doorstep — no need to move it anywhere. We carry the commonly needed spare parts in our service van. Only in rare cases of major component failure may we need to take it to our workshop, which we'll inform you about upfront."
       },
       {
         question: "Can you repair all fridge brands?",
@@ -342,7 +342,7 @@ export const services = {
         description: "TV turning on but no picture? We fix backlight issues, T-CON board failures, and panel problems.",
         icon: "🖥️",
         image: "/tv-repair/TV-services.jpeg",
-        // price: "Starting ₹499",
+        // price: "Starting AED499",
         keywords: ["tv no display", "tv black screen", "tv no picture"],
         estimatedTime: "1-3 hours"
       },
@@ -352,7 +352,7 @@ export const services = {
         description: "TV won't power on? Power supply board repair, fuse replacement, and electrical diagnosis.",
         icon: "🔌",
         image: "/tv-repair/no-power.png",
-        // price: "Starting ₹399",
+        // price: "Starting AED399",
         keywords: ["tv not turning on", "tv no power", "tv dead"],
         estimatedTime: "1-2 hours"
       },
@@ -362,7 +362,7 @@ export const services = {
         description: "Cracked or damaged TV screen? Professional panel replacement for all TV sizes and brands.",
         icon: "💔",
         image: "/tv-repair/screen-damage.png",
-        // price: "Starting ₹3,999",
+        // price: "Starting AED3,999",
         keywords: ["tv screen replacement", "tv panel replacement", "broken tv screen"],
         estimatedTime: "1-2 days"
       },
@@ -372,7 +372,7 @@ export const services = {
         description: "No sound, distorted audio, or speaker issues? Complete audio system diagnosis and repair.",
         icon: "🔊",
         image: "/tv-repair/no-sound.png",
-        // price: "Starting ₹399",
+        // price: "Starting AED399",
         keywords: ["tv no sound", "tv audio problem", "tv speaker repair"],
         estimatedTime: "1-2 hours"
       },
@@ -382,7 +382,7 @@ export const services = {
         description: "WiFi not connecting, apps crashing, slow performance? Smart TV software update and optimization.",
         icon: "📡",
         image: "/tv-repair/smart-issue.png",
-        // price: "Starting ₹299",
+        // price: "Starting AED299",
         keywords: ["smart tv repair", "tv wifi problem", "tv software update"],
         estimatedTime: "1 hour"
       },
@@ -392,7 +392,7 @@ export const services = {
         description: "Main board diagnosis, repair, and replacement for LED, LCD, and Smart TVs.",
         icon: "🔧",
         image: "/tv-repair/tv-motherboard.png",
-        // price: "Starting ₹1,999",
+        // price: "Starting AED1,999",
         keywords: ["tv motherboard repair", "tv main board", "tv board replacement"],
         estimatedTime: "2-3 hours"
       },
@@ -402,7 +402,7 @@ export const services = {
         description: "Professional TV wall mounting service. Includes bracket, cable management, and alignment.",
         icon: "🏗️",
         image: "/tv-repair/tv-wall-install.png",
-        // price: "Starting ₹499",
+        // price: "Starting AED499",
         keywords: ["tv wall mount", "tv installation", "tv mounting service"],
         estimatedTime: "1 hour"
       },
@@ -412,7 +412,7 @@ export const services = {
         description: "Faded colors, lines on screen, flickering display? Complete display diagnosis and repair.",
         icon: "🌈",
         image: "/tv-repair/no-color.png",
-        // price: "Starting ₹499",
+        // price: "Starting AED499",
         keywords: ["tv color problem", "tv lines on screen", "tv flickering"],
         estimatedTime: "1-2 hours"
       }
@@ -479,7 +479,7 @@ export const services = {
         description: "Fix all washing machine problems - not spinning, water leaking, drum issues, error codes for front & top load.",
         icon: "👕",
         image: "/electronics/washing-repair.png",
-        // price: "Starting ₹399",
+        // price: "Starting AED399",
         keywords: ["washing machine repair", "washer repair"],
         estimatedTime: "1-3 hours"
       },
@@ -489,7 +489,7 @@ export const services = {
         description: "Microwave not heating, turntable not working, sparking issues? Complete microwave repair service.",
         icon: "🍽️",
         image: "/electronics/micro.png",
-        // price: "Starting ₹349",
+        // price: "Starting AED349",
         keywords: ["microwave repair", "oven repair", "microwave not heating"],
         estimatedTime: "1-2 hours"
       },
@@ -499,7 +499,7 @@ export const services = {
         description: "RO/UV water purifier repair, filter replacement, membrane change, and annual maintenance.",
         icon: "💧",
         image: "/electronics/ro-repair.png",
-        // price: "Starting ₹299",
+        // price: "Starting AED299",
         keywords: ["water purifier repair", "ro repair", "ro service"],
         estimatedTime: "1 hour"
       },
@@ -509,7 +509,7 @@ export const services = {
         description: "Inverter not charging, battery issues, beeping problems? Complete inverter and UPS repair service.",
         icon: "🔋",
         image: "/electronics/ups-repair.png",
-        // price: "Starting ₹499",
+        // price: "Starting AED499",
         keywords: ["inverter repair", "ups repair", "inverter battery"],
         estimatedTime: "1-2 hours"
       },
@@ -519,7 +519,7 @@ export const services = {
         description: "Geyser not heating, leaking, or thermostat issues? Quick repair and element replacement.",
         icon: "🚿",
         image: "/electronics/gyser.png",
-        // price: "Starting ₹399",
+        // price: "Starting AED399",
         keywords: ["geyser repair", "water heater repair"],
         estimatedTime: "1-2 hours"
       },
@@ -529,7 +529,7 @@ export const services = {
         description: "Dishwasher not cleaning, draining, or starting? Complete diagnosis and repair service.",
         icon: "🍽️",
         image: "/electronics/dishwasher.png",
-        // price: "Starting ₹499",
+        // price: "Starting AED499",
         keywords: ["dishwasher repair", "dishwasher not working"],
         estimatedTime: "1-3 hours"
       },
@@ -539,7 +539,7 @@ export const services = {
         description: "Mixer grinder, iron, fan, induction cooktop, and other small appliance repairs.",
         icon: "🔌",
         image: "/electronics/small.png",
-        // price: "Starting ₹199",
+        // price: "Starting AED199",
         keywords: ["mixer repair", "iron repair", "fan repair", "appliance repair"],
         estimatedTime: "1 hour"
       }
@@ -606,7 +606,7 @@ export const services = {
         description: "Complete CCTV camera system installation including cameras, DVR/NVR, cabling, and configuration.",
         icon: "📷",
         image: "/cctv/cctv-installtion.png",
-        // price: "Starting ₹4,999",
+        // price: "Starting AED4,999",
         keywords: ["cctv installation", "security camera installation", "camera setup"],
         estimatedTime: "3-6 hours"
       },
@@ -616,7 +616,7 @@ export const services = {
         description: "Wireless IP camera installation with mobile app setup for remote viewing from anywhere.",
         icon: "📡",
         image: "/cctv/ip-camers.png",
-        // price: "Starting ₹1,999",
+        // price: "Starting AED1,999",
         keywords: ["ip camera installation", "wifi camera setup", "wireless cctv"],
         estimatedTime: "1-2 hours"
       },
@@ -626,7 +626,7 @@ export const services = {
         description: "Digital video recorder setup, hard disk installation, network configuration, and remote access setup.",
         icon: "💿",
         image: "/cctv/dvr-setup.png",
-        // price: "Starting ₹1,499",
+        // price: "Starting AED1,499",
         keywords: ["dvr setup", "nvr configuration", "cctv recorder"],
         estimatedTime: "1-2 hours"
       },
@@ -636,7 +636,7 @@ export const services = {
         description: "Fix camera not working, blurry images, night vision issues, and recording problems.",
         icon: "🔧",
         image: "/cctv/cctv-repair.png",
-        // price: "Starting ₹499",
+        // price: "Starting AED499",
         keywords: ["cctv repair", "camera not working", "cctv maintenance"],
         estimatedTime: "1-2 hours"
       },
@@ -646,7 +646,7 @@ export const services = {
         description: "Annual maintenance contract for regular cleaning, software updates, and priority support.",
         icon: "📋",
         image: "/cctv/amc.png",
-        // price: "Starting ₹2,999/year",
+        // price: "Starting AED2,999/year",
         keywords: ["cctv amc", "cctv maintenance contract", "camera service"],
         estimatedTime: "Ongoing"
       },
@@ -656,7 +656,7 @@ export const services = {
         description: "Upgrade from analog to IP cameras, add more cameras, or upgrade to higher resolution system.",
         icon: "⬆️",
         image: "/cctv/cctv-upgrade.png",
-        // price: "Starting ₹2,999",
+        // price: "Starting AED2,999",
         keywords: ["cctv upgrade", "camera upgrade", "hd cctv upgrade"],
         estimatedTime: "2-4 hours"
       },
@@ -666,7 +666,7 @@ export const services = {
         description: "Configure mobile app and cloud access to view your CCTV cameras from anywhere in the world.",
         icon: "📱",
         image: "/cctv/remote.png",
-        // price: "Starting ₹499",
+        // price: "Starting AED499",
         keywords: ["cctv remote viewing", "camera mobile app", "remote monitoring"],
         estimatedTime: "30 mins - 1 hour"
       },
@@ -705,7 +705,7 @@ export const services = {
   "electrician-service": {
     slug: "electrician-service",
     title: "Electrician Service",
-    metaTitle: "Electrician Service Near You | Electrical Repair & Wiring | [City]",
+    metaTitle: "Electrician Service Near You | Electrical Repair & Wiring | Dubai",
     metaDescription: "Licensed electrician service for wiring, switches, MCB repair, fan installation, short circuit fixing. 24/7 emergency electrical service. Call now!",
     seoTitle: "Electrician Dubai | 24/7 Emergency Electrical Repair, Wiring & Installation",
     seoDescription: "Licensed electricians in Dubai — short circuit repair, wiring, MCB fix, fan & light installation. 24/7 emergency service, certified professionals. Call 055-786-4636.",
@@ -747,7 +747,7 @@ export const services = {
         description: "New house wiring, rewiring old buildings, concealed wiring, and open wiring installation.",
         icon: "🔌",
         image: "/electricen/wiring.png",
-        // price: "Starting ₹999",
+        // price: "Starting AED999",
         keywords: ["electrical wiring", "house wiring", "rewiring service"],
         estimatedTime: "4-8 hours"
       },
@@ -757,7 +757,7 @@ export const services = {
         description: "Replace faulty switches, sockets, dimmers, and modular plates. All brands available.",
         icon: "🔲",
         image: "/electricen/socket-repair.jpeg",
-        price: "Starting ₹149",
+        // price: "Starting AED149",
         keywords: ["switch repair", "socket repair", "electrical switch"],
         estimatedTime: "30 mins"
       },
@@ -767,7 +767,7 @@ export const services = {
         description: "MCB tripping, fuse blowing, distribution board repair, and electrical panel upgrades.",
         icon: "⚡",
         image: "/electricen/mcb-repair.png",
-        // price: "Starting ₹299",
+        // price: "Starting AED299",
         keywords: ["mcb repair", "fuse repair", "electrical panel", "mcb tripping"],
         estimatedTime: "1-2 hours"
       },
@@ -777,7 +777,7 @@ export const services = {
         description: "Ceiling fan, exhaust fan, wall fan installation and repair. Includes balancing and speed issues.",
         icon: "🌀",
         image: "/electricen/fan.png",
-        // price: "Starting ₹249",
+        // price: "Starting AED249",
         keywords: ["fan installation", "ceiling fan repair", "fan fitting"],
         estimatedTime: "30 mins - 1 hour"
       },
@@ -787,7 +787,7 @@ export const services = {
         description: "LED lights, chandeliers, tube lights, spot lights, and decorative lighting installation.",
         icon: "💡",
         image: "/electricen/light.png",
-        // price: "Starting ₹199",
+        // price: "Starting AED199",
         keywords: ["light installation", "led light fitting", "chandelier installation"],
         estimatedTime: "30 mins - 2 hours"
       },
@@ -797,7 +797,7 @@ export const services = {
         description: "Emergency short circuit diagnosis and repair. Identify faulty wiring and prevent electrical hazards.",
         icon: "🔥",
         image: "/electricen/short.png",
-        // price: "Starting ₹499",
+        // price: "Starting AED499",
         keywords: ["short circuit repair", "electrical short", "power trip"],
         estimatedTime: "1-3 hours"
       },
@@ -807,7 +807,7 @@ export const services = {
         description: "Professional electrical earthing installation and testing for home and commercial safety.",
         icon: "🌍",
         image: "/electricen/earthing.png",
-        // price: "Starting ₹1,499",
+        // price: "Starting AED1,499",
         keywords: ["earthing service", "grounding", "electrical earthing"],
         estimatedTime: "2-4 hours"
       },
@@ -817,7 +817,7 @@ export const services = {
         description: "Video doorbell, wireless doorbell, and intercom system installation and setup.",
         icon: "🔔",
         image: "/electricen/doorbell.png",
-        // price: "Starting ₹299",
+        // price: "Starting AED299",
         keywords: ["doorbell installation", "video doorbell", "intercom setup"],
         estimatedTime: "30 mins - 1 hour"
       }
@@ -834,11 +834,94 @@ export const services = {
       },
       {
         question: "How much does an electrician visit cost?",
-        answer: "Basic electrician visit starts from ₹149. The cost depends on the type of work - simple repairs, installations, or complex wiring projects."
+        answer: "Basic electrician visit starts from AED 100. The cost depends on the type of work - simple repairs, installations, or complex wiring projects."
       },
       {
         question: "Can you do complete house wiring?",
         answer: "Yes, we handle complete electrical wiring for new constructions, renovations, and old house rewiring with proper load calculation and safety standards."
+      }
+    ]
+  },
+
+  "ev-charging": {
+    slug: "ev-charging",
+    title: "EV Charger Installation",
+    metaTitle: "EV Charger Installation Near You | Home & Commercial | Dubai",
+    metaDescription: "Professional EV charger installation for homes, villas, and commercial spaces in Dubai. Tesla, Porsche, DEWA approved. Book your installation now!",
+    seoTitle: "EV Charger Installation Dubai | Home & Commercial Setup — DEWA Approved",
+    seoDescription: "Certified EV charger installation in Dubai. Home, villa, and office setup. DEWA approved contractors for Tesla, Porsche, Audi & all EV brands. Call 055-786-4636.",
+    seoKeywords: [
+      "EV charger installation Dubai",
+      "home EV charger setup Dubai",
+      "Tesla charger installation Dubai",
+      "DEWA approved EV charger installer",
+      "commercial EV charging stations Dubai",
+      "electric car charger installation near me",
+      "villa EV charger Dubai",
+      "Porsche EV charger Dubai",
+      "wallbox installation Dubai",
+      "EV charger repair Dubai"
+    ],
+    jsonLdServiceType: "Electrical Installation",
+    heroHeading: "EV Charger Installation",
+    heroSubheading: "Professional EV Charger Setup for Home & Business",
+    heroDescription: "Certified and DEWA approved electric vehicle (EV) charger installation services. We expertly install home wallboxes and commercial charging stations for all EV brands.",
+    icon: "🔌",
+    image: "/hero1.jpeg",
+    color: "green",
+    gradient: "from-green-500 to-emerald-400",
+    emergencyAvailable: false,
+    subServices: [
+      {
+        id: "home-ev-charger",
+        title: "Home EV Charger Installation",
+        description: "Professional wallbox installation for villas and residential homes. Safe, compliant, and optimized for your vehicle.",
+        icon: "🏠",
+        image: "/ev-charging/home.png",
+        keywords: ["home ev charger", "villa ev charger", "residential ev charging"],
+        estimatedTime: "3-5 hours"
+      },
+      {
+        id: "commercial-ev-charger",
+        title: "Commercial EV Charging Stations",
+        description: "Scalable EV charging solutions for offices, malls, residential buildings, and public spaces.",
+        icon: "🏢",
+        image: "/ev-charging/commercial.png",
+        keywords: ["commercial ev charger", "office ev charging", "public ev station"],
+        estimatedTime: "2-5 days"
+      },
+      {
+        id: "tesla-charger",
+        title: "Tesla Wall Connector Setup",
+        description: "Specialized installation for Tesla Wall Connectors, ensuring optimal charging speeds and safety.",
+        icon: "⚡",
+        image: "/ev-charging/tesla.png",
+        keywords: ["tesla charger", "tesla wall connector", "tesla installation"],
+        estimatedTime: "3-5 hours"
+      },
+      {
+        id: "ev-charger-repair",
+        title: "EV Charger Repair & Maintenance",
+        description: "Troubleshooting, repair, and ongoing maintenance for all types of EV charging stations.",
+        icon: "🔧",
+        image: "/ev-charging/repair.png",
+        keywords: ["ev charger repair", "charger maintenance", "charging station fix"],
+        estimatedTime: "1-3 hours"
+      }
+    ],
+    brands: ["Tesla", "Porsche", "Wallbox", "ChargePoint", "ABB", "Schneider", "Siemens", "JuiceBox"],
+    faqs: [
+      {
+        question: "Do I need DEWA approval for EV charger installation?",
+        answer: "Yes, installing an EV charger requires proper DEWA approval and certification, which our certified electricians handle for you."
+      },
+      {
+        question: "Can I install an EV charger in an apartment building?",
+        answer: "Yes, but you usually need an NOC from your building management or owners association. We can guide you through the process."
+      },
+      {
+        question: "How long does it take to install a home EV charger?",
+        answer: "A standard home installation typically takes between 3 to 5 hours, depending on the distance from the electrical panel and required cabling."
       }
     ]
   }
