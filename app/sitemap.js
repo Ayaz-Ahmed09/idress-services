@@ -10,6 +10,7 @@ export default function sitemap() {
     "electronics-repair",
     "cctv-installation",
     "electrician-service",
+    "ev-charger"
   ];
 
   return [
@@ -29,7 +30,7 @@ export default function sitemap() {
       url: `${baseUrl}/book`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.5,
+      priority: 0.8,
     },
   ];
 }

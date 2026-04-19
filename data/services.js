@@ -3,10 +3,10 @@
 export const services = {
   "ac-repair": {
     slug: "ac-repair",
-    title: "AC Repair & Service",
-    metaTitle: "AC Repair Service Near You | 24/7 Emergency AC Repair | Dubai",
+    title: "AC Repair & Service Dubai | Idrees Technical Services",
+    metaTitle: "AC Repair Service Near You | 24/7 Emergency AC Repair | Dubai | Idrees Technical Services",
     metaDescription: "Expert AC repair, installation & maintenance. All brands - Split AC, Window AC, Central AC. Same-day service. Call now for instant booking!",
-    seoTitle: "AC Repair Dubai | #1 Emergency AC Fix, Gas Refill & Deep Cleaning — Same-Day",
+    seoTitle: "AC Repair Dubai | #1 Emergency AC Fix, Gas Refill & Deep Cleaning — Same-Day | Idrees Technical Services",
     seoDescription: "Dubai's fastest AC repair — split, central & window units fixed in 60 min. 24/7 emergency service, certified technicians, gas refill from AED 150, 30-day warranty. Call 055-786-4636 for instant booking.",
     seoKeywords: [
       "AC repair Dubai",
@@ -157,10 +157,10 @@ export const services = {
 
   "fridge-repair": {
     slug: "fridge-repair",
-    title: "Refrigerator Repair & Service",
-    metaTitle: "Fridge Repair Service Near You | Same-Day Refrigerator Repair | [City]",
+    title: "Refrigerator Repair Service ",
+    metaTitle: "Fridge Repair Service Near You | Same-Day Refrigerator Repair Dubai | Idrees Technical Services",
     metaDescription: "Expert refrigerator repair for all brands. Fix cooling issues, compressor problems, gas leaks. Same-day service with warranty. Call now!",
-    seoTitle: "Fridge Repair Dubai | Same-Day Refrigerator Fix, Gas Refill & Compressor Repair",
+    seoTitle: "Fridge Repair Dubai | Same-Day Refrigerator Fix, Gas Refill & Compressor Repair | Idrees Technical Services",
     seoDescription: "Dubai's trusted fridge repair — Samsung, LG, Bosch & all brands. Not cooling? Water leaking? Gas refill from AED 200. Same-day doorstep service with 90-day warranty. Call 055-786-4636.",
     seoKeywords: [
       "fridge repair Dubai",
@@ -298,8 +298,8 @@ export const services = {
 
   "tv-repair": {
     slug: "tv-repair",
-    title: "TV Repair & Service",
-    metaTitle: "TV Repair Service Near You | LED, LCD, Smart TV Repair | [City]",
+    title: "TV Repair & Service ",
+    metaTitle: "TV Repair Service Near You | LED, LCD, Smart TV Repair | Idrees Technical Services",
     metaDescription: "Expert TV repair for LED, LCD, OLED, Smart TV. Fix display issues, no power, sound problems. All brands serviced. Call for same-day repair!",
     seoTitle: "TV Repair Dubai | LED, LCD, Smart TV Screen Fix & Motherboard Repair",
 
@@ -334,7 +334,7 @@ export const services = {
     image: "/tv-repair/TV-services.jpeg",
     color: "purple",
     gradient: "from-purple-500 to-pink-400",
-    emergencyAvailable: false,
+    emergencyAvailable: true,
     subServices: [
       {
         id: "tv-no-display",
@@ -436,11 +436,11 @@ export const services = {
 
   "electronics-repair": {
     slug: "electronics-repair",
-    title: "Electronics & Gadget Repair",
-    metaTitle: "Electronics Repair Service | Washing Machine, Microwave, Gadget Repair | [City]",
+    title: "Electronics & Appliance Repair ",
+    metaTitle: "Electronics Repair Service | Washing Machine, Microwave, Gadget Repair | Dubai",
     metaDescription: "Expert repair for washing machines, microwaves, water purifiers, inverters & home electronics. All brands serviced with warranty. Book now!",
     seoTitle: "Electronics & Appliance Repair Dubai | Washing Machine, Microwave, RO Service",
-    seoDescription: "Professional home appliance repair in Dubai — washing machines, microwaves, water purifiers, geysers & more. All brands, same-day service, genuine parts. Call 055-786-4636.",
+    seoDescription: "Professional home appliance repair in Dubai — washing machines, microwaves, water purifiers, geysers & more. All brands, same-day service, genuine parts.",
     seoKeywords: [
       "washing machine repair Dubai",
       "microwave repair Dubai",
@@ -471,7 +471,7 @@ export const services = {
     image: "/electronics.webp",
     color: "orange",
     gradient: "from-orange-500 to-amber-400",
-    emergencyAvailable: false,
+    emergencyAvailable: true,
     subServices: [
       {
         id: "washing-machine-repair",
@@ -563,11 +563,11 @@ export const services = {
 
   "cctv-installation": {
     slug: "cctv-installation",
-    title: "CCTV Camera Installation",
-    metaTitle: "CCTV Installation Service | Security Camera Setup & Repair | Dubai",
+    title: "CCTV Camera Installation ",
+    metaTitle: "CCTV Installation Service | Security Camera Setup & Repair Dubai | Idrees Technical Services ",
     metaDescription: "Professional CCTV camera installation, AMC & repair. IP cameras, DVR/NVR setup, remote monitoring. Homes & businesses. Get free survey!",
-    seoTitle: "CCTV Installation Dubai | Security Camera Setup, Repair & Remote Monitoring",
-    seoDescription: "Professional CCTV installation in Dubai — Hikvision, Dahua, CP Plus. HD/IP cameras, DVR/NVR setup, mobile app monitoring. Homes & offices. Free site survey. Call 055-786-4636.",
+    seoTitle: "CCTV Installation Dubai | Security Camera Setup, Repair & Remote Monitoring | Idrees Technical Services",
+    seoDescription: "Professional CCTV installation in Dubai — Hikvision, Dahua, CP Plus. HD/IP cameras, DVR/NVR setup, mobile app monitoring. Homes & offices. Free site survey. Call now:0557864636",
     seoKeywords: [
       "CCTV installation Dubai",
       "security camera installation Dubai",
@@ -598,7 +598,7 @@ export const services = {
     image: "/cctv.webp",
     color: "red",
     gradient: "from-red-500 to-rose-400",
-    emergencyAvailable: false,
+    emergencyAvailable: true,
     subServices: [
       {
         id: "cctv-new-installation",
@@ -692,7 +692,7 @@ export const services = {
         answer: "Yes! We set up remote monitoring on your smartphone so you can view live footage and recordings from anywhere with internet access."
       },
       {
-        question: "How long does CCTV footage get stored?",
+        question: "How long does CCTV footafalsege get stored?",
         answer: "Recording duration depends on hard disk size and camera resolution. Typically, a 1TB HDD stores 7-15 days of footage for 4 cameras."
       },
       {
@@ -705,12 +705,14 @@ export const services = {
   "electrician-service": {
     slug: "electrician-service",
     title: "Electrician Service",
-    metaTitle: "Electrician Service Near You | Electrical Repair & Wiring | Dubai",
-    metaDescription: "Licensed electrician service for wiring, switches, MCB repair, fan installation, short circuit fixing. 24/7 emergency electrical service. Call now!",
-    seoTitle: "Electrician Dubai | 24/7 Emergency Electrical Repair, Wiring & Installation",
-    seoDescription: "Licensed electricians in Dubai — short circuit repair, wiring, MCB fix, fan & light installation. 24/7 emergency service, certified professionals. Call 055-786-4636.",
+    metaTitle: "Electrician Service Near You | Electrical Repair & Wiring Dubai | Idrees Technical Services",
+    metaDescription: "Licensed electrician service for wiring, switches, MCB repair, fan installation, short circuit fixing. 24/7 emergency electrical service. Call now:0557864636",
+    seoTitle: "Electrician Dubai | 24/7 Emergency Electrical Repair, Wiring & Installation | Idrees Technical Services",
+    seoDescription: "Licensed electricians in Dubai — short circuit repair, wiring, MCB fix, fan & light installation. 24/7 emergency service, certified professionals. Call now:0557864636",
     seoKeywords: [
       "electrician Dubai",
+      "expert electrician Dubai",
+      "electrician near me",
       "electrical repair Dubai",
       "emergency electrician Dubai",
       "short circuit repair Dubai",
@@ -731,10 +733,10 @@ export const services = {
       "villa electrician Dubai",
       "best electrical company Dubai",
     ],
-    jsonLdServiceType: "Electrical Repair and Installation",
-    heroHeading: "Professional Electrician Service",
-    heroSubheading: "Licensed Electricians for All Electrical Needs",
-    heroDescription: "From simple switch repairs to complete house wiring - our licensed electricians handle all electrical work safely and efficiently.",
+    jsonLdServiceType: "Electrical Repair and Installation in Dubai",
+    heroHeading: "Professional Electrician Service in Dubai",
+    heroSubheading: "Licensed Electricians for All Electrical Needs in Dubai",
+    heroDescription: "From simple switch repairs to complete house wiring - our licensed electricians handle all electrical work safely and efficiently in Dubai.",
     icon: "⚡",
     image: "/electricen-services.webp",
     color: "yellow",
@@ -845,11 +847,11 @@ export const services = {
 
   "ev-charging": {
     slug: "ev-charging",
-    title: "EV Charger Installation",
-    metaTitle: "EV Charger Installation Near You | Home & Commercial | Dubai",
+    title: "EV Charger Units Installation ",
+    metaTitle: "EV Charger Installation Near You | Home & Commercial | Dubai | Idrees Technical Services",
     metaDescription: "Professional EV charger installation for homes, villas, and commercial spaces in Dubai. Tesla, Porsche, DEWA approved. Book your installation now!",
-    seoTitle: "EV Charger Installation Dubai | Home & Commercial Setup — DEWA Approved",
-    seoDescription: "Certified EV charger installation in Dubai. Home, villa, and office setup. DEWA approved contractors for Tesla, Porsche, Audi & all EV brands. Call 055-786-4636.",
+    seoTitle: "EV Charger Installation Dubai | Home & Commercial Setup — DEWA Approved in Dubai",
+    seoDescription: "Certified EV charger installation in Dubai. Home, villa, and office setup. DEWA approved contractors for Tesla, Porsche, Audi & all EV brands.  Call:0557864636",
     seoKeywords: [
       "EV charger installation Dubai",
       "home EV charger setup Dubai",
@@ -870,7 +872,7 @@ export const services = {
     image: "/hero1.jpeg",
     color: "green",
     gradient: "from-green-500 to-emerald-400",
-    emergencyAvailable: false,
+    emergencyAvailable: true,
     subServices: [
       {
         id: "home-ev-charger",

@@ -1,5 +1,4 @@
-import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
+
 import { HeroSplit } from "@/components/modules/HeroSplit";
 import { ServiceProcess } from "@/components/modules/ServiceProcess";
 import { StickyMobileNav } from "@/components/modules/StickyMobileNav";
@@ -70,13 +69,13 @@ export default async function ElectricianPage () {
       {/* JSON-LD Structured Data */ }
 
 
-      {/* <Navbar /> */ }
+    
       <main className="min-h-screen bg-dark">
         {/* ─── h1 lives here ─── */ }
         <HeroSplit
           title="Electrician Near You - Fast & Affordable 24/7"
           subtitle=" Emergency electrician available near you
-Same-day service – Call now."
+          Same-day service – Call now ."
           serviceName="Electrician Services"
           heroImage="/electricen.jpeg"
           features={ [
@@ -97,7 +96,7 @@ Same-day service – Call now."
 
         <TrustBar title="electrician-service" />
 
-        {/* ─── h2: service catalog ─── */ }
+       
         <SubServicesSection
           subServices={ serviceData.subServices || [] }
           serviceSlug="electrician-service"
@@ -106,16 +105,16 @@ Same-day service – Call now."
           gradient="from-yellow-500 to-orange-400"
         />
 
-        {/* ─── h2: process / trust ─── */ }
+     
         <ServiceProcess heading="Our Electrical Service Process — Safe & Certified" />
 
-        {/* ─── h2: FAQ signals ─── */ }
+        
         <ServiceFAQSection
           title="electrician-service"
           heading="Electrical Service Questions & Expert Guidance"
         />
 
-        {/* ─── h4: booking CTA ─── */ }
+       
         <section className="py-16 md:py-24 bg-gray-950">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -133,7 +132,7 @@ Same-day service – Call now."
           </div>
         </section>
 
-        {/* ─── h2: social proof ─── */ }
+       
         <Testimonials
           testimonials={ electricianTestimonials }
           title="Verified Electrician Service Reviews in Dubai"
@@ -141,12 +140,12 @@ Same-day service – Call now."
           className="mt-4"
         />
 
-        {/* ─── h2: contact / conversion ─── */ }
+       
         <ContactForm heading="Request a Free Electrical Consultation" />
 
         <StickyMobileNav />
       </main>
-      {/* <Footer /> */ }
+    
     </>
   );
 }
