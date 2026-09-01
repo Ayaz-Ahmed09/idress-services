@@ -1,5 +1,6 @@
 "use client";
 
+import { company } from "@/data/company-data";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -100,7 +101,8 @@ export default function HeroEVCharger()
             </motion.div>
 
             <h1
-              className="mt-6 font-extrabold text-5xl tracking-tight text-white drop-shadow-lg sm:text-5xl lg:text-6xl"
+              style={{ color: "#ffffff" }}
+              className="mt-6 font-extrabold text-5xl tracking-tight !text-white text-white drop-shadow-lg sm:text-5xl lg:text-6xl"
             >
               Best EV Charger Installation in Dubai
             </h1>
@@ -125,7 +127,7 @@ export default function HeroEVCharger()
 
 
               <Link
-                href="tel:+971557864636"
+                href={`tel:+${company.whatsapp}`}
                 className="inline-flex items-center justify-center rounded-xl bg-sky-400 hover:bg-sky-300 px-6 py-3.5 text-sm font-semibold text-sky-950 shadow-[0_10px_30px_rgba(56,189,248,0.3)] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white hover:-translate-y-1"
               >
                 Call Now

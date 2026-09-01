@@ -1,5 +1,6 @@
 "use client";
 
+import { company } from "@/data/company-data";
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -9,8 +10,9 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import Link from "next/link";
 import { Whatsapp } from "../ui/Svg";
 
-export function HeroSplit ({
+export function HeroSplit({
   title,
+  secondaryHeading,
   subtitle,
   features = [
     "24/7 Emergency Service",
@@ -43,7 +45,7 @@ export function HeroSplit ({
       formData.append(
         "access_key",
         process.env.NEXT_PUBLIC_WEB3_PUBLIC_KEY ||
-        "5b54b2db-ee98-4dee-a4ed-40b6f6e33e8b"
+        "a1024588-a9d0-4258-88ff-70918df432c3"
       );
 
       const res = await fetch("https://api.web3forms.com/submit", {
@@ -68,30 +70,30 @@ export function HeroSplit ({
 
   return (
     <section className="relative pt-24 pb-12 lg:pt-32 lg:pb-20 overflow-hidden text-white">
-      {/* ── Background Image via next/image (auto WebP/AVIF, srcset, zero CLS) ── */ }
-      { heroImage && (
+      {/* ── Background Image via next/image (auto WebP/AVIF, srcset, zero CLS) ── */}
+      {heroImage && (
         <div className="absolute inset-0  ">
           <Image
-            src={ heroImage }
-            alt={ `${ serviceName || "Service" } background` }
+            src={heroImage}
+            alt={`${serviceName || "Service"} background`}
             fill
             sizes="100vw"
             className="object-cover object-center"
-            quality={ 90 }
+            quality={90}
             loading="eager"
           />
         </div>
-      ) }
+      )}
 
-      {/* ── Full-screen overlay removed to keep background image completely bright ── */ }
+      {/* ── Full-screen overlay removed to keep background image completely bright ── */}
 
-      {/* Background decoration (fallback when no image) */ }
-      { !heroImage && (
+      {/* Background decoration (fallback when no image) */}
+      {!heroImage && (
         <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-primary/10 blur-[100px] rounded-full" />
-      ) }
+      )}
 
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative z-20">
-        {/* Left Content */ }
+        {/* Left Content */}
         <div className="relative z-10 space-y-8 text-center lg:text-left">
           {/* Subtle localized dark shadow behind just the text for perfect readability without hard edges */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] lg:w-[120%] lg:h-[140%] bg-black/50 lg:bg-black/40 blur-[100px] rounded-full pointer-events-none -z-10" />
@@ -103,25 +105,34 @@ export function HeroSplit ({
             Available Now in Your Area
           </div>
 
-          <h1 className="text-4xl lg:text-6xl font-extrabold tracking-tight leading-tight animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100 drop-shadow-2xl text-white">
-            { title }
+          <h1
+            style={{ color: "#ffffff" }}
+            className="text-4xl lg:text-6xl font-extrabold tracking-tight leading-tight animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100 drop-shadow-2xl !text-white"
+          >
+            {title}
           </h1>
 
-          <p className="text-lg font-sans font-semibold text-gray-100 max-w-xl mx-auto lg:mx-0 drop-shadow-lg">
-            { subtitle }
+          {secondaryHeading && (
+            <p className="text-2xl lg:text-3xl font-semibold tracking-tight leading-tight text-slate-100 max-w-xl mx-auto lg:mx-0 drop-shadow-lg mt-4">
+              {secondaryHeading}
+            </p>
+          )}
+
+          <p className="text-lg font-sans font-semibold text-gray-100 max-w-xl mx-auto lg:mx-0 drop-shadow-lg mt-4">
+            {subtitle}
           </p>
 
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm font-medium text-gray-200 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
-            { features.map((feature, i) => (
-              <div key={ i } className="flex items-center gap-2 drop-shadow-sm">
+            {features.map((feature, i) => (
+              <div key={i} className="flex items-center gap-2 drop-shadow-sm">
                 <CheckCircle2 className="h-5 w-5 text-green-400" />
-                { feature }
+                {feature}
               </div>
-            )) }
+            ))}
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start ">
-            {/* Desktop / Tablet Link (Scrolls to form) */ }
+            {/* Desktop / Tablet Link (Scrolls to form) */}
             <Link href="/book" className="hidden md:block">
               <Button
                 size="lg"
@@ -131,8 +142,8 @@ export function HeroSplit ({
               </Button>
             </Link>
 
-            {/* Mobile Link (Dials phone number) */ }
-            <Link href="https://wa.me/971557864636" className="block md:hidden ">
+            {/* Mobile Link (Dials phone number) */}
+            <Link href={`https://wa.me/${company.whatsapp}`} className="block md:hidden ">
               <Button
                 size="lg"
                 variant="accent"
@@ -145,14 +156,14 @@ export function HeroSplit ({
 
           <div className="pt-4 flex items-center justify-center lg:justify-start gap-4">
             <div className="flex -space-x-2">
-              { [1, 2, 3, 4].map((i) => (
+              {[1, 2, 3, 4].map((i) => (
                 <div
-                  key={ i }
+                  key={i}
                   className="h-10 w-10 rounded-full border-2 border-surface-dark bg-gray-600 relative overflow-hidden"
                 >
-                  {/* Placeholder avatars would go here */ }
+                  {/* Placeholder avatars would go here */}
                 </div>
-              )) }
+              ))}
             </div>
             <div className="text-left">
               <div className="flex items-center text-yellow-400">
@@ -169,7 +180,7 @@ export function HeroSplit ({
           </div>
         </div>
 
-        {/* Right Content - Lead Form */ }
+        {/* Right Content - Lead Form */}
         <div className="relative animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 md:block hidden">
           <GlassCard
             id="lead-form"
@@ -184,14 +195,14 @@ export function HeroSplit ({
               </div>
 
               <form
-                ref={ formRef }
-                onSubmit={ handleSubmit }
+                ref={formRef}
+                onSubmit={handleSubmit}
                 className="space-y-4"
               >
                 <input
                   type="hidden"
                   name="form_source"
-                  value={ `Hero Callback – ${ serviceName || "Service Page" }` }
+                  value={`Hero Callback – ${serviceName || "Service Page"}`}
                 />
 
                 <div className="grid grid-cols-1 gap-4">
@@ -215,28 +226,28 @@ export function HeroSplit ({
                     className="w-full px-4 py-3 rounded-lg text-gray-300 border-b-2 border-orange-500 bg-transparent focus:border-primary focus:bg-gray-700 focus:ring-2 transition-all outline-none"
                   >
                     <option value="">Select Issue</option>
-                    { issueOptions.map((option, i) => (
-                      <option key={ i } value={ option }>
-                        { option }
+                    {issueOptions.map((option, i) => (
+                      <option key={i} value={option}>
+                        {option}
                       </option>
-                    )) }
+                    ))}
                   </select>
                 </div>
 
-                { errorMsg && (
+                {errorMsg && (
                   <p className="text-sm text-red-400 text-center">
-                    { errorMsg }
+                    {errorMsg}
                   </p>
-                ) }
+                )}
 
                 <Button
                   type="submit"
                   size="lg"
                   variant="black"
                   className="w-full font-bold text-lg border-b-4 border-orange-500 border-t-2"
-                  disabled={ isLoading }
+                  disabled={isLoading}
                 >
-                  { isLoading ? "Sending..." : "Request Callback" }
+                  {isLoading ? "Sending..." : "Request Callback"}
                 </Button>
                 <p className="text-xs text-center text-gray-400">
                   No hidden fees. Free cancellation.

@@ -353,7 +353,7 @@ export default function ServicesForm()
       {/* Back arrow */}
       <Link
         href="/"
-        className="inline-flex items-center gap-2 mb-6 text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors group"
+        className="inline-flex items-center gap-2 mb-6 text-slate-600 hover:text-sky-600 transition-colors group"
       >
         <span className="group-hover:-translate-x-1 transition-transform">
           <Icons.ArrowLeft />
@@ -361,12 +361,12 @@ export default function ServicesForm()
         <span className="text-sm font-medium">Back to Home</span>
       </Link>
 
-      <GlassCard className="overflow-hidden" children={undefined}>
-        <div className="bg-linear-to-r from-orange-500 via-orange-600 to-orange-700 p-6 md:p-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+      <GlassCard className="overflow-hidden bg-white border border-slate-200 shadow-xl" children={undefined}>
+        <div className="bg-white border-b border-slate-200 p-6 md:p-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
             Book a Service
           </h2>
-          <p className="text-white/80">
+          <p className="text-slate-500">
             Fill in your details and we&apos;ll get back to you shortly
           </p>
         </div>
@@ -381,9 +381,9 @@ export default function ServicesForm()
             <div className="space-y-2">
               <label
                 htmlFor="name"
-                className="text-sm font-semibold text-gray-100 dark:text-gray-300 flex items-center gap-2"
+                className="text-sm font-semibold text-slate-700 flex items-center gap-2"
               >
-                <span className="text-orange-500">
+                <span className="text-sky-600">
                   <Icons.User />
                 </span>
                 Full Name *
@@ -396,16 +396,16 @@ export default function ServicesForm()
                 onChange={handleChange}
                 required
                 placeholder="John Doe"
-                className="w-full px-4 py-3 rounded-xl border-b-2 border-orange-500 dark:border-cyan-700 bg-slate-800/50 backdrop-blur-3xl dark:bg-gray-800 text-white dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+                className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:border-sky-500 focus:bg-white transition-all outline-none"
               />
             </div>
 
             <div className="space-y-2">
               <label
                 htmlFor="phone"
-                className="text-sm font-semibold text-gray-100 dark:text-gray-300 flex items-center gap-2"
+                className="text-sm font-semibold text-slate-700 flex items-center gap-2"
               >
-                <span className="text-orange-500">
+                <span className="text-sky-600">
                   <Icons.Phone />
                 </span>
                 Phone Number *
@@ -418,7 +418,7 @@ export default function ServicesForm()
                 onChange={handleChange}
                 required
                 placeholder="+1 234 567 890"
-                className="w-full px-4 py-3 rounded-xl border-b-2 border-orange-500 dark:border-cyan-700 bg-slate-800/50 backdrop-blur-3xl dark:bg-gray-800 text-gray-100 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+                className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:border-sky-500 focus:bg-white transition-all outline-none"
               />
             </div>
           </div>
@@ -426,9 +426,9 @@ export default function ServicesForm()
           <div className="space-y-2">
             <label
               htmlFor="email"
-              className="text-sm font-semibold text-gray-100 dark:text-gray-300 flex items-center gap-2"
+              className="text-sm font-semibold text-slate-700 flex items-center gap-2"
             >
-              <span className="text-orange-500">
+              <span className="text-sky-600">
                 <Icons.Mail />
               </span>
               Email Address
@@ -440,16 +440,16 @@ export default function ServicesForm()
               value={formData.email}
               onChange={handleChange}
               placeholder="john@example.com"
-              className="w-full px-4 py-3 rounded-xl border-b-2 border-orange-500 dark:border-gray-700 bg-slate-800/50 backdrop-blur-3xl dark:bg-gray-800 text-gray-100 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:border-sky-500 focus:bg-white transition-all outline-none"
             />
           </div>
 
           <div className="space-y-2">
             <label
               htmlFor="address"
-              className="text-sm font-semibold text-gray-100 dark:text-gray-300 flex items-center gap-2"
+              className="text-sm font-semibold text-slate-700 flex items-center gap-2"
             >
-              <span className="text-orange-500">
+              <span className="text-sky-600">
                 <Icons.MapPin />
               </span>
               Address *
@@ -462,7 +462,7 @@ export default function ServicesForm()
               onChange={handleChange}
               required
               placeholder="Your complete address"
-              className="w-full px-4 py-3 rounded-xl border-l-4 border-orange-500 dark:border-gray-700 bg-slate-800/50 backdrop-blur-3xl dark:bg-gray-800 text-gray-100 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:border-sky-500 focus:bg-white transition-all outline-none"
             />
           </div>
 
@@ -470,9 +470,9 @@ export default function ServicesForm()
             <div className="space-y-2">
               <label
                 htmlFor="service"
-                className="text-sm font-semibold text-gray-100 dark:text-gray-300 flex items-center gap-2"
+                className="text-sm font-semibold text-slate-700 flex items-center gap-2"
               >
-                <span className="text-orange-500">
+                <span className="text-sky-600">
                   <Icons.Tool />
                 </span>
                 Select Service *
@@ -484,17 +484,17 @@ export default function ServicesForm()
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 pr-12 rounded-xl border-l-2 border-orange-500 dark:border-cyan-700 bg-slate-800/50 backdrop-blur-3xl dark:bg-gray-800 text-gray-100 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all outline-none appearance-none cursor-pointer"
+                  className="w-full px-4 py-3 pr-12 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 focus:border-sky-500 focus:bg-white transition-all outline-none appearance-none cursor-pointer"
                 >
-                  <option value="">Choose a service</option>
+                  <option value="" className="bg-white text-slate-500">Choose a service</option>
                   {SERVICE_OPTIONS.map((service) => (
-                    <option key={service.value} value={service.value}>
+                    <option key={service.value} value={service.value} className="bg-white text-slate-900">
                       {service.icon} {service.label}
                     </option>
                   ))}
                 </select>
-                <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
-                  <span className="text-orange-500">
+                <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+                  <span className="text-sky-600">
                     <Icons.ChevronDown />
 
                   </span>
@@ -505,9 +505,9 @@ export default function ServicesForm()
             <div className="space-y-2">
               <label
                 htmlFor="subService"
-                className="text-sm font-semibold text-gray-100 dark:text-gray-300 flex items-center gap-2"
+                className="text-sm font-semibold text-slate-700 flex items-center gap-2"
               >
-                <span className="text-orange-500">
+                <span className="text-sky-600">
                   <Icons.Tool />
                 </span>
                 Specific Issue
@@ -519,21 +519,21 @@ export default function ServicesForm()
                   value={formData.subService}
                   onChange={handleChange}
                   disabled={!formData.service}
-                  className="w-full px-4 py-3 pr-12 rounded-xl  border-l-2 border-orange-500 dark:border-gray-700 bg-slate-800/50 backdrop-blur-3xl dark:bg-gray-800 text-gray-100 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none appearance-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 pr-12 rounded-xl border border-slate-200 bg-slate-50 text-slate-900 focus:border-sky-500 focus:bg-white transition-all outline-none appearance-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <option value="">
+                  <option value="" className="bg-white text-slate-500">
                     {formData.service
                       ? "Select specific issue"
                       : "Select a service first"}
                   </option>
                   {availableSubServices.map((subService) => (
-                    <option key={subService.id} value={subService.id}>
+                    <option key={subService.id} value={subService.id} className="bg-white text-slate-900">
                       {subService.icon} {subService.title}
                     </option>
                   ))}
                 </select>
-                <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-100">
-                  <span className="text-orange-500">
+                <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+                  <span className="text-sky-600">
                     <Icons.ChevronDown />
 
                   </span>
@@ -545,7 +545,7 @@ export default function ServicesForm()
           <div className="space-y-2">
             <label
               htmlFor="message"
-              className="text-sm font-semibold text-gray-100 dark:text-gray-300 flex items-center gap-2"
+              className="text-sm font-semibold text-slate-700 flex items-center gap-2"
             >
               <span className="text-orange-500">
                 <Icons.MessageSquare />

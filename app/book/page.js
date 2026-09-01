@@ -1,11 +1,12 @@
 import ServicesForm from "@/components/ui/ServicesForm";
+import { company } from "@/data/company-data";
 
 export const metadata = {
   title: "Book a Service | Schedule Your Repair",
   description:
     "Book your home repair service in Dubai online. AC repair, fridge fix, electrician, and more. Fast and easy scheduling.",
   alternates: {
-    canonical: "/book",
+    canonical: `${company.website}/book`,
   },
 };
 

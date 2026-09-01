@@ -201,7 +201,7 @@ export default function SearchBar() {
         <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden z-50">
           {/* Service prompt */}
           {showServicePrompt && (
-            <div className="p-4 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border-b border-blue-100 dark:border-blue-800">
+            <div className="p-4 bg-gradient-to-r from-orange-50 to-cyan-50 dark:from-orange-900/20 dark:to-cyan-900/20 border-b border-orange-100 dark:border-orange-800">
               <div className="flex items-start gap-3">
                 <div className="p-2 bg-primary rounded-lg text-white flex-shrink-0">
                   <Icons.Wrench />
@@ -243,7 +243,7 @@ export default function SearchBar() {
                 >
                   <div className="flex-shrink-0">
                     {result.type === "service" && (
-                      <span className="inline-flex items-center px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-semibold rounded">
+                      <span className="inline-flex items-center px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 text-xs font-semibold rounded">
                         Service
                       </span>
                     )}

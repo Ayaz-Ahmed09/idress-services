@@ -14,6 +14,8 @@ import {
   generateServiceJsonLd,
 } from "@/lib/generateServiceMetadata";
 
+
+
 /* ─── Metadata (Next.js Metadata API) ─── */
 export const metadata = generateServiceMetadata("electrician-service");
 
@@ -61,29 +63,29 @@ const electricianTestimonials = [
   },
 ];
 
-export default async function ElectricianPage () {
+export default async function ElectricianPage() {
 
 
   return (
     <>
-      {/* JSON-LD Structured Data */ }
+      {/* JSON-LD Structured Data */}
 
 
-    
-      <main className="min-h-screen bg-dark">
-        {/* ─── h1 lives here ─── */ }
+
+      <main className="min-h-screen bg-white">
+        {/* ─── h1 lives here ─── */}
         <HeroSplit
           title="Electrician Near You - Fast & Affordable 24/7"
           subtitle=" Emergency electrician available near you
           Same-day service – Call now ."
           serviceName="Electrician Services"
           heroImage="/electricen.jpeg"
-          features={ [
+          features={[
             "24/7 Emergency Response",
             "Licensed & Certified Pros",
             "Safety-First Approach",
-          ] }
-          issueOptions={ [
+          ]}
+          issueOptions={[
             "Short Circuit / Tripping",
             "Wiring & Rewiring",
             "Switch & Socket Repair",
@@ -91,61 +93,64 @@ export default async function ElectricianPage () {
             "DB Box / Breaker Issue",
             "New Electrical Fitting",
             "Other",
-          ] }
+          ]}
         />
 
         <TrustBar title="electrician-service" />
 
-       
+
         <SubServicesSection
-          subServices={ serviceData.subServices || [] }
+          subServices={serviceData.subServices || []}
           serviceSlug="electrician-service"
           serviceTitle="Electrician Service"
           sectionHeading="Full-Range Electrical Services for Dubai Properties"
           gradient="from-yellow-500 to-orange-400"
         />
 
-     
+
         <ServiceProcess heading="Our Electrical Service Process — Safe & Certified" />
 
-        
+
         <ServiceFAQSection
           title="electrician-service"
           heading="Electrical Service Questions & Expert Guidance"
         />
 
-       
-        <section className="py-16 md:py-24 bg-gray-950">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h4 className="text-3xl md:text-4xl font-bold text-white mb-4">
+
+        <section className="py-16 md:py-24 bg-gradient-to-r from-orange-600 via-orange-500 to-amber-600 text-white relative overflow-hidden shadow-2xl">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center">
+              <h4 className="text-3xl md:text-4xl font-extrabold text-white mb-4 drop-shadow-md">
                 Book a Certified Electrician Now
               </h4>
-              <p className="text-gray-400">
+              <p className="text-orange-100 text-lg max-w-xl mx-auto">
                 Fill in the form below and we&apos;ll dispatch an electrician
                 within 30 minutes
               </p>
-              <button className="mt-4 px-3 py-2 bg-gray-500/50 backdrop-blur-sm outline-1 border-2 border-sky-500">
-                <Link href="/book">Book Now</Link>
-              </button>
+              <Link
+                href="/book"
+                className="mt-8 inline-block px-8 py-3.5 bg-black  text-orange-600 font-bold text-base rounded-xl shadow-xl hover:bg-orange-50 hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300"
+              >
+                Book Now
+              </Link>
             </div>
           </div>
         </section>
 
-       
+
         <Testimonials
-          testimonials={ electricianTestimonials }
+          testimonials={electricianTestimonials}
           title="Verified Electrician Service Reviews in Dubai"
           subtitle="Hear from homeowners and businesses who rely on our electrical expertise."
           className="mt-4"
         />
 
-       
+
         <ContactForm heading="Request a Free Electrical Consultation" />
 
         <StickyMobileNav />
       </main>
-    
+
     </>
   );
 }

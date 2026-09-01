@@ -7,15 +7,15 @@ export default function ServiceHeroSection({ service }) {
   if (!service) return null;
 
   const colorClass = {
-    blue: "from-blue-600 to-cyan-500",
+    orange: "from-orange-600 to-cyan-500",
     red: "from-red-600 to-orange-500",
     purple: "from-purple-600 to-pink-500",
     green: "from-green-600 to-emerald-500",
     amber: "from-amber-600 to-yellow-500",
-    indigo: "from-indigo-600 to-blue-500",
+    indigo: "from-indigo-600 to-orange-500",
   };
 
-  const gradient = colorClass[service.color] || "from-blue-600 to-cyan-500";
+  const gradient = colorClass[service.color] || "from-orange-600 to-cyan-500";
 
   return (
     <section

@@ -3,14 +3,11 @@
 import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
 
-export default function Preloader()
-{
+export default function Preloader() {
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() =>
-  {
-    const timer = setTimeout(() =>
-    {
+  useEffect(() => {
+    const timer = setTimeout(() => {
       setIsLoading(false);
     }, 4000);
     return () => clearTimeout(timer);
@@ -22,7 +19,7 @@ export default function Preloader()
     <motion.div
       exit={{ opacity: 30, transition: { duration: 0.8, ease: "easeInOut" } }}
     >
-      <div className="fixed inset-0 z-100 flex items-center justify-center bg-blue-900 overflow-hidden">
+      <div className="fixed inset-0 z-100 flex items-center justify-center bg-orange-900 overflow-hidden">
         <div className="relative w-full h-full flex flex-col items-center justify-center">
           {/* Car moving container */}
           <motion.div

@@ -64,7 +64,7 @@ export default function BrandsSection({ brands, gradient }) {
                 />
 
                 <div className="relative">
-                  <p className="font-semibold text-white text-sm md:text-base group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 transition-all duration-300">
+                  <p className="font-semibold text-white text-sm md:text-base group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange-600 group-hover:to-cyan-500 transition-all duration-300">
                     {brand}
                   </p>
                 </div>

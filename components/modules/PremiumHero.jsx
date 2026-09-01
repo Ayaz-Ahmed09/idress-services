@@ -8,6 +8,7 @@ import Image from "next/image";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
 import { services } from "@/data/services";
+import { company } from "@/data/company-data";
 import { Whatsapp } from "../ui/Svg";
 
 const SERVICE_OPTIONS = Object.values(services).map((s) => ({
@@ -31,7 +32,7 @@ export default function PremiumHero() {
       formData.append(
         "access_key",
         process.env.NEXT_PUBLIC_WEB3_PUBLIC_KEY ||
-        "5b54b2db-ee98-4dee-a4ed-40b6f6e33e8b"
+        "a1024588-a9d0-4258-88ff-70918df432c3"
       );
 
       const res = await fetch("https://api.web3forms.com/submit", {
@@ -59,22 +60,22 @@ export default function PremiumHero() {
       {/* ── Background Image ── */}
       <div className="absolute inset-0 -z-20">
         <Image
-          src="/idres-technicen.avif"
+          src="/home-tools.png"
           alt="Professional technician background"
           fill
           priority
           className="object-cover object-center"
-          quality={80}
+          quality={90}
         />
       </div>
 
-      {/* ── Dark Overlay for readability ── */}
-      <div className="absolute inset-0 -z-10 bg-black/60 dark:bg-black/70" />
+      {/* ── Overlay for high readability ── */}
+      <div className="absolute inset-0 -z-10 bg-slate-950/50 backdrop-blur-[1px]" />
 
       {/* ── Gradient accents (on top of overlay) ── */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] rounded-full bg-linear-to-b from-blue-500/15 via-cyan-500/5 to-transparent blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-[800px] h-[800px] rounded-full bg-linear-to-t from-blue-500/10 via-purple-500/5 to-transparent blur-3xl" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] rounded-full bg-gradient-to-b from-orange-500/20 via-amber-400/10 to-transparent blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-[800px] h-[800px] rounded-full bg-gradient-to-t from-orange-500/20 via-amber-300/10 to-transparent blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto w-full">
@@ -84,39 +85,56 @@ export default function PremiumHero() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
+            className="flex flex-col items-center text-center"
           >
             {/* Badge */}
-            <motion.div
-              className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 backdrop-blur-sm px-4 py-2 mb-8 w-fit"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
-            >
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-500" />
-              </span>
-              <span className="text-xs font-semibold text-blue-300 uppercase">
-                ⚡ 24/7 Emergency Service Available
-              </span>
-            </motion.div>
+
 
             {/* Main Heading */}
             <motion.h1
-              className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white mb-6"
+              style={{ color: "#ffffff" }}
+              className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white text-center mb-4 drop-shadow-2xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              Professional Services,{" "}
-              <span className="bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Professional, Expert Services,{" "}
+              <span className="bg-gradient-to-r from-orange-500 to-white bg-clip-text text-transparent">
                 One Call Away
               </span>
             </motion.h1>
 
+            {/* Services Links under H1 */}
+            <motion.div
+              className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-6 text-sm sm:text-base font-bold tracking-wide text-white drop-shadow-md"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.35, duration: 0.8 }}
+            >
+              {[
+                { label: "AC REPAIR", href: "/ac-repair" },
+                { label: "PAINTING", href: "/painting-services" },
+                { label: "CCTV INSTALLATION", href: "/cctv-installation" },
+                { label: "ELECTRICIAN", href: "/electrician-service" },
+                { label: "EV CHARGING", href: "/ev-charging" },
+              ].map((item, index, array) => (
+                <div key={item.href} className="flex items-center gap-2 md:gap-3">
+                  <Link
+                    href={item.href}
+                    className="text-orange-400 hover:text-amber-300 transition-colors duration-200 underline-offset-4 hover:underline drop-shadow"
+                  >
+                    {item.label}
+                  </Link>
+                  {index < array.length - 1 && (
+                    <span className="text-slate-300/70 font-normal">|</span>
+                  )}
+                </div>
+              ))}
+            </motion.div>
+
             {/* Subtitle */}
             <motion.p
-              className="text-xl text-gray-300 leading-relaxed mb-8 max-w-lg"
+              className="text-xl text-center text-slate-100 leading-relaxed mb-8 max-w-lg font-medium drop-shadow-md mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -128,14 +146,14 @@ export default function PremiumHero() {
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex justify-center items-center w-full"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
             >
               <Link
                 href="/book"
-                className="lg:inline-flex items-center hidden md:block justify-center px-8 py-4 rounded-xl font-semibold text-white bg-linear-to-r from-blue-600 to-cyan-500 hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105 active:scale-95"
+                className="hidden md:inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-white bg-accent hover:bg-accent hover:shadow-xl hover:shadow-sky-600/30 transition-all duration-300 hover:scale-105 active:scale-95"
               >
                 <span>Book Now</span>
                 <svg
@@ -154,17 +172,16 @@ export default function PremiumHero() {
                 </svg>
               </Link>
 
-              <Link href="https://wa.me/971557864636" className="block md:hidden ">
+              <Link href={`https://wa.me/${company.whatsapp}`} className="block md:hidden">
                 <Button
                   size="lg"
-                  variant="blue"
-                  className="justify-center px-9 py-4 rounded-xl font-semibold text-white bg-linear-to-r from-blue-600 to-cyan-500 hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105 active:scale-95 "
+                  variant="orange"
+                  className="justify-center px-9 py-4 rounded-xl font-semibold text-white bg-linear-to-r from-accent to-accent-hover hover:shadow-2xl hover:shadow-orange-500/40 transition-all duration-300 hover:scale-105 active:scale-95"
                 >
                   <Whatsapp />
                   <span className="ml-3">Chat via Whatsapp</span>
                 </Button>
               </Link>
-
             </motion.div>
           </motion.div>
 
@@ -177,14 +194,14 @@ export default function PremiumHero() {
           >
             <GlassCard
               id="lead-form"
-              className="p-8 max-w-md mx-auto relative z-10 border-t-4 border-t-accent hidden md:block"
+              className="p-8 max-w-md mx-auto relative z-10 border-t-4 border-t-sky-500 hidden md:block bg-white/95 border-slate-200 shadow-2xl"
             >
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-white">
+                  <h3 className="text-2xl font-bold text-slate-900">
                     Get a Quick Quote
                   </h3>
-                  <p className="text-sm text-gray-400">
+                  <p className="text-sm text-slate-500">
                     Response time: 5 mins
                   </p>
                 </div>
@@ -202,23 +219,23 @@ export default function PremiumHero() {
                       name="name"
                       required
                       placeholder="Your Name"
-                      className="w-full px-4 py-3 rounded-lg border-b-2 border-orange-500 bg-transparent text-white focus:border-primary focus:bg-gray-700 focus:ring-0 transition-all outline-none"
+                      className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-900 placeholder-slate-400 focus:border-sky-500 focus:bg-white focus:ring-0 transition-all outline-none"
                     />
                     <input
                       type="tel"
                       name="phone"
                       required
                       placeholder="Mobile Number"
-                      className="w-full px-4 py-3 rounded-lg text-white border-b-2 border-orange-500 bg-transparent focus:border-primary focus:bg-gray-700 focus:ring-0 transition-all outline-none"
+                      className="w-full px-4 py-3 rounded-lg text-slate-900 border border-slate-200 bg-slate-50 placeholder-slate-400 focus:border-sky-500 focus:bg-white focus:ring-0 transition-all outline-none"
                     />
                     <select
                       name="service"
                       required
-                      className="w-full px-4 py-3 rounded-lg text-gray-300 border-b-2 border-orange-500 bg-transparent focus:border-primary focus:bg-gray-700 focus:ring-2 transition-all outline-none"
+                      className="w-full px-4 py-3 rounded-lg text-slate-900 border border-slate-200 bg-slate-50 focus:border-sky-500 focus:bg-white focus:ring-2 transition-all outline-none"
                     >
-                      <option value="">Select Service</option>
+                      <option value="" className="bg-white text-slate-500">Select Service</option>
                       {SERVICE_OPTIONS.map((s) => (
-                        <option key={s.value} value={s.label}>
+                        <option key={s.value} value={s.label} className="bg-white text-slate-900">
                           {s.label}
                         </option>
                       ))}
@@ -265,7 +282,7 @@ export default function PremiumHero() {
               key={i}
               className="text-center p-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10"
             >
-              <p className="sm:text-md lg:text-xl md:text-2xl font-bold bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <p className="sm:text-md lg:text-xl md:text-2xl font-bold bg-linear-to-r from-accent to-accent-hover bg-clip-text text-transparent">
                 {stat.value}
               </p>
               <p className="text-gray-300 text-sm sm:w-full text-center">

@@ -1,26 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0066ff;
-  --color-primary-dark: #0044aa;
-  --color-accent: #ff5500;
-  --color-accent-hover: #cc4400;
-  --color-surface: #f8f9fa;
-  --color-surface-dark: #111827;
-  --color-text-main: #1f2937;
-  --color-text-muted: #6b7280;
+  --color-primary: #f97316;
+  --color-primary-dark: #ea580c;
+  --color-accent: #f97316;
+  --color-accent-hover: #ea580c;
+  --color-surface: #ffffff;
+  --color-surface-dark: #f8fafc;
+  --color-text-main: #0f172a;
+  --color-text-muted: #64748b;
 
-  --text-primary: #f3f4f6;
-  --text-secondary: #9ca3af;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
 
-  --color-bg-primary: #0a0a0f;
-  --color-bg-secondary: #1a1a2e;
-  --color-bg-card: #16162a;
-  --color-bg-glass: rgba(26, 26, 46, 0.6);
-  --color-border-glass: rgba(255, 255, 255, 0.08);
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f8fafc;
+  --color-bg-card: #ffffff;
+  --color-bg-glass: rgba(255, 255, 255, 0.85);
+  --color-border-glass: #e2e8f0;
 
-  --color-accent-cyan: #00f0ff;
-  --color-accent-orange: #ff5f1f;
+  --color-accent-cyan: #f97316;
+  --color-accent-orange: #f97316;
 
   --font-display: "Outfit", system-ui, sans-serif;
   --font-body: "Space Grotesk", system-ui, sans-serif;
@@ -67,18 +67,18 @@
 /* Custom Utilities */
 @layer utilities {
   .glass {
-    @apply bg-bg-glass backdrop-blur-xl border border-border-glass;
+    @apply bg-white/90 backdrop-blur-xl border border-orange-200 shadow-md;
   }
 }
 
-/* Global Reset — Force Dark Theme */
+/* Global Reset — Force Light Theme */
 html {
   overflow-x: hidden;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
-  @apply bg-gray-950 text-white font-body antialiased overflow-x-hidden;
+  @apply bg-white font-body antialiased overflow-x-hidden;
   width: 100%;
 }
 
@@ -88,7 +88,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-display font-bold text-white;
+  @apply font-display font-bold;
 }
 
 

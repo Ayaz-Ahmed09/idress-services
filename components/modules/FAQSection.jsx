@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { company } from "@/data/company-data";
 
 const faqs = [
   {
@@ -17,7 +18,7 @@ const faqs = [
     category: "Service",
     question: "Do you provide same-day service?",
     answer:
-      "Yes! We offer same-day service in most areas. For emergency repairs, our technicians can reach you within 60 minutes. Call us at 055-7864636 for immediate bookings.",
+      "Yes! We offer same-day service in most areas. For emergency repairs, our technicians can reach you within 60 minutes. Call us at 050-4460083 for immediate bookings.",
   },
   {
     id: 3,
@@ -38,7 +39,7 @@ const faqs = [
     category: "Service",
     question: "Which brands do you service?",
     answer:
-      "We service all major brands including Daikin, LG, Samsung, Voltas, Blue Star, Hitachi, Carrier, Whirlpool, Godrej, Panasonic, and many more. Call us for your specific brand.",
+      "We service all major brands including Daikin, LG, Samsung, Voltas, orange Star, Hitachi, Carrier, Whirlpool, Godrej, Panasonic, and many more. Call us for your specific brand.",
   },
   {
     id: 6,
@@ -64,7 +65,7 @@ export default function FAQSection() {
     <section className="relative py-20 md:py-32 px-6" id="faq">
       {/* Background */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
-        <div className="absolute top-1/2 right-1/4 w-96 h-96 rounded-full bg-blue-500/10 blur-3xl" />
+        <div className="absolute top-1/2 right-1/4 w-96 h-96 rounded-full bg-orange-500/10 blur-3xl" />
         <div className="absolute bottom-0 left-1/3 w-96 h-96 rounded-full bg-cyan-500/10 blur-3xl" />
       </div>
 
@@ -87,11 +88,11 @@ export default function FAQSection() {
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Frequently Asked Questions
           </h2>
 
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Find answers to common questions about our services, pricing, and
             booking process.
           </p>
@@ -110,8 +111,8 @@ export default function FAQSection() {
               key={cat}
               onClick={() => setSelectedCategory(cat)}
               className={`px-5 py-2 rounded-full font-semibold transition-all duration-300 ${selectedCategory === cat
-                ? "bg-linear-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-500/40"
-                : "glass-card text-gray-500 shadow-xl dark:text-gray-300 border border-orange-500  hover:border-cyan-500 dark:hover:border-cyan-500"
+                ? "bg-orange-600 text-white shadow-md"
+                : "bg-white text-slate-700 border-2 border-orange-200 hover:border-orange-500 shadow-sm"
                 }`}
             >
               {cat}
@@ -136,25 +137,25 @@ export default function FAQSection() {
                   onClick={() =>
                     setExpandedId(expandedId === faq.id ? null : faq.id)
                   }
-                  className="w-full text-left p-6 rounded-xl border-l-3 border-orange-500/80 border-b-2 glass-card backdrop-blur-3xl  hover:border-blue-500/50 dark:hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
+                  className="w-full text-left p-6 rounded-xl border-3 border-orange-400 bg-white hover:border-orange-500 transition-all duration-300 shadow-sm"
                 >
                   <div className="flex items-center justify-between gap-4">
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
-                        <span className="inline-flex px-2.5 py-1 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400">
+                        <span className="inline-flex px-2.5 py-1 text-xs font-semibold rounded-full bg-orange-50 text-orange-700 border border-orange-200">
                           {faq.category}
                         </span>
                       </div>
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                      <h3 className="text-lg font-semibold text-black">
                         {faq.question}
                       </h3>
                     </div>
                     <motion.div
                       animate={{ rotate: expandedId === faq.id ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
-                      className="shrink-0 text-blue-600 dark:text-blue-400"
+                      className="shrink-0 text-orange-600"
                     >
-                      <ChevronDown size={24} className="text-orange-700" />
+                      <ChevronDown size={24} className="text-orange-600" />
                     </motion.div>
                   </div>
                 </button>
@@ -168,8 +169,8 @@ export default function FAQSection() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="p-6 bg-transparent text-white  border-t-2 border-orange-500 border-r-4 rounded-b-xl">
-                        <p className=" leading-relaxed">
+                      <div className="p-6 bg-slate-50 text-slate-700 border-t border-slate-200 rounded-b-xl">
+                        <p className="leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>
@@ -189,19 +190,19 @@ export default function FAQSection() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ delay: 0.3 }}
         >
-          <p className="text-gray-600 dark:text-gray-300 mb-4">
+          <p className="text-slate-600 mb-4">
             Didn't find your answer? We're here to help!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+971557864636"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-white bg-cyan-500  hover:shadow-lg hover:shadow-blue-500/40 transition-all duration-300"
+              href={`tel:+${company.whatsapp}`}
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-white bg-orange-500 hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-500/40 transition-all duration-300"
             >
               Call Now
             </a>
             <a
-              href="mailto:ahmedidrees392@gmail.com"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-gray-900 dark:text-white border-2 border-gray-300 dark:border-gray-600 hover:bg-sky-600 dark:hover:bg-gray-700 transition-all duration-300"
+              href={`mailto:${company.email}`}
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-slate-900 border-2 border-slate-300 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all duration-300"
             >
               Email Us
             </a>

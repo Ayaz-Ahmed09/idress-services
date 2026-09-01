@@ -60,10 +60,11 @@ export default function Hero()
         </motion.div>
 
         <motion.h1
+          style={{ color: "#ffffff" }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 4 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-heading font-black tracking-tighter leading-[1.05] mb-6 drop-shadow-2xl"
+          className="text-5xl md:text-7xl lg:text-8xl font-heading font-black tracking-tighter leading-[1.05] mb-6 drop-shadow-2xl !text-white text-white"
         >
           DON&apos;T LET A BAD INSTALL <br />
           <span className="text-gradient-electric glow-text">FRY YOUR EV.</span>

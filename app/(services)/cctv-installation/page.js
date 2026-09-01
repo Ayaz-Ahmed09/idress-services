@@ -15,6 +15,8 @@ import {
   generateServiceJsonLd,
 } from "@/lib/generateServiceMetadata";
 
+
+
 /* ─── Metadata (Next.js Metadata API) ─── */
 export const metadata = generateServiceMetadata("cctv-installation");
 
@@ -72,7 +74,7 @@ export default function CctvPage() {
       />
 
       {/* <Navbar /> */}
-      <main className="min-h-screen bg-dark">
+      <main className="min-h-screen bg-white">
         {/* ─── h1 lives here ─── */}
         <HeroSplit
           title="Professional CCTV Installation & Security in Dubai"
@@ -116,19 +118,22 @@ export default function CctvPage() {
         />
 
         {/* ─── h4: booking CTA ─── */}
-        <section className="py-16 md:py-24 bg-gray-950">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h4 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section className="py-16 md:py-24 bg-gradient-to-r from-orange-600 via-orange-500 to-amber-600 text-white relative overflow-hidden shadow-2xl">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center">
+              <h4 className="text-3xl md:text-4xl font-extrabold text-white mb-4 drop-shadow-md">
                 Book Your Free CCTV Site Survey
               </h4>
-              <p className="text-gray-400">
+              <p className="text-orange-100 text-lg max-w-xl mx-auto">
                 Fill in the form below and we&apos;ll schedule a free survey
                 within 24 hours
               </p>
-              <button className="mt-4 px-3 py-2 bg-gray-500/50 backdrop-blur-sm outline-1 border-2 border-sky-500">
-                <Link href="/book">Book Now</Link>
-              </button>
+              <Link
+                href="/book"
+                className="mt-8 inline-block px-8 py-3.5 bg-white text-orange-600 font-bold text-base rounded-xl shadow-xl hover:bg-orange-50 hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300"
+              >
+                Book Now
+              </Link>
             </div>
           </div>
         </section>

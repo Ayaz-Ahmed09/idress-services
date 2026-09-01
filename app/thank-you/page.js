@@ -1,5 +1,7 @@
 
 import Confetti from "@/components/ui/Thankyou"
+import { company } from "@/data/company-data"
+
 export const metadata = {
   title: "Booking Confirmed | Thank You",
   description:
@@ -7,6 +9,9 @@ export const metadata = {
   robots: {
     index: false,
     follow: false,
+  },
+  alternates: {
+    canonical: `${company.website}/thank-you`,
   },
 };
 

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { ParallaxCard } from '@/components/ui/ParallaxCard'
 export const dynamic = 'force-dynamic';
 
-function FloatingParticles ({ count, color }) {
+function FloatingParticles({ count, color }) {
         const particles = Array.from({ length: count }, (_, i) => ({
                 id: i,
                 x: Math.random() * 100,
@@ -14,48 +14,48 @@ function FloatingParticles ({ count, color }) {
         }));
         return (
                 <div className="absolute inset-0 overflow-hidden rounded-2xl">
-                        { particles.map((p) => (
+                        {particles.map((p) => (
                                 <div
-                                        key={ p.id }
+                                        key={p.id}
                                         className="absolute rounded-full animate-pulse"
-                                        style={ {
-                                                left: `${ p.x }%`,
-                                                top: `${ p.y }%`,
+                                        style={{
+                                                left: `${p.x}%`,
+                                                top: `${p.y}%`,
                                                 width: p.size,
                                                 height: p.size,
                                                 backgroundColor: color,
                                                 opacity: p.opacity,
-                                                animationDelay: `${ p.delay }s`,
-                                                animationDuration: `${ 2 + Math.random() * 3 }s`,
-                                        } }
+                                                animationDelay: `${p.delay}s`,
+                                                animationDuration: `${2 + Math.random() * 3}s`,
+                                        }}
                                 />
-                        )) }
+                        ))}
                 </div>
         );
 }
 
-function GeometricPattern ({ color }) {
+function GeometricPattern({ color }) {
         return (
                 <div className="absolute inset-0 overflow-hidden rounded-2xl opacity-[0.07]">
-                        { Array.from({ length: 6 }, (_, i) => (
+                        {Array.from({ length: 6 }, (_, i) => (
                                 <div
-                                        key={ i }
+                                        key={i}
                                         className="absolute border rounded-full"
-                                        style={ {
+                                        style={{
                                                 borderColor: color,
                                                 width: 60 + i * 40,
                                                 height: 80 + i * 40,
-                                                left: `${ 50 - (20 + i * 60) / 4 }%`,
-                                                top: `${ 50 - (80 + i * 60) / 6 }%`,
-                                        } }
+                                                left: `${50 - (20 + i * 60) / 4}%`,
+                                                top: `${50 - (80 + i * 60) / 6}%`,
+                                        }}
                                 />
-                        )) }
+                        ))}
                 </div>
         );
 }
 
 /* ─── Counter animation hook ─── */
-function useCountUp (target, duration = 2000) {
+function useCountUp(target, duration = 2000) {
         const [count, setCount] = useState(0);
         const [started, setStarted] = useState(false);
 
@@ -79,22 +79,22 @@ function useCountUp (target, duration = 2000) {
         return { count, start, started };
 }
 
-function StatCard ({ value, suffix, label, color }) {
+function StatCard({ value, suffix, label, color }) {
         const { count, start } = useCountUp(value);
 
         return (
                 <div
                         className="text-center group cursor-default"
-                        onMouseEnter={ start }
+                        onMouseEnter={start}
                 >
                         <div
                                 className="text-4xl md:text-5xl font-black mb-2 transition-all duration-500"
-                                style={ { color } }
+                                style={{ color }}
                         >
-                                { count }
-                                <span className="text-2xl">{ suffix }</span>
+                                {count}
+                                <span className="text-2xl">{suffix}</span>
                         </div>
-                        <div className="text-xs font-semibold tracking-[0.2em] text-white/30 uppercase">{ label }</div>
+                        <div className="text-xs font-semibold tracking-[0.2em] text-white/30 uppercase">{label}</div>
                 </div>
         );
 }
@@ -182,34 +182,34 @@ const AboutUs = () => {
         ];
         return (
                 <div className="min-h-screen bg-[#08080e] relative overflow-hidden">
-                        {/* Ambient background blurs */ }
+                        {/* Ambient background blurs */}
                         <div className="fixed inset-0 pointer-events-none">
                                 <div className="absolute top-[-15%] left-[-5%] w-[500px] h-[500px] rounded-full bg-teal-900/20 blur-[150px]" />
-                                <div className="absolute top-[30%] right-[-10%] w-[600px] h-[600px] rounded-full bg-blue-900/15 blur-[150px]" />
+                                <div className="absolute top-[30%] right-[-10%] w-[600px] h-[600px] rounded-full bg-orange-900/15 blur-[150px]" />
                                 <div className="absolute bottom-[-10%] left-[30%] w-[500px] h-[500px] rounded-full bg-violet-900/10 blur-[120px]" />
                                 <div className="absolute bottom-[20%] right-[20%] w-[300px] h-[300px] rounded-full bg-amber-900/10 blur-[100px]" />
                                 <div className="absolute top-[50%] left-[10%] w-[400px] h-[400px] rounded-full bg-green-900/10 blur-[120px]" />
                         </div>
 
-                        {/* Grid pattern */ }
+                        {/* Grid pattern */}
                         <div
                                 className="fixed inset-0 opacity-[0.025] pointer-events-none"
-                                style={ {
+                                style={{
                                         backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
                                         backgroundSize: "60px 60px",
-                                } }
+                                }}
                         />
 
-                        {/* ════════════════════════════════════════════════════════ */ }
-                        {/* ─── HERO SECTION ─── */ }
-                        {/* ════════════════════════════════════════════════════════ */ }
+                        {/* ════════════════════════════════════════════════════════ */}
+                        {/* ─── HERO SECTION ─── */}
+                        {/* ════════════════════════════════════════════════════════ */}
                         <div className="text-center pt-12 md:pt-20 pb-16 md:pb-24 max-w-4xl mx-auto">
                                 <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-teal-500/20 bg-teal-500/10 px-4 py-1.5 text-xs font-bold tracking-[0.2em] text-teal-300 uppercase">
                                         <span className="inline-block h-1.5 w-1.5 rounded-full bg-violet-500 animate-pulse" />
                                         Dubai Government Approved
                                 </div>
                                 <h1 className="text-4xl sm:text-5xl md:text-7xl font-black bg-gradient-to-b from-white via-white/90 to-white/30 bg-clip-text text-transparent tracking-tight leading-[1.1] mb-6">
-                                        About <span className="bg-gradient-to-r from-violet-800 to-blue-500 bg-clip-text text-transparent">Idrees</span>
+                                        About <span className="bg-gradient-to-r from-violet-800 to-orange-500 bg-clip-text text-transparent">Idrees</span>
                                 </h1>
                                 <p className="text-base md:text-lg text-white/35 max-w-2xl mx-auto leading-relaxed mb-4">
                                         Your trusted partner for professional home maintenance and technical services in Dubai.
@@ -233,42 +233,42 @@ const AboutUs = () => {
                                 </div>
                         </div>
 
-                        {/* ════════════════════════════════════════════════════════ */ }
-                        {/* ─── ABOUT / WHO WE ARE ─── */ }
-                        {/* ════════════════════════════════════════════════════════ */ }
+                        {/* ════════════════════════════════════════════════════════ */}
+                        {/* ─── ABOUT / WHO WE ARE ─── */}
+                        {/* ════════════════════════════════════════════════════════ */}
                         <div className="max-w-6xl mx-auto mb-24 md:mb-32">
                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-                                        {/* Left - Shield parallax card */ }
+                                        {/* Left - Shield parallax card */}
                                         <div className="flex justify-center">
                                                 <ParallaxCard
-                                                        layers={ [
+                                                        layers={[
                                                                 { depth: 0.1, content: <GeometricPattern color="#2fff" /> },
-                                                                { depth: 0.5, content: <FloatingParticles count={ 50 } color="#ffffff" /> },
+                                                                { depth: 0.5, content: <FloatingParticles count={50} color="#ffffff" /> },
                                                                 {
                                                                         depth: 1.1,
                                                                         content: (
                                                                                 <div className="flex items-center justify-center mt-[-30px]">
-                                                                                        <div className="absolute rounded-full blur-xl" style={ { width: 120, height: 120, background: "rgba(0,0,0,0.0.75)" } } />
-                                                                                        {/* <LottieIcon animationData={shieldAnim} size={130} /> */ }
+                                                                                        <div className="absolute rounded-full blur-xl" style={{ width: 120, height: 120, background: "rgba(0,0,0,0.0.75)" }} />
+                                                                                        {/* <LottieIcon animationData={shieldAnim} size={130} /> */}
                                                                                 </div>
                                                                         ),
                                                                 },
                                                                 {
                                                                         depth: 1.5,
                                                                         content: (
-                                                                                <div className="absolute top-6 right-6 text-[10px] font-bold tracking-[0.3em] text-blue-300/60">
+                                                                                <div className="absolute top-6 right-6 text-[10px] font-bold tracking-[0.3em] text-orange-300/60">
                                                                                         EST. DUBAI
                                                                                 </div>
                                                                         ),
                                                                 },
-                                                        ] }
+                                                        ]}
                                                         backgroundGradient="linear-gradient(135deg, #120a1a 0%, #1c0f2a 40%, #251535 100%)"
-                                                        width={ 380 }
-                                                        height={ 440 }
-                                                        maxTilt={ 16 }
-                                                        glareOpacity={ 0.25 }
+                                                        width={380}
+                                                        height={440}
+                                                        maxTilt={16}
+                                                        glareOpacity={0.25}
                                                 >
-                                                        <div className="relative z-10" style={ { transform: "translateZ(40px)", transformStyle: "preserve-3d" } }>
+                                                        <div className="relative z-10" style={{ transform: "translateZ(40px)", transformStyle: "preserve-3d" }}>
                                                                 <div className="mb-2 flex items-center gap-2">
                                                                         <span className="inline-block h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
                                                                         <span className="text-[10px] font-bold tracking-[0.25em] text-white/40 uppercase">Verified Company</span>
@@ -280,7 +280,7 @@ const AboutUs = () => {
                                                 </ParallaxCard>
                                         </div>
 
-                                        {/* Right - Text content */ }
+                                        {/* Right - Text content */}
                                         <div className="lg:pl-4">
                                                 <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-teal-500/20 bg-teal-500/10 px-3 py-1 text-[10px] font-bold tracking-[0.2em] text-teal-300 uppercase">
                                                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -301,46 +301,46 @@ const AboutUs = () => {
                                                         Our team of experienced and certified technicians specialize in AC repair, TV repair, CCTV installation, home appliance repair, plumbing, and electrical work. Every technician is trained, background-verified, and equipped with the latest tools and genuine parts to ensure top-quality service.
                                                 </p>
 
-                                                {/* Quick facts */ }
+                                                {/* Quick facts */}
                                                 <div className="grid grid-cols-2 gap-4">
-                                                        { [
+                                                        {[
                                                                 { icon: "🏛️", label: "Dubai Govt. Approved", desc: "Fully licensed company" },
                                                                 { icon: "🛡️", label: "Insured Services", desc: "100% damage coverage" },
                                                                 { icon: "⚡", label: "Same-Day Service", desc: "Quick response guaranteed" },
                                                                 { icon: "🔧", label: "Genuine Parts", desc: "Original spare parts only" },
                                                         ].map((item, idx) => (
-                                                                <div key={ idx } className="flex items-start gap-3 p-3 rounded-xl border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.04] transition-colors group">
+                                                                <div key={idx} className="flex items-start gap-3 p-3 rounded-xl border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.04] transition-colors group">
                                                                         <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/[0.04] text-lg">
-                                                                                { item.icon }
+                                                                                {item.icon}
                                                                         </div>
                                                                         <div>
-                                                                                <div className="text-xs font-semibold text-white/70">{ item.label }</div>
-                                                                                <div className="text-[10px] text-white/25 mt-0.5">{ item.desc }</div>
+                                                                                <div className="text-xs font-semibold text-white/70">{item.label}</div>
+                                                                                <div className="text-[10px] text-white/25 mt-0.5">{item.desc}</div>
                                                                         </div>
                                                                 </div>
-                                                        )) }
+                                                        ))}
                                                 </div>
                                         </div>
                                 </div>
                         </div>
 
-                        {/* ════════════════════════════════════════════════════════ */ }
-                        {/* ─── STATS SECTION ─── */ }
-                        {/* ════════════════════════════════════════════════════════ */ }
+                        {/* ════════════════════════════════════════════════════════ */}
+                        {/* ─── STATS SECTION ─── */}
+                        {/* ════════════════════════════════════════════════════════ */}
                         <div className="max-w-5xl mx-auto mb-24 md:mb-32">
                                 <div className="rounded-3xl border border-white/[0.06] bg-white/[0.02] p-8 md:p-12 backdrop-blur-sm">
                                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                                                <StatCard value={ 5000 } suffix="+" label="Happy Customers" color="#4fd1c5" />
-                                                <StatCard value={ 15 } suffix="+" label="Years Experience" color="#a78bfa" />
-                                                <StatCard value={ 30 } suffix="+" label="Expert Technicians" color="#38bdf8" />
-                                                <StatCard value={ 98 } suffix="%" label="Satisfaction Rate" color="#4ade80" />
+                                                <StatCard value={5000} suffix="+" label="Happy Customers" color="#4fd1c5" />
+                                                <StatCard value={15} suffix="+" label="Years Experience" color="#a78bfa" />
+                                                <StatCard value={30} suffix="+" label="Expert Technicians" color="#38bdf8" />
+                                                <StatCard value={98} suffix="%" label="Satisfaction Rate" color="#4ade80" />
                                         </div>
                                 </div>
                         </div>
 
-                        {/* ════════════════════════════════════════════════════════ */ }
-                        {/* ─── OUR SERVICES (6 Parallax Cards) ─── */ }
-                        {/* ════════════════════════════════════════════════════════ */ }
+                        {/* ════════════════════════════════════════════════════════ */}
+                        {/* ─── OUR SERVICES (6 Parallax Cards) ─── */}
+                        {/* ════════════════════════════════════════════════════════ */}
                         <div className="max-w-7xl mx-auto mb-24 md:mb-32">
                                 <div className="text-center mb-14">
                                         <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[10px] font-bold tracking-[0.2em] text-white/50 uppercase">
@@ -356,52 +356,52 @@ const AboutUs = () => {
                                 </div>
 
                                 <div className="flex flex-wrap items-stretch justify-center gap-6 lg:gap-7">
-                                        { services.map((service, i) => (
+                                        {services.map((service, i) => (
                                                 <ParallaxCard
-                                                        key={ i }
-                                                        layers={ [
-                                                                { depth: -1, content: <GeometricPattern color={ service.accentColor } /> },
-                                                                { depth: 0.5, content: <FloatingParticles count={ 8 } color={ service.accentColor } /> },
+                                                        key={i}
+                                                        layers={[
+                                                                { depth: -1, content: <GeometricPattern color={service.accentColor} /> },
+                                                                { depth: 0.5, content: <FloatingParticles count={8} color={service.accentColor} /> },
                                                                 {
                                                                         depth: 1.5,
                                                                         content: (
                                                                                 <div className="mt-[-60px] flex items-center justify-center">
-                                                                                        <div className="absolute rounded-full blur-2xl" style={ { width: 70, height: 70, background: service.glowColor } } />
-                                                                                        {/* <LottieIcon animationData={service.lottieData} size={80} /> */ }
+                                                                                        <div className="absolute rounded-full blur-2xl" style={{ width: 70, height: 70, background: service.glowColor }} />
+                                                                                        {/* <LottieIcon animationData={service.lottieData} size={80} /> */}
                                                                                 </div>
                                                                         ),
                                                                 },
                                                                 {
                                                                         depth: 2.5,
                                                                         content: (
-                                                                                <div className={ `absolute top-5 right-5 text-[9px] font-bold tracking-[0.3em] ${ service.numberColor }` }>
-                                                                                        { service.numberLabel }
+                                                                                <div className={`absolute top-5 right-5 text-[9px] font-bold tracking-[0.3em] ${service.numberColor}`}>
+                                                                                        {service.numberLabel}
                                                                                 </div>
                                                                         ),
                                                                 },
-                                                        ] }
-                                                        backgroundGradient={ service.gradient }
-                                                        width={ 320 }
-                                                        height={ 360 }
-                                                        maxTilt={ 16 }
-                                                        glareOpacity={ 0.25 }
+                                                        ]}
+                                                        backgroundGradient={service.gradient}
+                                                        width={320}
+                                                        height={360}
+                                                        maxTilt={16}
+                                                        glareOpacity={0.25}
                                                 >
-                                                        <div className="relative z-10" style={ { transform: "translateZ(40px)", transformStyle: "preserve-3d" } }>
+                                                        <div className="relative z-10" style={{ transform: "translateZ(40px)", transformStyle: "preserve-3d" }}>
                                                                 <div className="mb-2 flex items-center gap-2">
-                                                                        <span className={ `inline-block h-2 w-2 rounded-full ${ service.dotColor } animate-pulse` } />
+                                                                        <span className={`inline-block h-2 w-2 rounded-full ${service.dotColor} animate-pulse`} />
                                                                         <span className="text-[10px] font-bold tracking-[0.25em] text-white/40 uppercase">Service</span>
                                                                 </div>
-                                                                <h3 className="text-lg font-bold text-white mb-2 tracking-tight">{ service.title }</h3>
-                                                                <p className="text-[12px] text-white/40 leading-relaxed mb-4 line-clamp-3">{ service.description }</p>
-                                                                <span className={ `inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-[10px] font-semibold ${ service.tagColor }` }>
-                                                                        { service.tag }
+                                                                <h3 className="text-lg font-bold text-white mb-2 tracking-tight">{service.title}</h3>
+                                                                <p className="text-[12px] text-white/40 leading-relaxed mb-4 line-clamp-3">{service.description}</p>
+                                                                <span className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-[10px] font-semibold ${service.tagColor}`}>
+                                                                        {service.tag}
                                                                         <svg width="10" height="10" viewBox="0 0 12 12" fill="none" className="ml-0.5">
                                                                                 <path d="M4.5 3L7.5 6L4.5 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                                                         </svg>
                                                                 </span>
                                                         </div>
                                                 </ParallaxCard>
-                                        )) }
+                                        ))}
                                 </div>
                         </div>
 

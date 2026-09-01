@@ -1,16 +1,15 @@
+import { company } from "@/data/company-data";
 export const dynamic = "force-static";
 
 
 export default function sitemap() {
-  const baseUrl = "https://idresselectronicesservices.com";
+  const baseUrl = company.website;
   const services = [
     "ac-repair",
-    "fridge-repair",
-    "tv-repair",
-    "electronics-repair",
+    "painting-services",
     "cctv-installation",
     "electrician-service",
-    "ev-charger"
+    "ev-charging"
   ];
 
   return [
@@ -26,6 +25,12 @@ export default function sitemap() {
       changeFrequency: "weekly",
       priority: 0.9,
     })),
+    {
+      url: `${baseUrl}/contact-us`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     {
       url: `${baseUrl}/book`,
       lastModified: new Date(),

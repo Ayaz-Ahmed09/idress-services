@@ -11,8 +11,8 @@ export default function WhyUs() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-heading font-black tracking-tight mb-6">
-            <span className="text-blue-900">THE COST OF</span> <span className="text-red-500">CHEAP</span> <br className="hidden md:block" />
-            <span className="text-blue-900">THE VALUE OF</span> <span className="text-sky-500">CERTIFIED</span>
+            <span className="text-orange-900">THE COST OF</span> <span className="text-red-500">CHEAP</span> <br className="hidden md:block" />
+            <span className="text-orange-900">THE VALUE OF</span> <span className="text-sky-500">CERTIFIED</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Your EV is a massive investment. Don&apos;t risk battery degradation or electrical fires with uncertified &quot;handymen&quot;.
@@ -21,7 +21,7 @@ export default function WhyUs() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* The Bad */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -47,7 +47,7 @@ export default function WhyUs() {
           </motion.div>
 
           {/* The Good */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -55,7 +55,7 @@ export default function WhyUs() {
           >
             <div className="absolute top-0 left-0 w-full h-1 bg-sky-500" />
             <h3 className="text-2xl font-heading font-bold mb-8 text-gray-900 flex items-center gap-3">
-              <CheckCircle2 className="text-sky-600 w-6 h-6" /><span className='text-blue-900'> Our Certified Standard</span> 
+              <CheckCircle2 className="text-sky-600 w-6 h-6" /><span className='text-orange-900'> Our Certified Standard</span>
             </h3>
             <ul className="space-y-6">
               {[

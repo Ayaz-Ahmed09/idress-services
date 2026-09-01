@@ -11,7 +11,7 @@ export function Button({
 }) {
   const variants = {
     primary:
-      "bg-primary hover:bg-primary-dark text-white shadow-lg shadow-blue-500/20",
+      "bg-primary hover:bg-primary-dark text-white shadow-lg shadow-orange-500/20",
     accent:
       "bg-accent hover:bg-accent-hover text-white shadow-lg shadow-orange-500/20 animate-pulse-fast",
     outline:

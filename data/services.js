@@ -3,10 +3,10 @@
 export const services = {
   "ac-repair": {
     slug: "ac-repair",
-    title: "AC Repair & Service Dubai | Idrees Technical Services",
-    metaTitle: "AC Repair Service Near You | 24/7 Emergency AC Repair | Dubai | Idrees Technical Services",
+    title: "AC Repair & Service Dubai ",
+    metaTitle: "AC Repair Service Near You | 24/7 Emergency AC Repair | Dubai | Dubai",
     metaDescription: "Expert AC repair, installation & maintenance. All brands - Split AC, Window AC, Central AC. Same-day service. Call now for instant booking!",
-    seoTitle: "AC Repair Dubai | #1 Emergency AC Fix, Gas Refill & Deep Cleaning — Same-Day | Idrees Technical Services",
+    seoTitle: "AC Repair Dubai | #1 Emergency AC Fix, Gas Refill & Deep Cleaning — Same-Day | Dubai",
     seoDescription: "Dubai's fastest AC repair — split, central & window units fixed in 60 min. 24/7 emergency service, certified technicians, gas refill from AED 150, 30-day warranty. Call 055-786-4636 for instant booking.",
     seoKeywords: [
       "AC repair Dubai",
@@ -155,408 +155,102 @@ export const services = {
     ]
   },
 
-  "fridge-repair": {
-    slug: "fridge-repair",
-    title: "Refrigerator Repair Service ",
-    metaTitle: "Fridge Repair Service Near You | Same-Day Refrigerator Repair Dubai | Idrees Technical Services",
-    metaDescription: "Expert refrigerator repair for all brands. Fix cooling issues, compressor problems, gas leaks. Same-day service with warranty. Call now!",
-    seoTitle: "Fridge Repair Dubai | Same-Day Refrigerator Fix, Gas Refill & Compressor Repair | Idrees Technical Services",
-    seoDescription: "Dubai's trusted fridge repair — Samsung, LG, Bosch & all brands. Not cooling? Water leaking? Gas refill from AED 200. Same-day doorstep service with 90-day warranty. Call 055-786-4636.",
-    seoKeywords: [
-      "fridge repair Dubai",
-      "refrigerator repair near me",
-      "fridge not cooling Dubai",
-      "fridge gas refill Dubai",
-      "fridge compressor repair Dubai",
-      "Samsung fridge repair Dubai",
-      "LG fridge repair Dubai",
-      "Bosch fridge repair Dubai",
-      "fridge water leak repair",
-      "refrigerator maintenance Dubai",
-      "fridge thermostat repair",
-      "freezer repair Dubai",
-      "fridge door seal replacement",
-      "fridge making noise Dubai",
-      "double door fridge repair",
-      "side by side fridge repair Dubai",
-      "fridge repair Business Bay",
-      "fridge repair Marina Dubai",
-      "best fridge repair company Dubai",
-      "emergency fridge repair Dubai",
-    ],
-    jsonLdServiceType: "Refrigerator Repair and Maintenance",
-    heroHeading: "Expert Refrigerator Repair",
-    heroSubheading: "Professional Fridge Repair for All Brands & Models",
-    heroDescription: "Don't let a broken fridge spoil your food. Our certified technicians fix all refrigerator problems with same-day service and genuine spare parts.",
-    icon: "🧊",
-    image: "/fridge/refrigentor-hero.webp",
-    color: "teal",
-    gradient: "from-teal-500 to-emerald-400",
-    emergencyAvailable: true,
-    subServices: [
-      {
-        id: "fridge-not-cooling",
-        title: "Fridge Not Cooling",
-        description: "Refrigerator not cooling or freezing? We fix thermostat issues, gas leaks, compressor problems, and fan motor failures.",
-        icon: "🌡️",
-        image: "/fridge/Referigentor-services-min.jpeg",
-        // price: "Starting AED349",
-        keywords: ["fridge not cooling", "refrigerator not cold"],
-        estimatedTime: "1-2 hours"
-      },
-      {
-        id: "fridge-gas-refill",
-        title: "Fridge Gas Refill",
-        description: "Professional refrigerant gas charging for single door, double door, and side-by-side refrigerators.",
-        icon: "⛽",
-        image: "/fridge/gas-refill.png",
-        // price: "Starting AED1,299",
-        keywords: ["fridge gas refill", "refrigerator gas charge"],
-        estimatedTime: "1-2 hours"
-      },
-      {
-        id: "fridge-compressor-repair",
-        title: "Fridge Compressor Repair",
-        description: "Compressor diagnosis, repair, and replacement for all refrigerator brands with warranty.",
-        icon: "⚙️",
-        image: "/fridge/comprssor.png",
-        // price: "Starting AED2,999",
-        keywords: ["fridge compressor repair", "refrigerator compressor"],
-        estimatedTime: "2-4 hours"
-      },
-      {
-        id: "fridge-thermostat-repair",
-        title: "Thermostat Replacement",
-        description: "Faulty thermostat causing temperature issues? Quick replacement with genuine parts.",
-        icon: "🎛️",
-        image: "/fridge/thermostate.png",
-        // price: "Starting AED799",
-        keywords: ["fridge thermostat", "temperature control repair"],
-        estimatedTime: "1 hour"
-      },
-      {
-        id: "fridge-water-leak",
-        title: "Fridge Water Leaking",
-        description: "Fix water pooling inside or under your refrigerator. Drain tube cleaning and door seal repair.",
-        icon: "💧",
-        image: "/fridge/water-leak.jpeg",
-        // price: "Starting AED299",
-        keywords: ["fridge water leak", "refrigerator leaking water"],
-        estimatedTime: "1 hour"
-      },
-      {
-        id: "fridge-ice-buildup",
-        title: "Freezer Ice Build-up",
-        description: "Excessive ice formation in freezer? We fix defrost timer, heater, and sensor problems.",
-        icon: "🧊",
-        image: "/fridge/ice-tub.png",
-        // price: "Starting AED499",
-        keywords: ["freezer ice buildup", "fridge ice problem"],
-        estimatedTime: "1-2 hours"
-      },
-      {
-        id: "fridge-noise",
-        title: "Fridge Making Noise",
-        description: "Diagnose and fix unusual fridge noises - humming, clicking, buzzing, or rattling sounds.",
-        icon: "🔊",
-        image: "/fridge/noise.png",
-        // price: "Starting AED399",
-        keywords: ["fridge noise", "refrigerator loud sound"],
-        estimatedTime: "1-2 hours"
-      },
-      {
-        id: "fridge-door-seal",
-        title: "Door Gasket / Seal Replacement",
-        description: "Worn-out door seal causing cooling loss? Quick gasket replacement for all fridge models.",
-        icon: "🚪",
-        image: "/fridge/door-seal.png",
-        // price: "Starting AED599",
-        keywords: ["fridge door seal", "refrigerator gasket"],
-        estimatedTime: "30 mins - 1 hour"
-      }
-    ],
-    brands: ["LG", "Samsung", "Whirlpool", "Godrej", "Haier", "Bosch", "Hitachi", "Panasonic", "Electrolux", "Voltas Beko", "Liebherr", "Kelvinator"],
-    faqs: [
-      {
-        question: "Will the technician fix my fridge at home or take it to a workshop?",
-        answer: "In most cases, our technician repairs the fridge right at your doorstep — no need to move it anywhere. We carry the commonly needed spare parts in our service van. Only in rare cases of major component failure may we need to take it to our workshop, which we'll inform you about upfront."
-      },
-      {
-        question: "Can you repair all fridge brands?",
-        answer: "Yes, we repair all major refrigerator brands including LG, Samsung, Whirlpool, Godrej, Haier, Bosch, and many more."
-      },
-      {
-        question: "How long does fridge repair take?",
-        answer: "Most fridge repairs are completed within 1-2 hours. Compressor replacement may take 2-4 hours. We provide same-day service."
-      },
-      {
-        question: "Do you use genuine spare parts?",
-        answer: "Yes, we use 100% genuine OEM spare parts with manufacturer warranty for all refrigerator repairs."
-      }
-    ]
-  },
 
-  "tv-repair": {
-    slug: "tv-repair",
-    title: "TV Repair & Service ",
-    metaTitle: "TV Repair Service Near You | LED, LCD, Smart TV Repair | Idrees Technical Services",
-    metaDescription: "Expert TV repair for LED, LCD, OLED, Smart TV. Fix display issues, no power, sound problems. All brands serviced. Call for same-day repair!",
-    seoTitle: "TV Repair Dubai | LED, LCD, Smart TV Screen Fix & Motherboard Repair",
 
-    seoDescription: "Expert TV repair in Dubai — LED, LCD, OLED & Smart TV. Black screen, no power, sound issues fixed at your doorstep. Samsung, Sony, LG certified. Call 055-786-4636.",
+  "painting-services": {
+    slug: "painting-services",
+    title: "Painting Services (Commercial & Villas)",
+    metaTitle: "Professional Painting Services | Villa, Commercial & Exterior Painting | Dubai",
+    metaDescription: "Expert interior & exterior painting for villas, apartments, offices & commercial spaces in Dubai. Premium Jotun paints, clean finish, licensed painters.",
+    seoTitle: "Professional Painting Services Dubai | Villa & Commercial Painting Specialists",
+    seoDescription: "Transform your villa, office, or apartment with Dubai's top painting specialists. Interior wall painting, exterior weatherproof coating, epoxy flooring & decorative wall finishes. Free consultation & instant quote.",
     seoKeywords: [
-      "TV repair Dubai",
-      "LED TV repair near me",
-      "Smart TV repair Dubai",
-      "TV screen replacement Dubai",
-      "TV motherboard repair",
-      "Samsung TV repair Dubai",
-      "LG TV repair Dubai",
-      "Sony TV repair Dubai",
-      "TV no display fix",
-      "TV not turning on Dubai",
-      "TV sound problem repair",
-      "OLED TV repair Dubai",
-      "TV wall mount installation Dubai",
-      "TV power supply repair",
-      "TV backlight repair Dubai",
-      "LCD TV repair near me",
-      "Smart TV software update Dubai",
-      "TV repair JBR",
-      "TV repair Downtown Dubai",
-      "best TV repair service Dubai",
+      "painting services Dubai",
+      "villa painting Dubai",
+      "commercial painting Dubai",
+      "apartment painting Dubai",
+      "interior wall painting Dubai",
+      "exterior painting Dubai",
+      "office painting Dubai",
+      "house painter Dubai",
+      "Jotun painting contractors Dubai",
+      "wall texture painting Dubai",
+      "epoxy floor coating Dubai",
+      "waterproof painting Dubai",
+      "move out painting Dubai",
+      "villa renovation painting",
+      "best painters in Dubai"
     ],
-    jsonLdServiceType: "Television Repair and Installation",
-    heroHeading: "Professional TV Repair Service",
-    heroSubheading: "LED, LCD, OLED & Smart TV Repair for All Brands",
-    heroDescription: "Screen issues, no display, sound problems or smart TV glitches - our expert technicians fix all TV problems at your doorstep.",
-    icon: "📺",
-    image: "/tv-repair/TV-services.jpeg",
-    color: "purple",
-    gradient: "from-purple-500 to-pink-400",
-    emergencyAvailable: true,
-    subServices: [
-      {
-        id: "tv-no-display",
-        title: "TV No Display / Black Screen",
-        description: "TV turning on but no picture? We fix backlight issues, T-CON board failures, and panel problems.",
-        icon: "🖥️",
-        image: "/tv-repair/TV-services.jpeg",
-        // price: "Starting AED499",
-        keywords: ["tv no display", "tv black screen", "tv no picture"],
-        estimatedTime: "1-3 hours"
-      },
-      {
-        id: "tv-no-power",
-        title: "TV Not Turning On",
-        description: "TV won't power on? Power supply board repair, fuse replacement, and electrical diagnosis.",
-        icon: "🔌",
-        image: "/tv-repair/no-power.png",
-        // price: "Starting AED399",
-        keywords: ["tv not turning on", "tv no power", "tv dead"],
-        estimatedTime: "1-2 hours"
-      },
-      {
-        id: "tv-screen-damage",
-        title: "TV Screen Replacement",
-        description: "Cracked or damaged TV screen? Professional panel replacement for all TV sizes and brands.",
-        icon: "💔",
-        image: "/tv-repair/screen-damage.png",
-        // price: "Starting AED3,999",
-        keywords: ["tv screen replacement", "tv panel replacement", "broken tv screen"],
-        estimatedTime: "1-2 days"
-      },
-      {
-        id: "tv-sound-issue",
-        title: "TV Sound Problems",
-        description: "No sound, distorted audio, or speaker issues? Complete audio system diagnosis and repair.",
-        icon: "🔊",
-        image: "/tv-repair/no-sound.png",
-        // price: "Starting AED399",
-        keywords: ["tv no sound", "tv audio problem", "tv speaker repair"],
-        estimatedTime: "1-2 hours"
-      },
-      {
-        id: "tv-smart-tv-issues",
-        title: "Smart TV Software Issues",
-        description: "WiFi not connecting, apps crashing, slow performance? Smart TV software update and optimization.",
-        icon: "📡",
-        image: "/tv-repair/smart-issue.png",
-        // price: "Starting AED299",
-        keywords: ["smart tv repair", "tv wifi problem", "tv software update"],
-        estimatedTime: "1 hour"
-      },
-      {
-        id: "tv-motherboard-repair",
-        title: "TV Motherboard Repair",
-        description: "Main board diagnosis, repair, and replacement for LED, LCD, and Smart TVs.",
-        icon: "🔧",
-        image: "/tv-repair/tv-motherboard.png",
-        // price: "Starting AED1,999",
-        keywords: ["tv motherboard repair", "tv main board", "tv board replacement"],
-        estimatedTime: "2-3 hours"
-      },
-      {
-        id: "tv-wall-mount",
-        title: "TV Wall Mount Installation",
-        description: "Professional TV wall mounting service. Includes bracket, cable management, and alignment.",
-        icon: "🏗️",
-        image: "/tv-repair/tv-wall-install.png",
-        // price: "Starting AED499",
-        keywords: ["tv wall mount", "tv installation", "tv mounting service"],
-        estimatedTime: "1 hour"
-      },
-      {
-        id: "tv-color-issue",
-        title: "TV Color / Display Issues",
-        description: "Faded colors, lines on screen, flickering display? Complete display diagnosis and repair.",
-        icon: "🌈",
-        image: "/tv-repair/no-color.png",
-        // price: "Starting AED499",
-        keywords: ["tv color problem", "tv lines on screen", "tv flickering"],
-        estimatedTime: "1-2 hours"
-      }
-    ],
-    brands: ["Samsung", "LG", "Sony", "Mi (Xiaomi)", "OnePlus", "TCL", "Panasonic", "Toshiba", "Philips", "Vu", "Realme", "Hisense", "Thomson", "Motorola"],
-    faqs: [
-      {
-        question: "Can you repair my TV at home?",
-        answer: "Yes! Our technicians provide doorstep TV repair service. Most repairs are completed at your home within 1-3 hours."
-      },
-      {
-        question: "Is it worth repairing an old TV?",
-        answer: "It depends on the issue. We provide honest diagnosis - if repair cost exceeds 50% of a new TV price, we'll recommend replacement instead."
-      },
-      {
-        question: "Do you repair Smart TVs?",
-        answer: "Yes, we repair all Smart TVs including Android TV, WebOS, Tizen. Software updates, WiFi issues, app problems - we fix it all."
-      }
-    ]
-  },
-
-  "electronics-repair": {
-    slug: "electronics-repair",
-    title: "Electronics & Appliance Repair ",
-    metaTitle: "Electronics Repair Service | Washing Machine, Microwave, Gadget Repair | Dubai",
-    metaDescription: "Expert repair for washing machines, microwaves, water purifiers, inverters & home electronics. All brands serviced with warranty. Book now!",
-    seoTitle: "Electronics & Appliance Repair Dubai | Washing Machine, Microwave, RO Service",
-    seoDescription: "Professional home appliance repair in Dubai — washing machines, microwaves, water purifiers, geysers & more. All brands, same-day service, genuine parts.",
-    seoKeywords: [
-      "washing machine repair Dubai",
-      "microwave repair Dubai",
-      "water purifier repair Dubai",
-      "RO service Dubai",
-      "geyser repair Dubai",
-      "dishwasher repair Dubai",
-      "home appliance repair Dubai",
-      "electronics repair near me",
-      "kitchen chimney repair Dubai",
-      "inverter repair Dubai",
-      "dryer repair Dubai",
-      "Samsung washing machine repair Dubai",
-      "LG washing machine repair Dubai",
-      "Bosch appliance repair Dubai",
-      "water heater repair Dubai",
-      "appliance maintenance Dubai",
-      "small appliance repair",
-      "vacuum cleaner repair Dubai",
-      "cooking range repair Dubai",
-      "best appliance repair company Dubai",
-    ],
-    jsonLdServiceType: "Home Appliance Repair and Maintenance",
-    heroHeading: "Electronics & Appliance Repair",
-    heroSubheading: "Expert Repair for All Home Electronics & Gadgets",
-    heroDescription: "From washing machines to microwaves, water purifiers to inverters - we repair all home electronics with genuine parts and warranty.",
-    icon: "🔧",
-    image: "/electronics.webp",
+    jsonLdServiceType: "Painting and Wall Coating Services",
+    heroHeading: "Professional Painting Services",
+    heroSubheading: "Premium Interior & Exterior Painting for Villas, Commercial & Residential Properties",
+    heroDescription: "Revitalize your living or workspace with flawless paint finishes. Our certified painters deliver spotless wall prep, color consultation, and long-lasting weatherproof coatings across Dubai.",
+    icon: "🎨",
+    image: "/painting/painting-indoor.webp",
     color: "orange",
     gradient: "from-orange-500 to-amber-400",
     emergencyAvailable: true,
     subServices: [
       {
-        id: "washing-machine-repair",
-        title: "Washing Machine Repair",
-        description: "Fix all washing machine problems - not spinning, water leaking, drum issues, error codes for front & top load.",
-        icon: "👕",
-        image: "/electronics/washing-repair.png",
-        // price: "Starting AED399",
-        keywords: ["washing machine repair", "washer repair"],
-        estimatedTime: "1-3 hours"
+        id: "villa-interior-painting",
+        title: "Villa Interior Painting",
+        description: "Complete interior wall and ceiling painting for luxury villas with wall smoothing, seam repair, and premium washable paints.",
+        icon: "🏡",
+        image: "/painting/villa-painting.webp",
+        keywords: ["villa painting", "interior villa painter", "house wall paint"],
+        estimatedTime: "1-3 days"
       },
       {
-        id: "microwave-repair",
-        title: "Microwave Oven Repair",
-        description: "Microwave not heating, turntable not working, sparking issues? Complete microwave repair service.",
-        icon: "🍽️",
-        image: "/electronics/micro.png",
-        // price: "Starting AED349",
-        keywords: ["microwave repair", "oven repair", "microwave not heating"],
-        estimatedTime: "1-2 hours"
+        id: "villa-exterior-painting",
+        title: "Villa Exterior Weatherproof Painting",
+        description: "High-durability UV-resistant and heat-reflective exterior coatings for villa facades, boundary walls, and gates.",
+        icon: "🏰",
+        image: "/painting/painting-hero.webp",
+        keywords: ["villa exterior paint", "weatherproof coating", "facade painting"],
+        estimatedTime: "2-4 days"
       },
       {
-        id: "water-purifier-repair",
-        title: "Water Purifier / RO Repair",
-        description: "RO/UV water purifier repair, filter replacement, membrane change, and annual maintenance.",
-        icon: "💧",
-        image: "/electronics/ro-repair.png",
-        // price: "Starting AED299",
-        keywords: ["water purifier repair", "ro repair", "ro service"],
-        estimatedTime: "1 hour"
+        id: "commercial-office-painting",
+        title: "Commercial & Office Space Painting",
+        description: "Fast-turnaround commercial painting for corporate offices, retail stores, warehouses, and hospitality venues with zero disruption.",
+        icon: "🏢",
+        image: "/painting/office-commercial-painting.webp",
+        keywords: ["office painting Dubai", "commercial painter", "retail store paint"],
+        estimatedTime: "1-3 days"
       },
       {
-        id: "inverter-repair",
-        title: "Inverter / UPS Repair",
-        description: "Inverter not charging, battery issues, beeping problems? Complete inverter and UPS repair service.",
-        icon: "🔋",
-        image: "/electronics/ups-repair.png",
-        // price: "Starting AED499",
-        keywords: ["inverter repair", "ups repair", "inverter battery"],
-        estimatedTime: "1-2 hours"
+        id: "move-in-move-out-painting",
+        title: "Move-In & Move-Out Apartment Painting",
+        description: "Rapid wall restoration, nail hole filling, and fresh coat painting required for tenancy handover and property clearance.",
+        icon: "🔑",
+        image: "/painting/move-in-move-out-painting.webp",
+        keywords: ["move out painting", "apartment handover paint", "tenancy painting"],
+        estimatedTime: "1 day"
       },
       {
-        id: "geyser-repair",
-        title: "Geyser / Water Heater Repair",
-        description: "Geyser not heating, leaking, or thermostat issues? Quick repair and element replacement.",
-        icon: "🚿",
-        image: "/electronics/gyser.png",
-        // price: "Starting AED399",
-        keywords: ["geyser repair", "water heater repair"],
-        estimatedTime: "1-2 hours"
+        id: "decorative-feature-wall-painting",
+        title: "Decorative & Accent Wall Finishing",
+        description: "Custom stucco finishes, metallic accent walls, textured painting, and Venetian plaster designs for modern interiors.",
+        icon: "✨",
+        image: "/painting/waterproofing-wall-repair.webp",
+        keywords: ["feature wall paint", "accent wall", "textured painting Dubai"],
+        estimatedTime: "1 day"
       },
-      {
-        id: "dishwasher-repair",
-        title: "Dishwasher Repair",
-        description: "Dishwasher not cleaning, draining, or starting? Complete diagnosis and repair service.",
-        icon: "🍽️",
-        image: "/electronics/dishwasher.png",
-        // price: "Starting AED499",
-        keywords: ["dishwasher repair", "dishwasher not working"],
-        estimatedTime: "1-3 hours"
-      },
-      {
-        id: "small-appliance-repair",
-        title: "Small Appliance Repair",
-        description: "Mixer grinder, iron, fan, induction cooktop, and other small appliance repairs.",
-        icon: "🔌",
-        image: "/electronics/small.png",
-        // price: "Starting AED199",
-        keywords: ["mixer repair", "iron repair", "fan repair", "appliance repair"],
-        estimatedTime: "1 hour"
-      }
+
     ],
-    brands: ["LG", "Samsung", "Whirlpool", "Bosch", "IFB", "Godrej", "Haier", "Panasonic", "Voltas", "Kent", "Aquaguard", "Luminous", "Microtek", "Bajaj"],
+    brands: ["Jotun", "National Paints", "Caparol", "Dulux", "Berger Paints", "Benjamin Moore", "Sherwin-Williams", "Sigma Paints"],
     faqs: [
       {
-        question: "What electronics do you repair?",
-        answer: "We repair washing machines, microwaves, water purifiers/RO, inverters/UPS, geysers, chimneys, dishwashers, and small home appliances."
+        question: "What type of paint brands do you use for villa and commercial painting?",
+        answer: "We primarily use top-tier environment-friendly, low-VOC paints from premium brands like Jotun, Caparol, and National Paints tailored for Dubai climate."
       },
       {
-        question: "Do you provide doorstep electronics repair?",
-        answer: "Yes, most electronics repairs are done at your doorstep. For complex issues, we may need to take the appliance to our workshop."
+        question: "How long does it take to paint a villa or office space?",
+        answer: "Standard move-in apartments take 1 day, while full villa or commercial office painting usually takes between 2 to 3 days depending on surface prep requirements."
       },
       {
-        question: "What is the warranty on repairs?",
-        answer: "We provide 30-90 day warranty on repairs and 6-month warranty on replaced spare parts depending on the appliance."
+        question: "Do you protect furniture and flooring during the painting process?",
+        answer: "No, We have an experninced team for that which is currently unavailable but you can contact us we will let you know"
       }
     ]
   },
@@ -564,9 +258,9 @@ export const services = {
   "cctv-installation": {
     slug: "cctv-installation",
     title: "CCTV Camera Installation ",
-    metaTitle: "CCTV Installation Service | Security Camera Setup & Repair Dubai | Idrees Technical Services ",
+    metaTitle: "CCTV Installation Service | Security Camera Setup & Repair Dubai | Dubai ",
     metaDescription: "Professional CCTV camera installation, AMC & repair. IP cameras, DVR/NVR setup, remote monitoring. Homes & businesses. Get free survey!",
-    seoTitle: "CCTV Installation Dubai | Security Camera Setup, Repair & Remote Monitoring | Idrees Technical Services",
+    seoTitle: "CCTV Installation Dubai | Security Camera Setup, Repair & Remote Monitoring | Dubai",
     seoDescription: "Professional CCTV installation in Dubai — Hikvision, Dahua, CP Plus. HD/IP cameras, DVR/NVR setup, mobile app monitoring. Homes & offices. Free site survey. Call now:0557864636",
     seoKeywords: [
       "CCTV installation Dubai",
@@ -705,9 +399,9 @@ export const services = {
   "electrician-service": {
     slug: "electrician-service",
     title: "Electrician Service",
-    metaTitle: "Electrician Service Near You | Electrical Repair & Wiring Dubai | Idrees Technical Services",
+    metaTitle: "Electrician Service Near You | Electrical Repair & Wiring Dubai | Dubai",
     metaDescription: "Licensed electrician service for wiring, switches, MCB repair, fan installation, short circuit fixing. 24/7 emergency electrical service. Call now:0557864636",
-    seoTitle: "Electrician Dubai | 24/7 Emergency Electrical Repair, Wiring & Installation | Idrees Technical Services",
+    seoTitle: "Electrician Dubai | 24/7 Emergency Electrical Repair, Wiring & Installation | Dubai",
     seoDescription: "Licensed electricians in Dubai — short circuit repair, wiring, MCB fix, fan & light installation. 24/7 emergency service, certified professionals. Call now:0557864636",
     seoKeywords: [
       "electrician Dubai",
@@ -848,7 +542,7 @@ export const services = {
   "ev-charging": {
     slug: "ev-charging",
     title: "EV Charger Units Installation ",
-    metaTitle: "EV Charger Installation Near You | Home & Commercial | Dubai | Idrees Technical Services",
+    metaTitle: "EV Charger Installation Near You | Home & Commercial | Dubai | Dubai",
     metaDescription: "Professional EV charger installation for homes, villas, and commercial spaces in Dubai. Tesla, Porsche, DEWA approved. Book your installation now!",
     seoTitle: "EV Charger Installation Dubai | Home & Commercial Setup — DEWA Approved in Dubai",
     seoDescription: "Certified EV charger installation in Dubai. Home, villa, and office setup. DEWA approved contractors for Tesla, Porsche, Audi & all EV brands.  Call:0557864636",

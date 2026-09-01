@@ -1,8 +1,7 @@
 import React from 'react';
 import "../../app/globals.css"
 export const dynamic = "force-dynamic";
-interface Testimonial
-{
+interface Testimonial {
   id?: number;
   name: string;
   role?: string;
@@ -12,8 +11,7 @@ interface Testimonial
   rating: number;
 }
 
-interface NormalizedTestimonial
-{
+interface NormalizedTestimonial {
   id: number;
   name: string;
   role: string;
@@ -21,28 +19,27 @@ interface NormalizedTestimonial
   rating: number;
 }
 
-interface TestimonialsProps
-{
+interface TestimonialsProps {
   testimonials: Testimonial[];
   title?: string;
   subtitle?: string;
 }
 
 const TestimonialCard = ({ testimonial }: { testimonial: NormalizedTestimonial, key?: string | number }) => (
-  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-xl border-2 border-cyan-500 hover:bg-white/15 transition-all duration-300 mb-4 min-h-[200px] flex flex-col">
+  <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-orange-500 hover:shadow-xl hover:border-orange-600 transition-all duration-300 mb-4 min-h-[200px] flex flex-col">
     <div className="flex items-center gap-1 mb-3 h-5">
       {[...Array(testimonial.rating)].map((_, i) => (
-        <svg key={i} className="w-5 h-5 text-sky-500 fill-current" viewBox="0 0 20 20" aria-hidden="true">
+        <svg key={i} className="w-5 h-5 text-amber-500 fill-current" style={{filter: 'drop-shadow(0px 2px 3px rgba(245, 158, 11, 0.5))'}} viewBox="0 0 20 20" aria-hidden="true">
           <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
         </svg>
       ))}
     </div>
-    <p className="text-white/90 text-sm md:text-base leading-relaxed mb-4 flex-1 min-h-[4.5em] line-clamp-6">
+    <p className="text-black text-sm md:text-base leading-relaxed mb-4 flex-1 min-h-[4.5em] line-clamp-6">
       "{testimonial.content}"
     </p>
-    <div className="border-t border-cyan-500 pt-4">
-      <p className="text-white font-bold text-base">{testimonial.name}</p>
-      <p className="text-cyan-300 text-sm">{testimonial.role}</p>
+    <div className="border-t-2 border-orange-500 pt-4">
+      <p className="text-black font-bold text-base">{testimonial.name}</p>
+      <p className="text-slate-700 text-sm font-medium">{testimonial.role}</p>
     </div>
   </div>
 );
@@ -51,8 +48,7 @@ const Testimonials = ({
   testimonials = [],
   title = "What Our Clients Say",
   subtitle = "Don't just take our word for it - hear from our satisfied customers"
-}: TestimonialsProps) =>
-{
+}: TestimonialsProps) => {
   // Normalize testimonials to handle both data formats statically
   const normalizedTestimonials: NormalizedTestimonial[] = (testimonials || []).map((t, index) => ({
     id: t.id || index + 1,
@@ -63,13 +59,12 @@ const Testimonials = ({
   }));
 
   // If no testimonials, show a message
-  if (normalizedTestimonials.length === 0)
-  {
+  if (normalizedTestimonials.length === 0) {
     return (
-      <section className="py-20 bg-linear-to-br from-blue-900 via-sky-500 to-sky-800">
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">{title}</h2>
-          <p className="text-white/80 text-lg">No testimonials available yet.</p>
+          <h2 className="text-4xl font-bold text-black mb-4">{title}</h2>
+          <p className="text-slate-700 text-lg">No testimonials available yet.</p>
         </div>
       </section>
     );
@@ -85,11 +80,11 @@ const Testimonials = ({
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight mb-4">
             {title}
           </h2>
-          <div className="w-24 h-1 bg-sky-400 mx-auto rounded-full"></div>
-          <p className="text-white/80 text-lg mt-6 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
+          <p className="text-slate-700 text-lg mt-6 max-w-2xl mx-auto">
             {subtitle}
           </p>
         </div>

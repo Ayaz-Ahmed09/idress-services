@@ -2,8 +2,6 @@ import { Outfit, Space_Grotesk } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./globals.css";
-import { GoogleTagManager } from '@next/third-parties/google'
-import PageViewTracker from "@/components/modules/PageTracker_GTM";
 import { WebVitals } from "./components/WebVitalsCore";
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -19,14 +17,23 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["400", "500", "600", "700"],
 });
 
+import { company } from "@/data/company-data";
+
 export const metadata = {
-  title: "IDRESS HUSSAIN ELECTRONICES SERVICES REP DEVICES | In Dubai",
+  metadataBase: new URL(company.website),
+  title: `${company.name} | In Dubai`,
   description:
     "Professional Electronics Repair Services in Dubai. Expert technicians for AC, Fridge, TV, Washing Machine, and all home appliances. 24/7 Emergency Service.",
   keywords: [
     "AC repair Dubai",
     "HVAC service",
     "AC maintenance",
+    "painting services dubai",
+    "electrician service dubai",
+    "villa painting dubai",
+    "apartment painting dubai",
+    "best electrician in dubai",
+    "best painting services in dubai",
     "electronics repair dubai",
     "fridge repair dubai",
     "tv repair dubai",
@@ -42,15 +49,15 @@ export const metadata = {
     "AC deep cleaning Dubai",
   ],
   openGraph: {
-    title: "IDRESS HUSSAIN ELECTRONICES SERVICES REP DEVICES | In Dubai",
+    title: `${company.name} | In Dubai`,
     description:
-      "Professional Electronics Repair Services in Dubai. Expert technicians for AC, Fridge, TV, Washing Machine, and all home appliances. 24/7 Emergency Service.",
+      "Professional Painting Services in Dubai. Expert technicians for AC, Electrician, and all home appliances. 24/7 Emergency Service.",
     type: "website",
     locale: "en_AE",
     images: [
       {
-        url: "https://idresselectronicesservices.com/graphgql.webp",
-        alt: "IDRESS HUSSAIN ELECTRONICES SERVICES REP DEVICES",
+        url: `${company.website}/graphgql.webp`,
+        alt: company.name,
         width: 1200,
         height: 600,
 
@@ -62,7 +69,7 @@ export const metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://idresselectronicesservices.com",
+    canonical: company.website,
   },
 };
 
@@ -71,18 +78,19 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "LocalBusiness",
-      name: "IDRESS HUSSAIN ELECTRONICES SERVICES REP DEVICES",
+      name: company.name,
       description:
-        "Professional Electronics Repair Services in Dubai. Expert technicians for AC, Fridge, TV, Washing Machine, and all home appliances. 24/7 Emergency Service.",
-      url: "https://idresselectronicesservices.com/",
-      logo: "https://idresselectronicesservices.com/3d-logo.png",
-      image: "https://idresselectronicesservices.com/graphgql.webp",
-      telephone: "+971 55 786 4636",
+        "Professional Painting Services in Dubai. Expert technicians for AC, Electrician, and all home appliances. 24/7 Emergency Service.",
+      url: company.website,
+      logo: `${company.website}/logo.png`,
+      image: `${company.website}/graphgql.webp`,
+      telephone: company.phoneDisplay,
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Dubai",
-        addressRegion: "Dubai",
-        addressCountry: "AE",
+        streetAddress: company.address.office,
+        addressLocality: company.address.city,
+        addressRegion: company.address.state,
+        addressCountry: "UAE",
       },
       openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
@@ -106,29 +114,45 @@ const jsonLd = {
       name: "Repair & Maintenance",
       provider: {
         "@type": "LocalBusiness",
-        name: "IDRESS HUSSAIN ELECTRONICES SERVICES REP DEVICES",
-        licenseNumber: "213983",
-        licencseName: "IDRESS HUSSAIN ELECTRONICES SERVICES REP DEVICES",
+        name: company.name,
+        licenseNumber: company.licenseNumber,
+        licencseName: company.name,
       },
       serviceType: "Repair & Maintenance Services",
       areaServed: "Dubai, UAE",
       description:
-        "Professional Electronics Repair Services in Dubai. Expert technicians for AC, Fridge, TV, Washing Machine, and all home appliances. 24/7 Emergency Service.",
+        "Professional Painting Services in Dubai. Expert technicians for AC, electrical, and all home appliances. 24/7 Emergency Service.",
     },
   ],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode })
-{
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning={true}>
-      <GoogleTagManager gtmId="GTM-KCPJ9C9M" />
+    <html lang="en" className="light" suppressHydrationWarning={true}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-NT39MPTQ');`
+          }}
+        />
+      </head>
       <body
-        className={`${ outfit.variable } ${ spaceGrotesk.variable } antialiased`}
+        className={`${outfit.variable} ${spaceGrotesk.variable} antialiased`}
       >
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NT39MPTQ"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         <WebVitals />
         <Navbar />
-        <PageViewTracker />
         {children}
         <Footer />
       </body>

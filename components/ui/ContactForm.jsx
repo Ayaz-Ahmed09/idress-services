@@ -58,9 +58,9 @@ export function ContactForm() {
         const glareAngle = Math.atan2(tilt.mouseY - 0.5, tilt.mouseX - 0.5) * (180 / Math.PI) + 90;
 
         const inputClass = (field) =>
-                `w-full bg-white/[0.04] border rounded-xl px-4 py-3.5 text-white text-sm placeholder-white/20 outline-none transition-all duration-300 backdrop-blur-sm ${focused === field
-                        ? "border-violet-400/60 bg-white/[0.07] shadow-[0_0_20px_-5px_rgba(139,92,246,0.3)]"
-                        : "border-white/[0.08] hover:border-white/[0.15] hover:bg-white/[0.06]"
+                `w-full bg-slate-50 border rounded-xl px-4 py-3.5 text-slate-900 text-sm placeholder-slate-400 outline-none transition-all duration-300 ${focused === field
+                        ? "border-sky-500 bg-white shadow-[0_0_15px_-3px_rgba(2,132,199,0.2)]"
+                        : "border-slate-200 hover:border-slate-300 hover:bg-white"
                 }`;
 
         return (
@@ -69,7 +69,7 @@ export function ContactForm() {
                                 ref={cardRef}
                                 onMouseMove={handleMouseMove}
                                 onMouseLeave={handleMouseLeave}
-                                className="relative w-full rounded-3xl overflow-hidden"
+                                className="relative w-full rounded-3xl overflow-hidden border border-slate-200 shadow-xl"
                                 style={{
                                         transform: `rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg) translateZ(${tilt.isHovering ? 15 : 0}px)`,
                                         transition: tilt.isHovering
@@ -77,9 +77,8 @@ export function ContactForm() {
                                                 : "transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.6s cubic-bezier(0.23, 1, 0.32, 1)",
                                         transformStyle: "preserve-3d",
                                         boxShadow: `
-            ${shadowX}px ${shadowY}px ${tilt.isHovering ? 50 : 25}px -8px rgba(0,0,0,0.35),
-            ${shadowX * 0.5}px ${shadowY * 0.5}px 25px -5px rgba(0,0,0,0.2),
-            0 0 ${tilt.isHovering ? 100 : 50}px -25px rgba(139,92,246,0.08)
+            ${shadowX}px ${shadowY}px ${tilt.isHovering ? 30 : 15}px -5px rgba(0,0,0,0.08),
+            ${shadowX * 0.5}px ${shadowY * 0.5}px 15px -3px rgba(0,0,0,0.05)
           `,
                                 }}
                         >
@@ -87,7 +86,7 @@ export function ContactForm() {
                                 <div
                                         className="absolute inset-0"
                                         style={{
-                                                background: "linear-gradient(145deg, #0f0f1a 0%, #151530 40%, #1a1045 100%)",
+                                                background: "linear-gradient(145deg, #ffffff 0%, #f8fafc 100%)",
                                         }}
                                 />
 
@@ -164,8 +163,8 @@ export function ContactForm() {
                                                                 /
                                                         </div>
                                                         <div>
-                                                                <h2 className="text-2xl font-bold text-white tracking-tight">Send a Message</h2>
-                                                                <p className="text-sm text-white/30 mt-0.5">We'd love to hear from you</p>
+                                                                <h2 className="text-2xl font-bold text-slate-900 tracking-tight">Send a Message</h2>
+                                                                <p className="text-sm text-slate-500 mt-0.5">We'd love to hear from you</p>
                                                         </div>
                                                 </div>
                                         </div>

@@ -11,8 +11,7 @@ const reviews = [
   { name: "Fatima S.", role: "Audi e-tron Owner", text: "Emergency repair at 10 PM. The technician arrived in 30 mins and fixed the fault. Lifesavers." }
 ];
 
-export default function Testimonials()
-{
+export default function Testimonials() {
   return (
     <section id="testimonials" className="py-32 bg-white relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
@@ -22,8 +21,8 @@ export default function Testimonials()
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-sky-500/10 border border-sky-500/20 text-sky-600 text-xs font-mono uppercase tracking-widest mb-6">
             Verified Reviews
           </div>
-          <h2 className="text-4xl md:text-6xl text-blue-900 font-heading font-black tracking-tight mb-6">
-            <span className="text-blue-900">TRUSTED BY</span> <br />
+          <h2 className="text-4xl md:text-6xl text-orange-900 font-heading font-black tracking-tight mb-6">
+            <span className="text-orange-900">TRUSTED BY</span> <br />
             <span className="text-sky-500">500+ EV OWNERS</span>
           </h2>
           <p className="text-gray-600 mb-8 max-w-md">
@@ -33,7 +32,7 @@ export default function Testimonials()
             <div className="flex -space-x-4">
               {[1, 2, 3, 4].map(i => (
                 <div key={i} className="w-12 h-12 rounded-full border-2 border-white bg-sky-100 flex items-center justify-center overflow-hidden relative">
-                  <Image src={`https://picsum.photos/seed/user${ i }/100/100`} alt="User" fill sizes="48px" className="object-cover grayscale" referrerPolicy="no-referrer" />
+                  <Image src={`https://picsum.photos/seed/user${i}/100/100`} alt="User" fill sizes="48px" className="object-cover grayscale" referrerPolicy="no-referrer" />
                 </div>
               ))}
             </div>
@@ -59,7 +58,7 @@ export default function Testimonials()
                 <p className="text-gray-700 text-sm mb-6 leading-relaxed">&quot;{review.text}&quot;</p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-sm bg-sky-100 overflow-hidden relative">
-                    <Image src={`https://picsum.photos/seed/${ review.name }/100/100`} alt={review.name} fill sizes="40px" className="object-cover grayscale" referrerPolicy="no-referrer" />
+                    <Image src={`https://picsum.photos/seed/${review.name}/100/100`} alt={review.name} fill sizes="40px" className="object-cover grayscale" referrerPolicy="no-referrer" />
                   </div>
                   <div>
                     <h4 className="font-bold text-sm text-gray-900">{review.name}</h4>
@@ -80,7 +79,7 @@ export default function Testimonials()
                 <p className="text-gray-700 text-sm mb-6 leading-relaxed">&quot;{review.text}&quot;</p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-sm bg-sky-100 overflow-hidden relative">
-                    <Image src={`https://picsum.photos/seed/${ review.name }2/100/100`} alt={review.name} fill sizes="40px" className="object-cover grayscale" referrerPolicy="no-referrer" />
+                    <Image src={`https://picsum.photos/seed/${review.name}2/100/100`} alt={review.name} fill sizes="40px" className="object-cover grayscale" referrerPolicy="no-referrer" />
                   </div>
                   <div>
                     <h4 className="font-bold text-sm text-gray-900">{review.name}</h4>

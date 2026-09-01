@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Award, Clock, Zap, Users, Headphones, DollarSign } from "lucide-react";
+import { company } from "@/data/company-data";
 
 const features = [
   {
@@ -9,7 +10,7 @@ const features = [
     title: "Same-Day Service",
     description:
       "Emergency technicians available 24/7. We reach you within 60 minutes in most service areas.",
-    gradient: "from-blue-500 to-cyan-500",
+    gradient: "from-orange-500 to-cyan-500",
   },
   {
     icon: Award,
@@ -44,7 +45,7 @@ const features = [
     title: "50,000+ Happy Customers",
     description:
       "4.8★ rating with 18,000+ verified reviews. Trusted by families and businesses.",
-    gradient: "from-indigo-500 to-blue-500",
+    gradient: "from-indigo-500 to-orange-500",
   },
 ];
 
@@ -53,7 +54,7 @@ export default function TrustSection() {
     <section className="relative py-20 md:py-32 px-6" id="why-us">
       {/* Background */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full bg-blue-500/10 blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full bg-orange-500/10 blur-3xl" />
         <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-cyan-500/10 blur-3xl" />
       </div>
 
@@ -76,11 +77,11 @@ export default function TrustSection() {
             </span>
           </div>
 
-          <h3 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h3 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Trusted by Thousands, Built on Excellence
           </h3>
 
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             We combine expertise, reliability, and customer care to deliver the
             best service experience.
           </p>
@@ -97,7 +98,7 @@ export default function TrustSection() {
               transition={{ delay: index * 0.1 }}
               className="group"
             >
-              <div className="relative h-full p-8 rounded-2xl bg-slate-700/50 dark:bg-gray-800/50 border border-gray-200/50 dark:border-cyan-500/80 backdrop-blur-lg hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-gray-950/50">
+              <div className="relative h-full p-8 rounded-2xl bg-slate-50 border border-slate-200 shadow-md backdrop-blur-lg hover:border-slate-300 transition-all duration-300 hover:shadow-lg">
                 {/* Gradient accent */}
                 {/* <div
                   className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${feature.gradient} pointer-events-none blur-xl`}
@@ -113,10 +114,10 @@ export default function TrustSection() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  <p className="text-slate-600 leading-relaxed">
                     {feature.description}
                   </p>
 
@@ -132,7 +133,7 @@ export default function TrustSection() {
 
         {/* CTA Banner */}
         <motion.div
-          className="mt-16 md:mt-24 p-8 md:p-12 rounded-2xl bg-linear-to-r from-blue-600/10 to-cyan-500/10 border border-blue-500/30 backdrop-blur-sm"
+          className="mt-16 md:mt-24 p-8 md:p-12 rounded-2xl bg-slate-50 border border-slate-200 shadow-md backdrop-blur-sm"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -140,10 +141,10 @@ export default function TrustSection() {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
+              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
                 Ready for Professional Service?
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-slate-600">
                 Book your service now and experience the difference. Same-day
                 appointments available in your area.
               </p>
@@ -151,13 +152,13 @@ export default function TrustSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-end">
               <a
                 href="/book"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-xl font-semibold text-white bg-linear-to-r from-blue-600 to-cyan-500 hover:shadow-lg hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105 active:scale-95"
+                className="inline-flex items-center justify-center px-8 py-3 rounded-xl font-semibold text-white bg-linear-to-r from-orange-600 to-cyan-500 hover:shadow-lg hover:shadow-orange-500/40 transition-all duration-300 hover:scale-105 active:scale-95"
               >
                 Book Service
               </a>
               <a
-                href="tel:+971557864636"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-xl font-semibold text-gray-900 dark:text-white bg-cyan-500 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300"
+                href={`tel:+${company.whatsapp}`}
+                className="inline-flex items-center bg-accent text-white justify-center px-8 py-3 rounded-xl font-semibold  dark:text-white  dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300"
               >
                 Call Now
               </a>

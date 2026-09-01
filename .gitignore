@@ -17,7 +17,11 @@
 # next.js
 /.next/
 /out/
-
+/.agents
+/.codex
+/.gemini
+/.anthropic
+/data
 # production
 /build
 /.claude

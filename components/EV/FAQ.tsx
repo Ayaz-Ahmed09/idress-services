@@ -25,7 +25,7 @@ export default function FAQ() {
             Clear Answers
           </div>
           <h2 className="text-4xl md:text-5xl font-heading font-black tracking-tight mb-4">
-            <span className="text-blue-900">FREQUENTLY ASKED</span> <br />
+            <span className="text-orange-900">FREQUENTLY ASKED</span> <br />
             <span className="text-sky-500">QUESTIONS</span>
           </h2>
         </div>

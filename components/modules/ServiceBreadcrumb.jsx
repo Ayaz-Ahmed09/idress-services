@@ -14,7 +14,7 @@ export default function ServiceBreadcrumb({ serviceSlug }) {
       <div className="max-w-7xl mx-auto w-full flex items-center gap-2">
         <Link
           href="/"
-          className="flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+          className="flex items-center gap-1 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
         >
           <Home size={16} />
           <span>Home</span>

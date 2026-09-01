@@ -6,14 +6,14 @@ export default function Loading() {
       <div className="relative flex items-center justify-center">
 
         {/* 1. Outer Glowing Ring (Slow rotation) */}
-        <div className="absolute h-24 w-24 rounded-full border-4 border-t-blue-600 border-r-transparent border-b-indigo-600 border-l-transparent animate-[spin_2s_linear_infinite] opacity-20" />
+        <div className="absolute h-24 w-24 rounded-full border-4 border-t-orange-600 border-r-transparent border-b-indigo-600 border-l-transparent animate-[spin_2s_linear_infinite] opacity-20" />
 
         {/* 2. Main High-Speed Spinner */}
-        <div className="h-16 w-16 rounded-full border-4 border-gray-200 dark:border-gray-800 border-t-blue-600 animate-spin will-change-transform" />
+        <div className="h-16 w-16 rounded-full border-4 border-gray-200 dark:border-gray-800 border-t-orange-600 animate-spin will-change-transform" />
 
         {/* 3. Center Logo/Initial (Static) */}
         <div className="absolute flex items-center justify-center">
-          <span className="text-xs font-bold text-blue-600 dark:text-blue-400 tracking-tighter uppercase">
+          <span className="text-xs font-bold text-orange-600 dark:text-orange-400 tracking-tighter uppercase">
             <Wrench />
           </span>
         </div>

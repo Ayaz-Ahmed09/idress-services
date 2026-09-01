@@ -31,8 +31,8 @@ export default function ContactForm({ heading = "GET IN TOUCH" }) {
         return (
                 <section className="relative min-h-screen flex items-center justify-center p-6 ">
                         {/* Background Glows */}
-                        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-600/20 rounded-full blur-[100px] animate-pulse" />
-                        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-indigo-600/20 rounded-full blur-[120px] animate-pulse" />
+                        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-orange-600/40 srounded-full blur-[100px] animate-pulse" />
+                        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-orange-600/20 rounded-full blur-[120px] animate-pulse" />
 
                         <motion.div
                                 initial={{ opacity: 0, scale: 0.95 }}
@@ -40,8 +40,8 @@ export default function ContactForm({ heading = "GET IN TOUCH" }) {
                                 className="relative w-full max-w-xl p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl shadow-2xl"
                         >
                                 <div className="mb-8">
-                                        <h2 className="text-4xl font-black text-white tracking-tight font-outfit">{heading}</h2>
-                                        <div className="h-1 w-12 bg-blue-500 mt-2 rounded-full" />
+                                        <h2 className="text-4xl font-black text-orange-500 tracking-tight font-outfit">{heading}</h2>
+                                        <div className="h-1 w-12 bg-orange-500 mt-2 rounded-full" />
                                 </div>
 
                                 <form ref={formRef} onSubmit={sendEmail} className="space-y-5">
@@ -49,25 +49,25 @@ export default function ContactForm({ heading = "GET IN TOUCH" }) {
                                                 <div className="space-y-2">
                                                         <label className="text-[10px] uppercase tracking-widest text-gray-400 font-bold ml-1">Your Name</label>
                                                         <input type="text" name="user_name" required placeholder="Full Name"
-                                                                className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-gray-600 focus:ring-2 focus:ring-blue-500/50 transition-all outline-none" />
+                                                                className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-gray-600 focus:ring-2 focus:ring-orange-500/50 transition-all outline-none" />
                                                 </div>
                                                 <div className="space-y-2">
                                                         <label className="text-[10px] uppercase tracking-widest text-gray-400 font-bold ml-1">Email Address</label>
                                                         <input type="email" name="user_email" required placeholder="Email"
-                                                                className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-gray-600 focus:ring-2 focus:ring-blue-500/50 transition-all outline-none" />
+                                                                className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-gray-600 focus:ring-2 focus:ring-orange-500/50 transition-all outline-none" />
                                                 </div>
                                         </div>
 
                                         <div className="space-y-2">
                                                 <label className="text-[10px] uppercase tracking-widest text-gray-400 font-bold ml-1">Message</label>
                                                 <textarea name="message" required rows="4" placeholder="How can we help?"
-                                                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-gray-600 focus:ring-2 focus:ring-blue-500/50 transition-all outline-none resize-none" />
+                                                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-gray-600 focus:ring-2 focus:ring-orange-500/50 transition-all outline-none resize-none" />
                                         </div>
 
                                         <button
                                                 type="submit"
                                                 disabled={status === "loading"}
-                                                className="w-full group relative overflow-hidden bg-blue-600 hover:bg-blue-500 text-white font-black py-5 rounded-2xl transition-all shadow-xl shadow-blue-900/20 disabled:opacity-50"
+                                                className="w-full group relative overflow-hidden bg-orange-500 hover:bg-black text-white font-black py-5 rounded-2xl transition-all shadow-xl shadow-orange-900/20 disabled:opacity-50"
                                         >
                                                 <span className="relative z-10 uppercase tracking-tighter text-lg">
                                                         {status === "loading" ? "TRANSMITTING..." : "SEND MESSAGE"}

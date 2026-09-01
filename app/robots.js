@@ -1,3 +1,4 @@
+import { company } from "@/data/company-data";
 export const dynamic = "force-static";
 
 export default function robots() {
@@ -7,6 +8,6 @@ export default function robots() {
       allow: "/",
       disallow: ["/api/", "/book", "/thank-you"],
     },
-    sitemap: "https://idresselectronicesservices.com/sitemap.xml",
+    sitemap: `${company.website}/sitemap.xml`,
   };
 }

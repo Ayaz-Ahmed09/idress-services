@@ -120,7 +120,7 @@ const features = [
     title: "90-Day Warranty",
     description:
       "All repairs come with a comprehensive warranty. If the issue persists, we'll fix it again at no extra cost.",
-    color: "from-blue-500 to-cyan-500",
+    color: "from-orange-500 to-cyan-500",
   },
   {
     icon: Icons.Award,
@@ -154,17 +154,17 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 md:py-24 bg-white dark:bg-gray-900">
+    <section className="py-16 md:py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <span className="inline-block px-4 py-1.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-sm font-semibold rounded-full mb-4">
+          <span className="inline-block px-4 py-1.5 bg-sky-50 text-sky-700 border border-sky-200 text-sm font-semibold rounded-full mb-4">
             Why Choose Us
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
             The Smart Choice for Home Services
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-slate-600 max-w-2xl mx-auto text-lg">
             We combine expertise, reliability, and customer-first approach to
             deliver unmatched service quality.
           </p>
@@ -177,7 +177,7 @@ export default function WhyChooseUs() {
             return (
               <div
                 key={feature.title}
-                className="group relative p-6 md:p-8 rounded-2xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-transparent transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 overflow-hidden"
+                className="group relative p-6 md:p-8 rounded-2xl bg-white border border-slate-200 hover:border-sky-500 transition-all duration-300 shadow-md hover:shadow-lg overflow-hidden"
               >
                 {/* Hover gradient background */}
                 {/* <div
@@ -192,10 +192,10 @@ export default function WhyChooseUs() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-blue-600 group-hover:to-cyan-500 transition-all duration-300">
+                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-sky-600 transition-all duration-300">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-slate-600 leading-relaxed">
                   {feature.description}
                 </p>
               </div>

@@ -88,13 +88,13 @@ const rightColumn = testimonials.filter((_, i) => i % 2 !== 0);
 
 function TestimonialCard({ name, location, text, rating }) {
   return (
-    <div className="bg-linear-to-br from-cream-50 to-cream-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-5 mb-4 shadow-md hover:shadow-xl transition-all duration-300 border border-sky-200/50 dark:border-sky-800/30 relative overflow-hidden group">
-      {/* Sky blue edge accent */}
-      <div className="absolute top-0 left-0 w-1 h-full bg-linear-to-b from-sky-400 to-sky-500" />
-      <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-sky-400 to-transparent" />
+    <div className="bg-white rounded-2xl p-5 mb-4 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-orange-500 relative overflow-hidden group">
+      {/* Orange edge accent */}
+      <div className="absolute top-0 left-0 w-1 h-full bg-orange-500" />
+      <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-orange-500 to-transparent" />
 
       {/* Quote icon */}
-      <div className="absolute top-3 right-3 text-sky-200 dark:text-sky-800 opacity-50">
+      <div className="absolute top-3 right-3 text-orange-200 opacity-50">
         <Icons.Quote />
       </div>
 
@@ -103,7 +103,7 @@ function TestimonialCard({ name, location, text, rating }) {
         <div className="flex gap-0.5 mb-3">
           {Array.from({ length: rating }, (_, index) => index + 1).map(
             (starNum) => (
-              <span key={`star-${starNum}`} className="text-yellow-400">
+              <span key={`star-${starNum}`} className="text-amber-500" style={{filter: 'drop-shadow(0px 2px 3px rgba(245, 158, 11, 0.5))'}}>
                 <Icons.Star />
               </span>
             ),
@@ -111,16 +111,16 @@ function TestimonialCard({ name, location, text, rating }) {
         </div>
 
         {/* Testimonial text */}
-        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-4">
+        <p className="text-black text-sm leading-relaxed mb-4 line-clamp-4">
           &ldquo;{text}&rdquo;
         </p>
 
         {/* Author info */}
-        <div className="border-t border-violet-500 dark:border-violet-700 pt-3">
-          <p className="font-bold text-gray-900 dark:text-white text-sm">
+        <div className="border-t-2 border-orange-500 pt-3">
+          <p className="font-bold text-black text-sm">
             {name}
           </p>
-          <p className="text-xs text-gray-500 dark:text-gray-400">{location}</p>
+          <p className="text-xs text-slate-600">{location}</p>
         </div>
       </div>
     </div>
@@ -165,14 +165,15 @@ export default function TestimonialSlider() {
   }, []);
 
   return (
-    <section className="py-16 md:py-24 overflow-hidden bg-gray-50 dark:bg-gray-950">
+    <section className="py-16 md:py-24 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
             What Our Customers Say
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full mb-4"></div>
+          <p className="text-slate-600 max-w-2xl mx-auto">
             Don&apos;t just take our word for it. Here&apos;s what our satisfied
             customers have to say about our services.
           </p>
@@ -181,10 +182,10 @@ export default function TestimonialSlider() {
         {/* Testimonials container with fade edges */}
         <div className="relative h-[500px] md:h-[600px] overflow-hidden">
           {/* Top fade */}
-          <div className="absolute top-0 left-0 right-0 h-20 bg-linear-to-b from-gray-50 dark:from-blue-950 to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 left-0 right-0 h-20 bg-linear-to-b from-white to-transparent z-10 pointer-events-none" />
 
           {/* Bottom fade */}
-          <div className="absolute bottom-0 left-0 right-0 h-20 bg-linear-to-t from-gray-50 dark:from-blue-950 to-transparent z-10 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-20 bg-linear-to-t from-white to-transparent z-10 pointer-events-none" />
 
           {/* Two columns */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 h-full">
